@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
     });
 
-    const API_URL = 'http://localhost:5000';
+    const API_URL = 'https://server.de2.netrun.io';
     const redirect = new URLSearchParams(location.search).get('redirect') || 'index.html';
 
     const loginForm = document.getElementById('loginForm');
