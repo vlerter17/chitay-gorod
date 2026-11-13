@@ -1,0 +1,38 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Georgia', serif; background: #0f0f1a; color: #fff; min-height: 100vh; cursor: none; }
+.cursor {
+    position: fixed; width: 10px; height: 10px; background: #e8d5b7;
+    border-radius: 50%; pointer-events: none; z-index: 10000;
+    transform: translate(-50%, -50%);
+    transition: width 0.2s, height 0.2s, background 0.2s, border 0.2s;
+    box-shadow: 0 0 12px rgba(232,213,183,0.8);
+}
+.cursor.hover { width: 30px; height: 30px; background: transparent; border: 2px solid #e8d5b7; }
+
+.auth-page { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 40px 20px; position: relative; }
+.auth-back { position: absolute; top: 30px; left: 30px; color: #e8d5b7; text-decoration: none; font-size: 16px; }
+.auth-back:hover { color: #fff; }
+.auth-card { background: #1a1a2e; border-radius: 18px; padding: 40px; width: 100%; max-width: 420px; }
+.auth-title { text-align: center; color: #e8d5b7; font-size: 32px; margin-bottom: 25px; }
+.auth-tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 25px; background: #131322; padding: 6px; border-radius: 10px; }
+.auth-tab { background: transparent; border: none; color: #999; padding: 12px; border-radius: 8px; font-size: 16px; cursor: none; transition: all 0.3s; font-family: inherit; }
+.auth-tab.active { background: #667eea; color: #fff; }
+.auth-group { margin-bottom: 18px; }
+.auth-group label { display: block; font-size: 14px; color: #999; margin-bottom: 8px; }
+.auth-group input {
+    width: 100%; padding: 14px 16px; background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15); border-radius: 10px;
+    color: #fff; font-size: 16px; outline: none; transition: border-color 0.3s;
+}
+.auth-group input:focus { border-color: #667eea; }
+.auth-submit {
+    width: 100%; padding: 16px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none; border-radius: 10px; color: #fff; font-size: 18px; font-weight: bold;
+    cursor: none; transition: transform 0.2s; margin-top: 8px; font-family: inherit;
+}
+.auth-submit:hover { transform: translateY(-2px); }
+.auth-error { color: #e74c3c; font-size: 14px; margin-top: 12px; text-align: center; min-height: 18px; }
+
+.password-strength { margin-top: 8px; display: flex; align-items: center; gap: 10px; }
+.password-strength__bar { height: 6px; width: 0; background: #e74c3c; border-radius: 3px; transition: width 0.3s, background 0.3s; flex: 1; max-width: 200px; }
+.password-strength__label { font-size: 12px; font-weight: bold; }

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой аккаунт — Читай-Город</title>
+    <link rel="stylesheet" href="account.css">
+</head>
+<body>
+    <div class="cursor" id="cursor"></div>
+
+    <header class="header">
+        <div class="header__container">
+            <a href="index.html" class="logo">📖 Читай-Город</a>
+            <nav class="nav">
+                <a href="index.html#catalog" class="nav__link">Каталог</a>
+            </nav>
+            <div class="header__user" id="headerUser"></div>
+        </div>
+    </header>
+
+    <main class="account-page">
+        <h1 class="account-title">Мой аккаунт</h1>
+        <div class="account-user" id="accountUser"></div>
+
+        <h2 class="account-subtitle">Купленные книги</h2>
+        <div class="account-books" id="accountBooks"></div>
+
+        <h2 class="account-subtitle">Корзина</h2>
+        <div class="account-cart" id="accountCart"></div>
+
+        <div class="danger-zone">
+            <h2 class="danger-zone__title">Опасная зона</h2>
+            <p class="danger-zone__text">Удаление аккаунта необратимо: будут стёрты учётная запись, купленные книги и корзина.</p>
+            <button class="danger-zone__btn" id="deleteAccountBtn">Удалить аккаунт</button>
+        </div>
+    </main>
+
+    <!-- ===== ЧИТАЛКА ===== -->
+    <div class="reader" id="reader">
+        <div class="reader__toolbar">
+            <button class="reader__back" id="readerBack">← Закрыть</button>
+            <div class="reader__meta" id="readerMeta"></div>
+            <div class="reader__progress-wrap">
+                <div class="reader__progress"><div class="reader__progress-bar" id="readerProgressBar"></div></div>
+                <span class="reader__progress-label" id="readerProgressLabel">0%</span>
+            </div>
+        </div>
+
+        <div class="reader__stage">
+            <button class="reader__nav reader__nav--prev" id="readerPrev" aria-label="Назад">‹</button>
+
+            <div class="reader__book">
+                <div class="reader__page" id="readerPage">
+                    <div class="reader__page-header" id="readerPageHeader"></div>
+                    <div class="reader__page-text" id="readerPageText">Загрузка…</div>
+                    <div class="reader__page-number" id="readerPageNumber"></div>
+                </div>
+            </div>
+
+            <button class="reader__nav reader__nav--next" id="readerNext" aria-label="Вперёд">›</button>
+        </div>
+
+        <div class="reader__footer">
+            <span id="readerPageInfo">— / —</span>
+        </div>
+    </div>
+
+    <!-- ===== МОДАЛКА УДАЛЕНИЯ ===== -->
+    <div class="modal-confirm" id="deleteModal">
+        <div class="modal-confirm__box">
+            <h3 class="modal-confirm__title">Удалить аккаунт?</h3>
+            <p class="modal-confirm__text">Все данные будут стёрты безвозвратно. Введите пароль для подтверждения.</p>
+            <input type="password" class="modal-confirm__input" id="deletePassword" placeholder="Ваш пароль">
+            <p class="modal-confirm__error" id="deleteError"></p>
+            <div class="modal-confirm__actions">
+                <button class="modal-confirm__cancel" id="deleteCancel">Отмена</button>
+                <button class="modal-confirm__confirm" id="deleteConfirm">Удалить навсегда</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="books.js"></script>
+    <script src="account.js"></script>
+</body>
+</html>

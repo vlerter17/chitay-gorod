@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход — Читай-Город</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="cursor" id="cursor"></div>
+    <div class="auth-page">
+        <a href="index.html" class="auth-back">← На главную</a>
+        <div class="auth-card">
+            <h1 class="auth-title">Читай-Город</h1>
+            <div class="auth-tabs">
+                <button class="auth-tab active" data-tab="login">Вход</button>
+                <button class="auth-tab" data-tab="register">Регистрация</button>
+            </div>
+            <form class="auth-form" id="loginForm">
+                <div class="auth-group">
+                    <label>Email</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+                <div class="auth-group">
+                    <label>Пароль</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <button type="submit" class="auth-submit">Войти</button>
+                <p class="auth-error" id="loginError"></p>
+            </form>
+            <form class="auth-form" id="registerForm" style="display:none;">
+                <div class="auth-group">
+                    <label>Имя</label>
+                    <input type="text" id="regName" required>
+                </div>
+                <div class="auth-group">
+                    <label>Email</label>
+                    <input type="email" id="regEmail" required>
+                </div>
+                <div class="auth-group" id="verifyGroup" style="display:none;">
+                    <label>Код из письма</label>
+                    <input type="text" id="verifyCode" maxlength="6" placeholder="6 цифр">
+                </div>
+                <div class="auth-group">
+                    <label>Пароль</label>
+                    <input type="password" id="regPassword" required minlength="6">
+                </div>
+                <button type="submit" class="auth-submit" id="registerSubmit">Зарегистрироваться</button>
+                <p class="auth-error" id="registerError"></p>
+            </form>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>

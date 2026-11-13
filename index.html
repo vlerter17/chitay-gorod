@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Читай-Город — Библиотека онлайн</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="cursor" id="cursor"></div>
+
+    <div class="intro" id="intro">
+        <div class="intro-logo">
+            <div class="intro-books">
+                <div class="intro-book book-1"></div>
+                <div class="intro-book book-2"></div>
+                <div class="intro-book book-3"></div>
+            </div>
+            <h1 class="intro-title">Читай-Город</h1>
+            <p class="intro-subtitle">Библиотека онлайн — более 1000 книг</p>
+        </div>
+    </div>
+
+    <div class="main-site" id="mainSite">
+        <header class="header">
+            <div class="header__container">
+                <a href="index.html" class="logo">📖 Читай-Город</a>
+                <nav class="nav">
+                    <a href="#catalog" class="nav__link">Каталог</a>
+                    <a href="#about" class="nav__link">О нас</a>
+                    <a href="#contacts" class="nav__link">Контакты</a>
+                </nav>
+                <div class="header__user" id="headerUser"></div>
+            </div>
+        </header>
+
+        <section class="hero">
+            <div class="hero__content">
+                <h2 class="hero__title">Читайте книги онлайн</h2>
+                <p class="hero__subtitle">Более 1000 книг в нашей библиотеке. Зарегистрируйтесь и начните читать!</p>
+                <a href="login.html" class="hero__button" id="heroButton">Начать читать</a>
+            </div>
+        </section>
+
+        <section id="catalog" class="catalog">
+            <div class="catalog__container">
+                <h2 class="section-title">Каталог книг</h2>
+                <div class="books" id="booksGrid"></div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="about__container">
+                <h2 class="section-title">О нашем издательстве</h2>
+                <div class="about__text">
+                    <p>Издательство «Читай-Город» основано в 2020 году группой единомышленников, влюблённых в литературу.</p>
+                    <p>Мы издаём качественную прозу, поэзию и переводную литературу. Наша миссия — находить сильные голоса и делать книги, которые хочется держать в руках.</p>
+                    <p>За четыре года мы выпустили более 50 наименований. Работаем с начинающими авторами и признанными мастерами слова.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer id="contacts" class="footer">
+            <div class="footer__container">
+                <div class="footer__col">
+                    <h3>📖 Читай-Город</h3>
+                    <p>Независимое издательство качественной литературы.</p>
+                </div>
+                <div class="footer__col">
+                    <h3>Контакты</h3>
+                    <p>📧 info@chitay-gorod.ru</p>
+                    <p>📞 +7 (999) 123-45-67</p>
+                    <p>📍 Москва, ул. Книжная, д. 1</p>
+                </div>
+                <div class="footer__col">
+                    <h3>Социальные сети</h3>
+                    <p><a href="#">Telegram</a></p>
+                    <p><a href="#">ВКонтакте</a></p>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>© 2024 Издательство «Читай-Город». Все права защищены.</p>
+            </div>
+        </footer>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal__content">
+            <button class="modal__close" id="modalClose">&times;</button>
+            <div class="modal__body">
+                <img class="modal__image" id="modalImage" alt="">
+                <div class="modal__info">
+                    <h2 class="modal__title" id="modalTitle"></h2>
+                    <p class="modal__author" id="modalAuthor"></p>
+                    <p class="modal__description" id="modalDescription"></p>
+                    <p class="modal__price" id="modalPrice"></p>
+                    <button class="modal__buy" id="modalBuy">Купить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ai-chat" id="aiChat">
+        <button class="ai-chat__toggle" id="aiToggle">🤖</button>
+        <div class="ai-chat__window" id="aiWindow">
+            <div class="ai-chat__header">
+                <span>🤖 ИИ-Помощник</span>
+                <button class="ai-chat__close" id="aiClose">&times;</button>
+            </div>
+            <div class="ai-chat__messages" id="aiMessages">
+                <div class="ai-message ai-message--bot">Привет! Я ИИ-помощник Читай-Города. Чем могу помочь?</div>
+            </div>
+            <div class="ai-chat__input">
+                <input type="text" id="aiInput" placeholder="Задайте вопрос...">
+                <button id="aiSend">➤</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="books.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
