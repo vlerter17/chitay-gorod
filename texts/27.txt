@@ -1,0 +1,499 @@
+<html>
+<head>
+   <title>Журнал &quot;Самиздат&quot;: Проза</title>
+     <link rel="openid.server" href="http://samlib.ru/cgi-bin/oid_login" />
+     <link rel="openid2.provider" href="http://samlib.ru/cgi-bin/oid_login" />
+        </head>
+	
+        <body bgcolor="#E9E9E9">
+        <div align="right">
+        
+        <h3></h3>
+        </div>
+							
+<center><h2><h1><a href=http://lib.ru>Lib.ru</a>: Журнал &quot;Самиздат&quot;: Проза</h1></h2>
+															
+<!------- Первый блок ссылок ------------->
+<font size=-1>
+<a href=/><font color="#555555"><b>Самиздат:</b></font></a>
+
+
+[<A HREF="/cgi-bin/login">Регистрация</A>]
+ 
+
+[<a href="/cgi-bin/seek">Найти</a>] 
+[<a href="/rating/expert/">Рейтинги</a>]
+[<a href="/rating/comment/">Обсуждения</a>]
+[<a href="/long.shtml">Новинки</a>]
+[<a href="/janr/index_janr_time23-1.shtml">Обзоры</a>]
+[<A HREF="/i/info/">Помощь</A>|<a href="/comment/r/redaktor/forum_main">Техвопросы</a>]
+
+
+
+
+
+</font>
+
+<table width=98%><tr><td>
+<table width=98% style="display: block !important"><tr>
+
+<td><small>Links</small></td>
+
+<td><script>(function (w, d, s) { var t = d.getElementsByTagName(s)[0], j = d.createElement(s); j.async = true; j.charset="utf-8"; var dt = new Date(); j.src = 'https://offfy.com/domain/moshkow/general.js?'+dt.getFullYear()+''+dt.getMonth()+''+dt.getDate()+''+dt.getHours(); t.parentNode.insertBefore(j, t); })(window, document, 'script');</script></td>
+
+<td> </td><td width=23%><hr noshade></td><td> </td>
+
+<td><style>#soiuz48{display:block; text-align:center; background:#25aa00; color:#ffffff; font-family: Arial; padding: 4px 10px; font-weight:bold; border-radius:4px;} #soiuz48:hover{background:#f02c22;} #soiuz48 a {text-decoration:none; color:#ffffff;} #soiuz48:hover u {color:yellow;} </style> <span id="soiuz48"><nobr><a href="https://cibum.ru/aicover?ref=samlib" target="_blank"><u>Создай обложку книги бесплатно</u></a></nobr></span></td>
+
+<td> </td><td width=23%><hr noshade></td><td> </td>
+
+<td><style>#author_today_btn{display: block;min-width: 150px;text-align: center;background: #4582af; color: #fff; font-family: Verdana, Sans-serif; padding: 4px 8px; font-size: 10px; font-weight: bold; border-radius: 4px;text-decoration: none;}#author_today_btn:hover{background: #5cb85c;}</style>
+<nobr><a href="https://leather-time.ru" target="_blank" id="author_today_btn">Кожевенное мастерство: сумки, ремни своими руками</a></nobr></td>
+
+<td> </td><td width=23%><hr noshade></td><td> </td>
+
+</tr></table>
+</td></tr></table>
+
+
+<!-- table width=98%><tr><td>
+<table width=98% style="display: block !important"><tr>
+
+<td> </td><td width=30%><hr noshade></td><td> </td>
+
+<td><style>#bd21{display: block; text-align: center;background: #3a60e9; color: #ffffff; font-family: Arial; padding: 4px 10px; font-weight: bold; border-radius: 4px;text-decoration: none;}#bd21:hover{background: #a2080a;color: #060734;}</style> <nobr><a href="/b/bd21/" target="_blank" id='bd21'>Конкурс фантрассказа Блэк-Джек-21</a></nobr></td>
+
+<td> </td><td width=30%><hr noshade></td><td> </td>
+
+<td>Ссылки</td>
+
+</tr></table>
+</td></tr></table -->
+
+<!--Z_LITERA-->
+
+<!-------- Второй блок ссылок  ------->
+
+<nobr>
+[<A HREF=../>Авторы</A>]
+[Жанры]
+[<A HREF="../type/">Произведения</A>]
+ Отсортировано по: [<a href=index_janr_5-1.shtml>рейтингу</a>] [<a href=index_janr_time5-1.shtml>дате</a>] [<a href=index_janr_name5-1.shtml>имени</a>][<a href=index_janr_hits5-1.shtml>читателям</a>]
+</nobr>
+</center>
+
+
+
+
+<!------------------ Тело индекса -------------------->
+
+
+<table align=right cellspacing=0 cellpadding=10 border=0 bgcolor=#e0e0e0><tr><td><b>ЖАНРЫ:</b><br>
+<a href=/janr/index_janr_5-1.shtml>Проза</a> (233130) <br> 
+<a href=/janr/index_janr_4-1.shtml>Поэзия</a> (540915) <br> 
+<a href=/janr/index_janr_3-1.shtml>Лирика</a> (175393) <br> 
+<a href=/janr/index_janr_36-1.shtml>AI-Generated</a> (742) <br> 
+<a href=/janr/index_janr_19-1.shtml>Мемуары</a> (17877) <br> 
+<a href=/janr/index_janr_26-1.shtml>История</a> (32959) <br> 
+<a href=/janr/index_janr_29-1.shtml>Детская</a> (19758) <br> 
+<a href=/janr/index_janr_2-1.shtml>Детектив</a> (24838) <br> 
+<a href=/janr/index_janr_25-1.shtml>Приключения</a> (58432) <br> 
+<a href=/janr/index_janr_1-1.shtml>Фантастика</a> (113951) <br> 
+<a href=/janr/index_janr_24-1.shtml>Фэнтези</a> (130981) <br> 
+<a href=/janr/index_janr_22-1.shtml>Киберпанк</a> (5219) <br> 
+<a href=/janr/index_janr_35-1.shtml>Фанфик</a> (9303) <br> 
+<a href=/janr/index_janr_11-1.shtml>Публицистика</a> (48294) <br> 
+<a href=/janr/index_janr_32-1.shtml>События</a> (13650) <br> 
+<a href=/janr/index_janr_23-1.shtml>Литобзор</a> (12733) <br> 
+<a href=/janr/index_janr_9-1.shtml>Критика</a> (14904) <br> 
+<a href=/janr/index_janr_15-1.shtml>Философия</a> (73193) <br> 
+<a href=/janr/index_janr_13-1.shtml>Религия</a> (20723) <br> 
+<a href=/janr/index_janr_14-1.shtml>Эзотерика</a> (16709) <br> 
+<a href=/janr/index_janr_18-1.shtml>Оккультизм</a> (2286) <br> 
+<a href=/janr/index_janr_17-1.shtml>Мистика</a> (35878) <br> 
+<a href=/janr/index_janr_30-1.shtml>Хоррор</a> (11667) <br> 
+<a href=/janr/index_janr_28-1.shtml>Политика</a> (24486) <br> 
+
+<a href=/janr/index_janr_12-1.shtml>Любовный роман</a> (25511) <br> 
+<a href=/janr/index_janr_20-1.shtml>Естествознание</a> (14554) <br> 
+<a href=/janr/index_janr_21-1.shtml>Изобретательство</a> (3027) <br> 
+<a href=/janr/index_janr_8-1.shtml>Юмор</a> (77496) <br> 
+<a href=/janr/index_janr_27-1.shtml>Байки</a> (10932) <br> 
+<a href=/janr/index_janr_31-1.shtml>Пародии</a> (8125) <br> 
+<a href=/janr/index_janr_10-1.shtml>Переводы</a> (23420) <br> 
+<a href=/janr/index_janr_16-1.shtml>Сказки</a> (26074) <br> 
+<a href=/janr/index_janr_6-1.shtml>Драматургия</a> (5828) <br> 
+<a href=/janr/index_janr_33-1.shtml>Постмодернизм</a> (9161) <br> 
+<a href=/janr/index_janr_34-1.shtml>Foreign+Translat</a> (1789) <br> 
+</td></tr><tr><td><br><font size=-1><b>РУЛЕТКА:</b><br><a href=/e/emelxjanow_a_d/mirkarikaperwyjigrok.shtml>Мир Карика. Первый</a><br>
+<a href=/s/sedrik/rozhdeniepatriarha.shtml>Рождение патриарха</a><br>
+<a href=/a/abashkina_o_s/vals.shtml>Шинра/селти - Вальс</a><br><a href=/m/morozowa_t_a/rating1.shtml
+>Рекомендует Ленивая З.</a><br>
+<br><font size=-1><b>ВСЕГО В ЖУРНАЛЕ:</b><br>&nbsp;Авторов: <b>110236</b><br>
+&nbsp;Произведений: <b>1764243</b><br><!--banner-->
+<p>
+<!--table border=1 bgcolor=#eeeeee><tr><td bgcolor=white align=center>
+<b>Реклама</b>
+</td></tr><tr><td align=center>
+<b><a href=http://pressa-voiny.ru/><font color=brown>
+Проект "Пресса Войны"<br>просит помощи</font></a></b><br>
+Газеты, фото, Совинформбюро<br> за 1941-1945 гг
+
+</td></tr></table-->
+
+<p>
+<a href=/r/ru1000/ru.shtml>Список известности России</a>
+<p>
+<li><b>СМ. ТАКЖЕ:<br>
+<a href=https://world.lib.ru><b>Заграница.lib.ru</b></a></b> | 
+<a href=/a/aktualxnoe_i/>Интервью СИ</a><br>
+<a href=http://music.lib.ru/><b>Музыка.lib.ru</b></a> |
+<a href=http://turizm.lib.ru><b>Туризм.lib.ru</b></a><br>
+<a href=http://www.artlib.ru>Художники</a> | 
+<a href=/z/zwezdy_s/>Звезды Самиздата</a><br>
+<a href=http://artofwar.ru>ArtOfWar</a> | 
+<a href=http://okopka.ru>Okopka.ru</a><br>
+<a href=/s/samizdat10/samizdat10.shtml>Фильм про "Самиздат"</a><br>
+<b>Уровень Шума:</b><br>
+<a href=https://www.youtube.com/watch?v=dLzrqnogcXA
+>Интервью про "Самиздат"</a>
+
+<p>
+<li><b>НАШИ КОНКУРСЫ:</b><br>
+<b>
+<a href=/k/konkurs_r_r/prawilakonkursann-27.shtml>"Нереальная новелла-27"</a><br>
+<a href=/s/stoptannye_kirzachi16/><font color=red>"Стоптанные Кирзачи-16"</font></a><br>
+<a href=/d/detektiwklub/a0010-1.shtml>"Арена детективов"</a> (АД-10)<br>
+</b>
+<a href=/d/detektiwklub/fd20.shtml>Фантастического детектива</a><br><!--/banner-->
+</td></tr><tr><td><b>ФОРМЫ:</b><br><a href=/type/index_type_1-1.shtml>Роман</a> (39240) <br> 
+<a href=/type/index_type_2-1.shtml>Повесть</a> (23431) <br> 
+<a href=/type/index_type_16-1.shtml>Глава</a> (162790) <br> 
+<a href=/type/index_type_10-1.shtml>Сборник рассказов</a> (13963) <br> 
+<a href=/type/index_type_3-1.shtml>Рассказ</a> (234083) <br> 
+<a href=/type/index_type_11-1.shtml>Поэма</a> (9698) <br> 
+<a href=/type/index_type_7-1.shtml>Сборник стихов</a> (43804) <br> 
+<a href=/type/index_type_6-1.shtml>Стихотворение</a> (676586) <br> 
+<a href=/type/index_type_13-1.shtml>Эссе</a> (40147) <br> 
+<a href=/type/index_type_4-1.shtml>Очерк</a> (28298) <br> 
+<a href=/type/index_type_5-1.shtml>Статья</a> (191793) <br> 
+<a href=/type/index_type_19-1.shtml>Дневник</a> (198) <br> 
+<a href=/type/index_type_17-1.shtml>Монография</a> (3608) <br> 
+<a href=/type/index_type_18-1.shtml>Справочник</a> (15909) <br> 
+<a href=/type/index_type_12-1.shtml>Песня</a> (25633) <br> 
+<a href=/type/index_type_15-1.shtml>Новелла</a> (10105) <br> 
+<a href=/type/index_type_9-1.shtml>Пьеса; сценарий</a> (7683) <br> 
+<a href=/type/index_type_8-1.shtml>Миниатюра</a> (148830) <br> 
+<a href=/type/index_type_14-1.shtml>Интервью</a> (5263) <br> 
+</td></tr><tr><td><br><font size=-1><b>16/11 <font color=red>ПОЗДРАВЛЯЕМ</font>:</b></font><br>
+<a href=/a/absvem/>Абsvem</a><br>
+<a href=/a/abzianidze_w_w/>Абзианидзе В.В.</a><br>
+<a href=/k/k_anastasija/>Анастасия К.</a><br>
+<a href=/a/archer_a_g/>Арчер А.</a><br>
+<a href=/a/asmodee_l_r/>Асмодее Л.Р.</a><br>
+<a href=/a/afansxew_i_a/>Афансьев И.А.</a><br>
+<a href=/b/barmina_o_m/>Бармина О.М.</a><br>
+<a href=/b/bewzjuk_s_w/>Бевзюк С.С.</a><br>
+<a href=/b/below_anatolij_alekseewich/>Белов А.</a><br>
+<a href=/b/belowa_m_w/>Белова М.В.</a><br>
+<a href=/b/beloglazow_a_i/>Белоглазов А.</a><br>
+<a href=/b/bogomazowa_m/>Богомазова М.</a><br>
+<a href=/b/bolhowitinowa_e_g/>Болховитинова Е.Г.</a><br>
+<a href=/b/bondarenko_n_d/>Бондаренко Н.Д.</a><br>
+<a href=/b/budxko_a_w/>Будько А.В.</a><br>
+<a href=/w/wasilxchenko_w_n/>Васильченко В.Н.</a><br>
+<a href=/g/gawura_g_a/>Гавура Г.А.</a><br>
+<a href=/g/gazizulin_g_m/>Газизулин Г.М.</a><br>
+<a href=/g/gorobec_s/>Горобец С.</a><br>
+<a href=/g/grozowoj_drakon/>Грозовой Д.</a><br>
+<a href=/g/gudman_m/>Гудман М.</a><br>
+<a href=/d/demidow_w_n/>Демидов В.Н.</a><br>
+<a href=/j/julija_d/>Диденко-Абраменко Ю.</a><br>
+<a href=/m/martynenko_d_w/>Дядюшка Д.</a><br>
+<a href=/i/iwanowa_angelina_wasilxewna/>Иванова А.В.</a><br>
+<a href=/i/ilar_d/>Илар Д.Д.</a><br>
+<a href=/i/imamaliew_s_s/>Имамалиев С.С.</a><br>
+<a href=/i/ishkilxdin_w_a/>Ишкильдин В.</a><br>
+<a href=/k/kadomcewa_a_i/>Кадомцева А.И.</a><br>
+<a href=/k/kalinin_a_j/>Калинин А.Ю.</a><br>
+<a href=/a/andrej_aleksandrowich_kamin/>Камин А.А.</a><br>
+<a href=/k/karimow_d_z/>Каримов Д.</a><br>
+<a href=/k/kondratkowskaja_n_g/>Кондратковская Н.Г.</a><br>
+<a href=/k/kenig_o_w/>Конеч И.В.</a><br>
+<a href=/w/wladimir_wiktorowich_korkin/>Коркин В.</a><br>
+<a href=/n/natalija_kortes/>Кортес Н.</a><br>
+<a href=/i/ija_i_l/>Кулакова Л.Н.</a><br>
+<a href=/k/kurbatowa_l_n/>Курбатова Л.Н.</a><br>
+<a href=/l/lanzhetka_k_j/>Ланжетка К.Ю.</a><br>
+<a href=/l/li_m_m/>Ли М.</a><br>
+<a href=/l/litau_a/>Литау А.</a><br>
+<a href=/l/logwin_j_w/>Логвин Ю.В.</a><br>
+<a href=/l/lomakin_w/>Ломакин В.</a><br>
+<a href=/l/longin_m/>Лонгин М.</a><br>
+<a href=/s/safonow_aleksandr_alekseewich/>Майнер А.</a><br>
+<a href=/m/miholewich_i_i/>Михолевич И.И.</a><br>
+<a href=/n/nilowa_e/>Нилова Е.</a><br>
+<a href=/n/nichwolodow_a_k/>Ничволодов А.К.</a><br>
+<a href=/o/ognew_l_d/>Огнев Л.Д.</a><br>
+<a href=/o/oriolanna/>Ориоланна</a><br>
+<a href=/p/perwaja_s_j/>Первая С.</a><br>
+<a href=/p/podchasowa_e_a/>Подчасова Э.А.</a><br>
+<a href=/p/polupoltinnyh_a_m/>Полуполтинных А.М.</a><br>
+<a href=/s/sweshnikowa_a_o/>Свешникова А.О.</a><br>
+<a href=/s/serafima_swjat/>Свят С.</a><br>
+<a href=/s/sedinkin_w_a/>Сединкин В.А.</a><br>
+<a href=/s/sidorowa_d_o/>Сидорова Д.О.</a><br>
+<a href=/s/sidorowa_darxja_olegowna/>Сидорова Д.О.</a><br>
+<a href=/s/silantxewa_a_w/>Силантьева А.В.</a><br>
+<a href=/p/paramonowa_a_a/>Скорпианна</a><br>
+<a href=/s/sychew_a_a/>Сычев А.А.</a><br>
+<a href=/t/tur_t/>Тур Т.</a><br>
+<a href=/t/tasja_t/>Тур Т.</a><br>
+<a href=/j/jarmakowich_n_a/>Ярмакович Н.А.</a><br>
+<a href=/j/jashina_i_n/>Яшина И.Н.</a><br>
+<a href=/e/ekaterina_s_b/>Atlantika</a><br>
+<a href=/i/iv/>Iv</a><br>
+<a href=/b/buneewa_k_p/>Rikkele</a><br>
+</td></tr></table><center><b>Страниц (1166):</b>  <b>1</b> <a href=index_janr_5-2.shtml>2</a> <a href=index_janr_5-3.shtml>3</a> <a href=index_janr_5-4.shtml>4</a> <a href=index_janr_5-5.shtml>5</a> <a href=index_janr_5-6.shtml>6</a> <a href=index_janr_5-7.shtml>7</a> <a href=index_janr_5-8.shtml>8</a> <a href=index_janr_5-9.shtml>9</a> <a href=index_janr_5-10.shtml>10</a> <a href=index_janr_5-11.shtml>11</a>  ... <a href=index_janr_5-1166.shtml>1166</a></center>
+<b><a href=/j/janr_5/>Жанровый раздел</a> >>> <a href=/comment/j/janr_5/forum_janr_5>Обсуждение жанра</a> >>></b>
+<DL><DT><li><a href=/n/noir2017><font color=#555555>Инка</font></a>: <a href=/n/noir2017/torch.shtml><b>Торч</b></a>&nbsp;<small><b>21k</b> &nbsp; Оценка:<b>10.00*5</b> &nbsp;  Рассказ  <A HREF=/comment/n/noir2017/torch>Комментарии</A> </small><br></DL> 
+<DL><DT><li><a href=/p/petrienko_p_w><font color=#555555>Бирюкова С.И.</font></a>: <a href=/p/petrienko_p_w/010_budkrest.shtml><b>Буденновский крест (издание 2010г)</b></a>&nbsp;<small><b>303k</b> &nbsp; Оценка:<b>10.00*4</b> &nbsp;  Роман  <A HREF=/comment/p/petrienko_p_w/010_budkrest>Комментарии</A> </small><br><DD><font color=#555555><i>Rнига "Буденновский крест", посвященная событиям в г.Буденновске 1995 года. Дополненное издание 2010 г.</i></font></DL> 
+<DL><DT><li><a href=/a/arjamnowa_w_n><font color=#555555>Арямнова Вера</font></a>: <a href=/a/arjamnowa_w_n/f-43.shtml><b>Ангелы</b></a>&nbsp;<small><b>94k</b> &nbsp; Оценка:<b>10.00*4</b> &nbsp;  Повесть  <A HREF=/comment/a/arjamnowa_w_n/f-43>Комментарии</A> </small><br><DD><font color=#555555><i>.</i></font></DL> 
+<DL><DT><li><a href=/j/jashina_g_a><font color=#555555>Яшина Галина Александровна</font></a>: <a href=/j/jashina_g_a/397.shtml><b>Поворот</b></a>&nbsp;<small><b>29k</b> &nbsp; Оценка:<b>10.00*4</b> &nbsp;  Рассказ  <A HREF=/comment/j/jashina_g_a/397>Комментарии</A> </small><br></DL> 
+<DL><DT><li><a href=/n/nubireckij_a_r><font color=#555555>Краснахоркаи Ласло</font></a>: <a href=/n/nubireckij_a_r/12.shtml><b>Нобелевский лауреат 2025 года Краснахоркаи Ласло Сборник</b></a>&nbsp;<small><b>6805k</b> &nbsp; Оценка:<b>10.00*3</b> &nbsp;  Роман  <A HREF=/comment/n/nubireckij_a_r/12>Комментарии</A> </small><br></DL> 
+<DL><DT><li><a href=/s/sushkow_wladimir_mihajlowich><font color=#555555>Сушков Владимир Михайлович</font></a>: <a href=/s/sushkow_wladimir_mihajlowich/delionposledamdrewnejpechati.shtml><b>Делион. По следам древней печати</b></a>&nbsp;<small><b>792k</b> &nbsp; Оценка:<b>10.00*3</b> &nbsp;  Роман  <A HREF=/comment/s/sushkow_wladimir_mihajlowich/delionposledamdrewnejpechati>Комментарии</A> </small><br><DD><font color=#555555><i>Всего лишь один день, одно событие может перевернуть жизнь человека с ног на голову. Флавиан, пастух с севера, получает от дяди таинственную печать, за которой охотятся могущественные силы. Волею судеб Флавиан попадает в  водоворот событий. Пастух оказывается в городе воронов, в котором  ...</i></font></DL> 
+<DL><DT><li><a href=/g/gawrik_s><font color=#555555>Патчетт Энн</font></a>: <a href=/g/gawrik_s/uistler.shtml><b>Уистлер</b></a>&nbsp;<small><b>526k</b> &nbsp; Оценка:<b>10.00*3</b> &nbsp;  Роман  <A HREF=/comment/g/gawrik_s/uistler>Комментарии</A> </small><br></DL> 
+<DL><DT><li><a href=/i/isachenko_w_i><font color=#555555>Исаченко Виталий Ильич</font></a>: <a href=/i/isachenko_w_i/1606.shtml><b>Пехота [пилюли от испуга]</b></a>&nbsp;<small><b>272k</b> &nbsp; Оценка:<b>10.00*3</b> &nbsp;  Роман  <A HREF=/comment/i/isachenko_w_i/1606>Комментарии</A> </small><br><DD><font color=#555555><i>"... -- И кака-ая ж падла эту разведку боем придумала?!.."</i></font></DL> 
+<DL><DT><li><a href=/g/gimadislamow_f_f><font color=#555555>Гимадисламов Фаниль Фаритович</font></a>: <a href=/g/gimadislamow_f_f/tatar-1.shtml><b>Татарский  фильм  ужасов</b></a>&nbsp;<small><b>101k</b> &nbsp; Оценка:<b>10.00*3</b> &nbsp;  Повесть  <A HREF=/comment/g/gimadislamow_f_f/tatar-1>Комментарии</A> </small><br><DD><font color=#555555><i>Повесть-триллер с элементами детектива и юмора о поиске золотого клада Колчака.</i></font></DL> 
+<DL><DT><li><a href=/m/mudrowa_t_a><font color=#555555>Мудрая Татьяна Алексеевна</font></a>: <a href=/m/mudrowa_t_a/top-tridcatnic.shtml><b>Мой  заветный  топ-тридцатник</b></a>&nbsp;<small><b>61k</b> &nbsp; Оценка:<b>10.00*3</b> &nbsp;  Статья  <A HREF=/comment/m/mudrowa_t_a/top-tridcatnic>Комментарии</A> </small><br><DD><font color=#555555><i>  Осторожно, ТОП  пополняется!</i></font></DL> 
+<DL><DT><li><a href=/p/potorak_l_m><font color=#555555>Поторак Леонид Михайлович</font></a>: <a href=/p/potorak_l_m/konecstrannojgwardii.shtml><b>Конец странной гвардии</b></a>&nbsp;<small><b>60k</b> &nbsp; Оценка:<b>10.00*3</b> &nbsp;  Рассказ </small><br></DL> 
+<DL><DT><li><a href=/s/shishkanow_p_n><font color=#555555>Шишканов Петр Николаевич</font></a>: <a href=/s/shishkanow_p_n/time.shtml><b>Time</b></a>&nbsp;<small><b>47k</b> &nbsp; Оценка:<b>10.00*3</b> &nbsp;  Глава </small><br></DL> 
+<DL><DT><li><a href=/p/polujanowa_t_w><font color=#555555>Юрина Татьяна</font></a>: <a href=/p/polujanowa_t_w/nikudyshniki.shtml><b>Никудышники</b></a>&nbsp;<small><b>40k</b> &nbsp; Оценка:<b>10.00*3</b> &nbsp;  Новелла  <A HREF=/comment/p/polujanowa_t_w/nikudyshniki>Комментарии</A> </small><br></DL> 
+<DL><DT><li><a href=/w/werehtina_i_g><font color=#555555>Верехтина Ирина Георгиевна</font></a>: <a href=/w/werehtina_i_g/vospominanija.shtml><b>Воспоминания о будущем. Часть 1</b></a>&nbsp;<small><b>36k</b> &nbsp; Оценка:<b>10.00*3</b> &nbsp;  Глава  <A HREF=/comment/w/werehtina_i_g/vospominanija>Комментарии</A> </small><br><DD><font color=#555555><i>В юности мы всегда знаем, каким будет наше будущее, мы в него верим, мы его делаем. И даже если оно не сбудется, оно останется будущим в наших воспоминаниях. Вот примерно так. Получается  "петля времени"...</i></font></DL> 
+<DL><DT><li><a href=/g/golxdman_w_d><font color=#555555>Гольдман Виталий Давидович</font></a>: <a href=/g/golxdman_w_d/awtobiografijahudozhnikaslowas.shtml><b>Ночи стали длиннее, ведь годы короче, как это нелепо. Почему годы короче, Боже? Так ведь дни стали длиннее  ...</b></a>&nbsp;<small><b>36k</b> &nbsp; Оценка:<b>10.00*3</b> &nbsp;  Статья  <A HREF=/comment/g/golxdman_w_d/awtobiografijahudozhnikaslowas>Комментарии</A> </small><br><DD><font color=#555555><i>Благодарю всех моих читателям за помощь!  А ведь долг платежом красен, я согласен.    *    Твой свет в окошке мерцает - морозно, цветы расцветают.  На огонёк свечи слетелись бабочки, мотыльки, светлячки.    *    Спелая черёмуха утром превратились в улей,  Пчёлы поют о любви, нектар  ...</i></font></DL> 
+<DL><DT><li><font color=gray size=-2>Upd</font><a href=/k/kac_jurgen_alekseewich><font color=#555555>К. Юрген</font></a>: <a href=/k/kac_jurgen_alekseewich/todd23jropaip.shtml><b>Жемчужная нить; глава десятая: Полковник и его друг</b></a>&nbsp;<small><b>32k</b> &nbsp; Оценка:<b>10.00*3</b> &nbsp;  Глава </small><br><DD><font color=#555555><i>Что же связывает полковника и мистера Торнхилла? Как они познакомились? А также, как проходит расследование полковника Джеффри вы узнаете в данной главе "Жемчужной нити"!</i></font></DL> 
+<DL><DT><li><font color=gray size=-2>Upd</font><a href=/k/kac_jurgen_alekseewich><font color=#555555>К. Юрген</font></a>: <a href=/k/kac_jurgen_alekseewich/todd23jropaipa1.shtml><b>Жемчужная нить; глава двенадцатая: Решение к которому пришла Джоанна Оукли</b></a>&nbsp;<small><b>29k</b> &nbsp; Оценка:<b>10.00*3</b> &nbsp;  Глава </small><br><DD><font color=#555555><i>Стерпит ли оскорбление Миссис Оукли, или же решит отомстить? Что же надумала Джоанна? С кем она решила посоветоваться? Узнайте в двенадцатой главе Жемчужной нити!</i></font></DL> 
+<DL><DT><li><a href=/b/beljackaja_i_v><font color=#555555>Беляцкая Инна Викторовна</font></a>: <a href=/b/beljackaja_i_v/1308.shtml><b>Смотреть, слушать, но не участвовать. (7 глава)</b></a>&nbsp;<small><b>21k</b> &nbsp; Оценка:<b>10.00*3</b> &nbsp;  Глава  <A HREF=/comment/b/beljackaja_i_v/1308>Комментарии</A> </small><br></DL> 
+<DL><DT><li><a href=/z/zorin_i_w><font color=#555555>Зорин Иван Васильевич</font></a>: <a href=/z/zorin_i_w/temaawtoraigeroja.shtml><b>Тема Автора И Героя</b></a>&nbsp;<small><b>20k</b> &nbsp; Оценка:<b>10.00*3</b> &nbsp;  Рассказ  <A HREF=/comment/z/zorin_i_w/temaawtoraigeroja>Комментарии</A> </small><br></DL> 
+<DL><DT><li><font color=gray size=-2>Upd</font><a href=/k/kac_jurgen_alekseewich><font color=#555555>К. Юрген</font></a>: <a href=/k/kac_jurgen_alekseewich/todd23jropaipa.shtml><b>Жемчужная нить; глава одинадцатая: Незнакомец у Ловетт</b></a>&nbsp;<small><b>20k</b> &nbsp; Оценка:<b>10.00*3</b> &nbsp;  Глава </small><br><DD><font color=#555555><i>Незнакомый бродяга приходит к миссис Ловетт просить рабочее место. Примет ли она его и что случилось с прошлым пекарем? Узнаете в одинадцатой глава Жемчужной нити!</i></font></DL> 
+<DL><DT><li><font color=gray size=-2>Upd</font><a href=/k/kac_jurgen_alekseewich><font color=#555555>К. Юрген</font></a>: <a href=/k/kac_jurgen_alekseewich/todd23jr.shtml><b>Жемчужная нить; глава пятая: Встреча в Храмовых садах</b></a>&nbsp;<small><b>17k</b> &nbsp; Оценка:<b>10.00*3</b> &nbsp;  Статья </small><br><DD><font color=#555555><i>Миссис Оукли, несмотря на явное неудовольствие Мистера Оукли, зовёт в гости Преподобного Люпина, но Джоанне совсем не до чаепитий. Она грустит по Марку Ингестри, своему судебному, от которого вчера не получила ни малейшего знака. Но внезапно, странный человек с розой передает ей послание,  ...</i></font></DL> 
+<DL><DT><li><font color=gray size=-2>Upd</font><a href=/k/kac_jurgen_alekseewich><font color=#555555>К. Юрген</font></a>: <a href=/k/kac_jurgen_alekseewich/todd23jropaipa1-15.shtml><b>Жемчужная нить; глава пятнадцатая: вторая встреча Джоанны с полковником в Храмовых садах</b></a>&nbsp;<small><b>16k</b> &nbsp; Оценка:<b>10.00*3</b> &nbsp;  Глава </small><br><DD><font color=#555555><i>Джоанна Оукли решается на вторую встречу с полковником, чтобы выяснить, скрывается ли за личиной Торнхила ее суженный, Марк Ингестри. Как же выглядит таинственный Торнхил, что же на самом деле чувствует полковник к Джоанне? Узнайте в новой главе Жемчужной нити!</i></font></DL> 
+<DL><DT><li><a href=/k/kac_jurgen_alekseewich><font color=#555555>К. Юрген</font></a>: <a href=/k/kac_jurgen_alekseewich/todd23jropaipa1-16.shtml><b>Жемчужная нить; глава шестнадцатая: цирюльник предпринимает ещё одну попытку сбыть жемчужную нить</b></a>&nbsp;<small><b>15k</b> &nbsp; Оценка:<b>10.00*3</b> &nbsp;  Глава  <A HREF=/comment/k/kac_jurgen_alekseewich/todd23jropaipa1-16>Комментарии</A> </small><br></DL> 
+<DL><DT><li><a href=/k/kowalxkow_t_n><font color=#555555>Ковальков Тимофей Николаевич</font></a>: <a href=/k/kowalxkow_t_n/angelina.shtml><b>Ангелина Сергеевна</b></a>&nbsp;<small><b>15k</b> &nbsp; Оценка:<b>10.00*3</b> &nbsp;  Рассказ </small><br><DD><font color=#555555><i>Хранительнице школьного красного уголка выпало тяжелое испытание. Как скрыть внезапно нахлынувшие чувства, преодолеть позднюю недозволенную любовь?</i></font></DL> 
+<DL><DT><li><a href=/l/listaj_j><font color=#555555>Листай Яна</font></a>: <a href=/l/listaj_j/laitvei.shtml><b>Система Лайт Вэй</b></a>&nbsp;<small><b>14k</b> &nbsp; Оценка:<b>10.00*3</b> &nbsp;  Рассказ  <A HREF=/comment/l/listaj_j/laitvei>Комментарии</A> </small><br></DL> 
+<DL><DT><li><a href=/b/bogushew_walerij_iwanowich><font color=#555555>Богушев Валерий Иванович</font></a>: <a href=/b/bogushew_walerij_iwanowich/podvignaroda.shtml><b>Последний бой Ивана Солодова</b></a>&nbsp;<small><b>12k</b> &nbsp; Оценка:<b>10.00*3</b> &nbsp;  Очерк  <A HREF=/comment/b/bogushew_walerij_iwanowich/podvignaroda>Комментарии</A> </small><br><DD><font color=#555555><i>О человеке, приближавшем Победу</i></font></DL> 
+<DL><DT><li><a href=/w/wysokie_k><font color=#555555>Леся</font></a>: <a href=/w/wysokie_k/angel-hranitelx.shtml><b>Ангел-хранитель</b></a>&nbsp;<small><b>11k</b> &nbsp; Оценка:<b>10.00*3</b> &nbsp;  Рассказ  <A HREF=/comment/w/wysokie_k/angel-hranitelx>Комментарии</A> </small><br></DL> 
+<DL><DT><li><a href=/d/denizhenko_s_w><font color=#555555>Дениженко Светлана Владимировна</font></a>: <a href=/d/denizhenko_s_w/msworddoc-87.shtml><b>Письмо издалека</b></a>&nbsp;<small><b>10k</b> &nbsp; Оценка:<b>10.00*3</b> &nbsp;  Рассказ  <A HREF=/comment/d/denizhenko_s_w/msworddoc-87>Комментарии</A> </small><br></DL> 
+<DL><DT><li><a href=/i/issaniella_shadow><font color=#555555>Issaniella Shadow</font></a>: <a href=/i/issaniella_shadow/durdom-2.shtml><b>Дурдом-2</b></a>&nbsp;<small><b>10k</b> &nbsp; Оценка:<b>10.00*3</b> &nbsp;  Глава  <A HREF=/comment/i/issaniella_shadow/durdom-2>Комментарии</A> </small><br><DD><font color=#555555><i>Стеб над все там же "Эрагоном", не дописан...пока)</i></font></DL> 
+<DL><DT><li><a href=/b/beljackaja_i_v><font color=#555555>Беляцкая Инна Викторовна</font></a>: <a href=/b/beljackaja_i_v/2863.shtml><b>Проза жизни. Держись деревня! (5 глава)</b></a>&nbsp;<small><b>9k</b> &nbsp; Оценка:<b>10.00*3</b> &nbsp;  Глава  <A HREF=/comment/b/beljackaja_i_v/2863>Комментарии</A> </small><br></DL> 
+<DL><DT><li><a href=/a/arilin_r_a><font color=#555555>Арилин Роман Александрович</font></a>: <a href=/a/arilin_r_a/lesopilka.shtml><b>Лесопилка</b></a>&nbsp;<small><b>9k</b> &nbsp; Оценка:<b>10.00*3</b> &nbsp;  Рассказ  <A HREF=/comment/a/arilin_r_a/lesopilka>Комментарии</A> </small><br><DD><font color=#555555><i>Странные встречи</i></font></DL> 
+<DL><DT><li><a href=/p/pikulx_a_s><font color=#555555>Пикуль Андрей Сергеевич</font></a>: <a href=/p/pikulx_a_s/001.shtml><b>Душа</b></a>&nbsp;<small><b>8k</b> &nbsp; Оценка:<b>10.00*3</b> &nbsp;  Рассказ  <A HREF=/comment/p/pikulx_a_s/001>Комментарии</A> </small><br><DD><font color=#555555><i>Пара слов о нашем внутреннем</i></font></DL> 
+<DL><DT><li><a href=/r/radion_ekaterina_arturowna><font color=#555555>Радион Екатерина Артуровна</font></a>: <a href=/r/radion_ekaterina_arturowna/mojpredannyjnochnojkoshmar.shtml><b>Мой преданный ночной кошмар</b></a>&nbsp;<small><b>8k</b> &nbsp; Оценка:<b>10.00*3</b> &nbsp;  Статья  <A HREF=/comment/r/radion_ekaterina_arturowna/mojpredannyjnochnojkoshmar>Комментарии</A> </small><br></DL> 
+<DL><DT><li><a href=/b/beljackaja_i_v><font color=#555555>Беляцкая Инна Викторовна</font></a>: <a href=/b/beljackaja_i_v/708.shtml><b>Временная замена..... (7 глава)</b></a>&nbsp;<small><b>8k</b> &nbsp; Оценка:<b>10.00*3</b> &nbsp;  Глава  <A HREF=/comment/b/beljackaja_i_v/708>Комментарии</A> </small><br></DL> 
+<DL><DT><li><a href=/b/bulgakow_arsenij_stanislawowich><font color=#555555>Булгаков Арсений Станиславович</font></a>: <a href=/b/bulgakow_arsenij_stanislawowich/a.shtml><b>Этрусская мышь</b></a>&nbsp;<small><b>8k</b> &nbsp; Оценка:<b>10.00*3</b> &nbsp;  Рассказ  <A HREF=/comment/b/bulgakow_arsenij_stanislawowich/a>Комментарии</A> </small><br><DD><font color=#555555><i>Рассказ посвящен "синдрому этрусской мыши", этрусская мышь - самая маленькое млекопитающее, её жизнь - это цикл поиска еды, поев - она засыпает, чтобы вновь проснутся и искать еду. Если она не успеет - то умрет. Я это этрусская мышь. Ты эта мышь. Мы все.</i></font></DL> 
+<DL><DT><li><a href=/r/rozhkowa><font color=#555555>Рожкова Анна</font></a>: <a href=/r/rozhkowa/angel.shtml><b>Ангел</b></a>&nbsp;<small><b>7k</b> &nbsp; Оценка:<b>10.00*3</b> &nbsp;  Рассказ  <A HREF=/comment/r/rozhkowa/angel>Комментарии</A> </small><br><DD><font color=#555555><i>Скоро, скоро она будет с ним, залечит его раны, исцелит душу...</i></font></DL> 
+<DL><DT><li><a href=/g/gawrilenko_d_s><font color=#555555>Гавриленко Дмитрий Сергеевич</font></a>: <a href=/g/gawrilenko_d_s/dmitrijsergeewichgawrilenko-73.shtml><b>Лев Озеров и поэзия</b></a>&nbsp;<small><b>7k</b> &nbsp; Оценка:<b>10.00*3</b> &nbsp;  Эссе  <A HREF=/comment/g/gawrilenko_d_s/dmitrijsergeewichgawrilenko-73>Комментарии</A> </small><br></DL> 
+<DL><DT><li><a href=/b/beljackaja_i_v><font color=#555555>Беляцкая Инна Викторовна</font></a>: <a href=/b/beljackaja_i_v/1032.shtml><b>Так получилось. (10 глава)</b></a>&nbsp;<small><b>6k</b> &nbsp; Оценка:<b>10.00*3</b> &nbsp;  Глава  <A HREF=/comment/b/beljackaja_i_v/1032>Комментарии</A> </small><br></DL> 
+<DL><DT><li><a href=/z/zabigajlo_a_o><font color=#555555>Забигайло Александр Олегович</font></a>: <a href=/z/zabigajlo_a_o/discours.shtml><b>Ответишь за дискурс</b></a>&nbsp;<small><b>5k</b> &nbsp; Оценка:<b>10.00*3</b> &nbsp;  Эссе  <A HREF=/comment/z/zabigajlo_a_o/discours>Комментарии</A> </small><br></DL> 
+<DL><DT><li><a href=/t/terehow_b_w><font color=#555555>Терехов Борис Владимирович</font></a>: <a href=/t/terehow_b_w/kot_sema.shtml><b>Кот Сема</b></a>&nbsp;<small><b>4k</b> &nbsp; Оценка:<b>10.00*3</b> &nbsp;  Миниатюра  <A HREF=/comment/t/terehow_b_w/kot_sema>Комментарии</A> </small><br><DD><font color=#555555><i>На конкурс "Инверсия". Ру Пол на Марди Гра - самоидентификация</i></font></DL> 
+<DL><DT><li><a href=/z/elektroik><font color=#555555>Зюлёв Леонтий</font></a>: <a href=/z/elektroik/httpswwwprozaru-11866.shtml><b>Певец</b></a>&nbsp;<small><b>4k</b> &nbsp; Оценка:<b>10.00*3</b> &nbsp;  Миниатюра  <A HREF=/comment/z/elektroik/httpswwwprozaru-11866>Комментарии</A> </small><br></DL> 
+<DL><DT><li><a href=/m/maslow_w_a><font color=#555555>Маслов Валерий Алексеевич</font></a>: <a href=/m/maslow_w_a/kniga2.shtml><b>Возмездие</b></a>&nbsp;<small><b>4k</b> &nbsp; Оценка:<b>10.00*3</b> &nbsp;  Рассказ </small><br><DD><font color=#555555><i>Сказка: "Колдун и красавица".</i></font></DL> 
+<DL><DT><li><a href=/o/oldman><font color=#555555>Sindbаd al-Ba&#7717;ri & Пушкин</font></a>: <a href=/o/oldman/moskva.shtml><b>Фиолетовая  Москва</b></a>&nbsp;<small><b>3k</b> &nbsp; Оценка:<b>10.00*3</b> &nbsp;  Рассказ  <A HREF=/comment/o/oldman/moskva>Комментарии</A> </small><br></DL> 
+<DL><DT><li><a href=/d/desna_a_a><font color=#555555>Десна Александр Александрович</font></a>: <a href=/d/desna_a_a/aboutthis-1.shtml><b>Об этом и о другом</b></a>&nbsp;<small><b>3k</b> &nbsp; Оценка:<b>10.00*3</b> &nbsp;  Миниатюра </small><br></DL> 
+<DL><DT><li><a href=/m/maslow_w_a><font color=#555555>Маслов Валерий Алексеевич</font></a>: <a href=/m/maslow_w_a/kniga7.shtml><b>Оборотень</b></a>&nbsp;<small><b>3k</b> &nbsp; Оценка:<b>10.00*3</b> &nbsp;  Рассказ  <A HREF=/comment/m/maslow_w_a/kniga7>Комментарии</A> </small><br><DD><font color=#555555><i>Секрет свиньи.</i></font></DL> 
+<DL><DT><li><a href=/v/voronkov_michael><font color=#555555>Voronkov Michael</font></a>: <a href=/v/voronkov_michael/rotozei.shtml><b>Ротозеи</b></a>&nbsp;<small><b>2k</b> &nbsp; Оценка:<b>10.00*3</b> &nbsp;  Рассказ  <A HREF=/comment/v/voronkov_michael/rotozei>Комментарии</A> </small><br></DL> 
+<DL><DT><li><a href=/e/elinor_o_i><font color=#555555>Элинор, Одна Из Трёх</font></a>: <a href=/e/elinor_o_i/opros.shtml><b>Опрос</b></a>&nbsp;<small><b>2k</b> &nbsp; Оценка:<b>10.00*3</b> &nbsp;  Интервью  <A HREF=/comment/e/elinor_o_i/opros>Комментарии</A> </small><br><DD><font color=#555555><i>граждане, граждане, маленький опросик! Итак, товарищи, в процессе высокоинтеллектуальной беседы с участием  Цветковой Галины и вашей покорной слуги родился такой вот вопросик (сформулирован Галиной *заложила-заложила!*))   гыгы нам с Галей за этот опросик какая-то добрая душа влепяшила  ...</i></font></DL> 
+<DL><DT><li><a href=/i/ilxina_i_i><font color=#555555>Айрис Канна</font></a>: <a href=/i/ilxina_i_i/poprobuite.shtml><b>Попробуйте</b></a>&nbsp;<small><b>2k</b> &nbsp; Оценка:<b>10.00*3</b> &nbsp;  Миниатюра  <A HREF=/comment/i/ilxina_i_i/poprobuite>Комментарии</A> </small><br><DD><font color=#555555><i>рекламный триллер</i></font></DL> 
+<DL><DT><li><a href=/k/kraew_d_a><font color=#555555>Kofter</font></a>: <a href=/k/kraew_d_a/mini-omaknapautinusweta.shtml><b>Взаимоотношения Куэс и аякаси 1</b></a>&nbsp;<small><b>2k</b> &nbsp; Оценка:<b>10.00*3</b> &nbsp;  Рассказ  <A HREF=/comment/k/kraew_d_a/mini-omaknapautinusweta>Комментарии</A> </small><br><DD><font color=#555555><i>Поразмышлял про отношения Куэс с аякаси и придумалось.</i></font></DL> 
+<DL><DT><li><a href=/l/lezhawa_i_k><font color=#555555>Лежава Ирина Карловна</font></a>: <a href=/l/lezhawa_i_k/1_boginya.shtml><b>Богиня</b></a>&nbsp;<small><b>2k</b> &nbsp; Оценка:<b>10.00*3</b> &nbsp;  Миниатюра  <A HREF=/comment/l/lezhawa_i_k/1_boginya>Комментарии</A> </small><br><DD><font color=#555555><i>Опубликован на бумаге - в Љ 2(57) журнала "Невский альманах".</i></font></DL> 
+<DL><DT><li><a href=/m/marchewskaja_w_a><font color=#555555>Марчевская Вика Александровна</font></a>: <a href=/m/marchewskaja_w_a/pawlichenkoljudmilemihajlownes.shtml><b>Павличенко Людмиле Михайловне... Спасибо Вам От Неба До Земли..</b></a>&nbsp;<small><b>2k</b> &nbsp; Оценка:<b>10.00*3</b> &nbsp;  Стихотворение </small><br></DL> 
+<DL><DT><li><a href=/m/maslow_w_a><font color=#555555>Маслов Валерий Алексеевич</font></a>: <a href=/m/maslow_w_a/kniga5.shtml><b>Могильщик</b></a>&nbsp;<small><b>2k</b> &nbsp; Оценка:<b>10.00*3</b> &nbsp;  Рассказ </small><br><DD><font color=#555555><i>Место памяти.</i></font></DL> 
+<DL><DT><li><a href=/m/maslow_w_a><font color=#555555>Маслов Валерий Алексеевич</font></a>: <a href=/m/maslow_w_a/kniga9.shtml><b>Приёмник-распределитель</b></a>&nbsp;<small><b>2k</b> &nbsp; Оценка:<b>10.00*3</b> &nbsp;  Рассказ </small><br><DD><font color=#555555><i>К чему снятся покойники?</i></font></DL> 
+<DL><DT><li><a href=/m/maslow_w_a><font color=#555555>Маслов Валерий Алексеевич</font></a>: <a href=/m/maslow_w_a/zajiganie.shtml><b>Позднее зажигание</b></a>&nbsp;<small><b>2k</b> &nbsp; Оценка:<b>10.00*3</b> &nbsp;  Рассказ  <A HREF=/comment/m/maslow_w_a/zajiganie>Комментарии</A> </small><br><DD><font color=#555555><i>У Вас сломался автомобиль? Сделаем!</i></font></DL> 
+<DL><DT><li><a href=/b/bashlakowa_n_w><font color=#555555>Башлакова Надежда Васильевна</font></a>: <a href=/b/bashlakowa_n_w/zvonok.shtml><b>Звонок с "того света"</b></a>&nbsp;<small><b>1k</b> &nbsp; Оценка:<b>10.00*3</b> &nbsp;  Миниатюра  <A HREF=/comment/b/bashlakowa_n_w/zvonok>Комментарии</A> </small><br></DL> 
+<DL><DT><li><a href=/i/ilxinskij_t_i><font color=#555555>Ильинский Тимофей Игоревич</font></a>: <a href=/i/ilxinskij_t_i/vremya_shumya_prohodit.shtml><b>Время, шумя, проходит...</b></a>&nbsp;<small><b>1k</b> &nbsp; Оценка:<b>10.00*3</b> &nbsp;  Стихотворение </small><br><DD><font color=#555555><i>Истина - тонкость, которая всегда висит в воздухе.</i></font></DL> 
+<DL><DT><li><a href=/i/iwakin_a_g><font color=#555555>Ивакин Алексей Геннадьевич</font></a>: <a href=/i/iwakin_a_g/ldjt.shtml><b>Двое</b></a>&nbsp;<small><b>1k</b> &nbsp; Оценка:<b>10.00*3</b> &nbsp;  Рассказ  <A HREF=/comment/i/iwakin_a_g/ldjt>Комментарии</A> </small><br></DL> 
+<DL><DT><li><a href=/a/arhipenko_o_a><font color=#555555>Леданика</font></a>: <a href=/a/arhipenko_o_a/proza.shtml><b>Про/за-2: Нищастная чернуха конкурса</b></a>&nbsp;<small><b>1k</b> &nbsp; Оценка:<b>10.00*3</b> &nbsp;  Статья  <A HREF=/comment/a/arhipenko_o_a/proza>Комментарии</A> </small><br><DD><font color=#555555><i>Я не понимаю</i></font></DL> 
+<DL><DT><li><a href=/l/lidija_f><font color=#555555>Фогель Лидия</font></a>: <a href=/l/lidija_f/li-102.shtml><b>Приятная неожиданность</b></a>&nbsp;<small><b>0k</b> &nbsp; Оценка:<b>10.00*3</b> &nbsp;  Миниатюра  <A HREF=/comment/l/lidija_f/li-102>Комментарии</A> </small><br></DL> 
+<DL><DT><li><a href=/s/sazonow_s_m><font color=#555555>Сазонов Сергей Дмитриевич</font></a>: <a href=/s/sazonow_s_m/2svidanie.shtml><b>Свидание</b></a>&nbsp;<small><b>20k</b> &nbsp; Оценка:<b>9.78*7</b> &nbsp;  Рассказ  <A HREF=/comment/s/sazonow_s_m/2svidanie>Комментарии</A> </small><br></DL> 
+<DL><DT><li><a href=/g/golikow_a_w><font color=#555555>Калугина Лена</font></a>: <a href=/g/golikow_a_w/11104.shtml><b>Посылка</b></a>&nbsp;<small><b>2k</b> &nbsp; Оценка:<b>9.73*6</b> &nbsp;  Рассказ  <A HREF=/comment/g/golikow_a_w/11104>Комментарии</A> </small><br></DL> 
+<DL><DT><li><a href=/s/sowremennaja_p><font color=#555555>Планета</font></a>: <a href=/s/sowremennaja_p/planeta.shtml><b>Правила конкурса Моя Планета 2013</b></a>&nbsp;<small><b>18k</b> &nbsp; Оценка:<b>9.64*5</b> &nbsp;  Статья </small><br><DD><font color=#555555><i>Предложения и пожелания относительно текущего или следующих конкурсов можно высказывать на этом форуме до начала приема работ или после формирования финала</i></font></DL> 
+<DL><DT><li><a href=/n/nejman_n_n><font color=#555555>Нейм Ник</font></a>: <a href=/n/nejman_n_n/beginning.shtml><b>Как всё начиналось</b></a>&nbsp;<small><b>17k</b> &nbsp; Оценка:<b>9.64*5</b> &nbsp;  Новелла  <A HREF=/comment/n/nejman_n_n/beginning>Комментарии</A> </small><br><DD><font color=#555555><i>Друзьям моих студенческих лет посвящается.  На конкурс "Нереальная Новелла РТ-2013".</i></font></DL> 
+<DL><DT><li><a href=/f/firsanowa_j_a><font color=#555555>Фирсанова Юлия Алексеевна</font></a>: <a href=/f/firsanowa_j_a/betel.shtml><b>Бетель</b></a>&nbsp;<small><b>2k</b> &nbsp; Оценка:<b>9.64*5</b> &nbsp;  Миниатюра  <A HREF=/comment/f/firsanowa_j_a/betel>Комментарии</A> </small><br><DD><font color=#555555><i>Маленькая орфографическая история из жизни офиса + бонус.</i></font></DL> 
+<DL><DT><li><a href=/k/kraew_d_a><font color=#555555>Kofter</font></a>: <a href=/k/kraew_d_a/newpower.shtml><b>Новая сила клана Амакава</b></a>&nbsp;<small><b>2k</b> &nbsp; Оценка:<b>9.64*5</b> &nbsp;  Рассказ  <A HREF=/comment/k/kraew_d_a/newpower>Комментарии</A> </small><br><DD><font color=#555555><i>С чем столкнутся Тсучимикадо после восстановления статуса клана Амакава</i></font></DL> 
+<DL><DT><li><font color=brown size=-2>Upd</font><a href=/k/koroljuk_m_a><font color=#555555>Алекс 62 Щ</font></a>: <a href=/k/koroljuk_m_a/333-2.shtml><b>Параллель 4. Роман с камнем</b></a>&nbsp;<small><b>690k</b> &nbsp; Оценка:<b>9.52*11</b> &nbsp;  Повесть  <A HREF=/comment/k/koroljuk_m_a/333-2>Комментарии</A> </small><br><DD><font color=#555555><i>В Параллели прошёл ещё один год.</i></font></DL> 
+<DL><DT><li><a href=/b/berdnikowa_j_l><font color=#555555>Бердникова Юлия Леонидовна</font></a>: <a href=/b/berdnikowa_j_l/21.shtml><b>Классификация троллей на Самиздате. Литобзор Хиж2020</b></a>&nbsp;<small><b>25k</b> &nbsp; Оценка:<b>9.47*6</b> &nbsp;  Статья  <A HREF=/comment/b/berdnikowa_j_l/21>Комментарии</A> </small><br><DD><font color=#555555><i>Классификация комментаторов всех видов, от вполне адекватных и приятных до злобных троллей (и продуктов их жизнедеятельности) на Самиздате. Предлагаю новое переиздание сего опуса, отредактированное и дополненное ценными наблюдениями и исследованиями моих коллег.</i></font></DL> 
+<DL><DT><li><a href=/z/zaraia><font color=#555555>Zaraia</font></a>: <a href=/z/zaraia/14.shtml><b>Читатель автору</b></a>&nbsp;<small><b>4k</b> &nbsp; Оценка:<b>9.47*6</b> &nbsp;  Статья  <A HREF=/comment/z/zaraia/14>Комментарии</A> </small><br><DD><font color=#555555><i>Ответ на популярный вопрос "А почему в  окопе тихо!?"  Сугубо ИМХО+ комм 1, 21+64 +74 Получилось как в песне-5 причин.;)</i></font></DL> 
+<DL><DT><li><a href=/o/ognewa_w_e><font color=#555555>Огнева Вера Евгеньевна</font></a>: <a href=/o/ognewa_w_e/come_to_oneself.shtml><b>Возвращение к себе</b></a>&nbsp;<small><b>801k</b> &nbsp; Оценка:<b>9.47*4</b> &nbsp;  Роман  <A HREF=/comment/o/ognewa_w_e/come_to_oneself>Комментарии</A> </small><br><DD><font color=#555555><i>Новая версия романа</i></font></DL> 
+<DL><DT><li><a href=/p/prozrachno><font color=#555555>Прозрачно</font></a>: <a href=/p/prozrachno/jasno-1.shtml><b>Инструменты времени</b></a>&nbsp;<small><b>271k</b> &nbsp; Оценка:<b>9.47*4</b> &nbsp;  Повесть </small><br></DL> 
+<DL><DT><li><a href=/g/galagan_e_a><font color=#555555>Галаган Эмилия</font></a>: <a href=/g/galagan_e_a/black.shtml><b>Чернее</b></a>&nbsp;<small><b>129k</b> &nbsp; Оценка:<b>9.47*4</b> &nbsp;  Повесть  <A HREF=/comment/g/galagan_e_a/black>Комментарии</A> </small><br><DD><font color=#555555><i>боль и смех. и идиотизм.  короче, всякое, что найдете, то и берите.  ПС. Иллюстрация для обложки найдена на пинтересте, ежели у автора какие претензии - удалю по первому требованию.</i></font></DL> 
+<DL><DT><li><a href=/b/borodkin_a_p><font color=#555555>Бородкин Алексей Петрович</font></a>: <a href=/b/borodkin_a_p/about_love-1.shtml><b>Всё это про любовь</b></a>&nbsp;<small><b>122k</b> &nbsp; Оценка:<b>9.47*4</b> &nbsp;  Рассказ  <A HREF=/comment/b/borodkin_a_p/about_love-1>Комментарии</A> </small><br></DL> 
+<DL><DT><li><a href=/o/osanches><font color=#555555>О'Санчес</font></a>: <a href=/o/osanches/nechizt.shtml><b>Осенняя охота с Мурманом и Алёнушкой (Сказка-росток)</b></a>&nbsp;<small><b>118k</b> &nbsp; Оценка:<b>9.47*4</b> &nbsp;  Повесть  <A HREF=/comment/o/osanches/nechizt>Комментарии</A> </small><br><DD><font color=#555555><i>Решил написать рассказ, а он вдруг вырос в маленькую повесть. Это своего рода продолжение, пусть и не прямое, романа-сказки "Нечисти" и, в меньшей степени, романа-сказки "Я люблю время". Место действия - леса, поля и Питер. Время действия - наши дни, Лёхе уже под тридцать... Получилась  ...</i></font></DL> 
+<DL><DT><li><a href=/b/beljackaja_i_v><font color=#555555>Беляцкая Инна Викторовна</font></a>: <a href=/b/beljackaja_i_v/1055.shtml><b>Пытка временем. (написано в 2015 году)</b></a>&nbsp;<small><b>90k</b> &nbsp; Оценка:<b>9.47*4</b> &nbsp;  Глава  <A HREF=/comment/b/beljackaja_i_v/1055>Комментарии</A> </small><br><DD><font color=#555555><i>  Повседневность, миди, ЛЛ имеется, но без подробностей.</i></font></DL> 
+<DL><DT><li><a href=/p/polunin_a_j><font color=#555555>Полунин Алексей Юрьевич</font></a>: <a href=/p/polunin_a_j/a07.shtml><b>И.О.Б. (Исполняющий Обязанности Бога)</b></a>&nbsp;<small><b>83k</b> &nbsp; Оценка:<b>9.47*4</b> &nbsp;  Повесть </small><br><DD><font color=#555555><i>Уважаемый читатель! Прежде чем ты начнешь знакомиться с данным повествованием, хочу предупредить тебя заранее: все персонажи, события и места действия являются вымышленными. Автор честно заявляет, что не несет никакой ответственности за мысли и действия некоторых действующих лиц.  ...</i></font></DL> 
+<DL><DT><li><a href=/s/shok_a_w><font color=#555555>Андеев Александр</font></a>: <a href=/s/shok_a_w/p_and_pdoc.shtml><b>Петр и Пауль</b></a>&nbsp;<small><b>75k</b> &nbsp; Оценка:<b>9.47*4</b> &nbsp;  Рассказ  <A HREF=/comment/s/shok_a_w/p_and_pdoc>Комментарии</A> </small><br></DL> 
+<DL><DT><li><a href=/b/beljackaja_i_v><font color=#555555>Беляцкая Инна Викторовна</font></a>: <a href=/b/beljackaja_i_v/1848.shtml><b>Проза жизни. Испытание. (написано в 2018 году)</b></a>&nbsp;<small><b>56k</b> &nbsp; Оценка:<b>9.47*4</b> &nbsp;  Глава  <A HREF=/comment/b/beljackaja_i_v/1848>Комментарии</A> </small><br><DD><font color=#555555><i> Миди рассказ о нашей жизни.</i></font></DL> 
+<DL><DT><li><a href=/m/mildret_b><font color=#555555>Блэйм Милдред</font></a>: <a href=/m/mildret_b/glawa17igrawslepuju.shtml><b>Глава17</b></a>&nbsp;<small><b>43k</b> &nbsp; Оценка:<b>9.47*4</b> &nbsp;  Глава  <A HREF=/comment/m/mildret_b/glawa17igrawslepuju>Комментарии</A> </small><br><DD><font color=#555555><i>Ни фига не правлено. В качестве беты - одинокий ворд)))  Товарищи, кому не нравиться, что обновления появляются редко - да не читайте вы вообще эту муть, не выносите мозг себе и мне.  На счет грамотности - аналогично. Если кто-то желает не блеснуть знаниями в комментах, а всё это  ...</i></font></DL> 
+<DL><DT><li><a href=/b/beljackaja_i_v><font color=#555555>Беляцкая Инна Викторовна</font></a>: <a href=/b/beljackaja_i_v/1818.shtml><b>Проза жизни. Заноза. (написано в 2018 году)</b></a>&nbsp;<small><b>41k</b> &nbsp; Оценка:<b>9.47*4</b> &nbsp;  Рассказ  <A HREF=/comment/b/beljackaja_i_v/1818>Комментарии</A> </small><br><DD><font color=#555555><i> Нельзя контролировать детей двадцать четыре часа в сутки, нужно обязательно давать им свободу выбора, иначе дети вырастут и начнут "брыкаться", противодействовать и доказывать окружающим, что они свободны и сами могут сделать выбор.  В результате сделают его, и тут, как повезет!  ...</i></font></DL> 
+<DL><DT><li><a href=/g/galagan_e_a><font color=#555555>Галаган Эмилия Александровна</font></a>: <a href=/g/galagan_e_a/nebesa.shtml><b>Первые небеса</b></a>&nbsp;<small><b>38k</b> &nbsp; Оценка:<b>9.47*4</b> &nbsp;  Рассказ  <A HREF=/comment/g/galagan_e_a/nebesa>Комментарии</A> </small><br><DD><font color=#555555><i>Сокровенное...</i></font></DL> 
+<DL><DT><li><a href=/k/kowalewskaja_a_w><font color=#555555>Ковалевская Александра</font></a>: <a href=/k/kowalewskaja_a_w/njashkinyrasskazy.shtml><b>Няшкины рассказы</b></a>&nbsp;<small><b>38k</b> &nbsp; Оценка:<b>9.47*4</b> &nbsp;  Рассказ  <A HREF=/comment/k/kowalewskaja_a_w/njashkinyrasskazy>Комментарии</A> </small><br><DD><font color=#555555><i>Ровно год назад в доме появилась собака</i></font></DL> 
+<DL><DT><li><a href=/b/beljackaja_i_v><font color=#555555>Беляцкая Инна Викторовна</font></a>: <a href=/b/beljackaja_i_v/1893.shtml><b>Проза жизни. Авторитетный человек. (написано в 2018 году)</b></a>&nbsp;<small><b>31k</b> &nbsp; Оценка:<b>9.47*4</b> &nbsp;  Рассказ  <A HREF=/comment/b/beljackaja_i_v/1893>Комментарии</A> </small><br><DD><font color=#555555><i> История произошла в большом сибирском городе, где зимы суровые и снежные, а лето, хоть и небольшое, но довольно жаркое. История началась в начале 2000-х годов, когда страна только начала отходить от бандитского капитализма, однако его отголоски ещё долго будут появляться в нашей  ...</i></font></DL> 
+<DL><DT><li><a href=/h/hitech_a><font color=#555555>Hitech Алекс</font></a>: <a href=/h/hitech_a/kompyutery_drevnosti.shtml><b>Компьютеры древности</b></a>&nbsp;<small><b>30k</b> &nbsp; Оценка:<b>9.47*4</b> &nbsp;  Рассказ  <A HREF=/comment/h/hitech_a/kompyutery_drevnosti>Комментарии</A> </small><br><DD><font color=#555555><i>Научно-популярный рассказ о некоторых аналоговых и дигитальных компьютерах наших предков.</i></font></DL> 
+<DL><DT><li><a href=/d/dxjakow_w_e><font color=#555555>Дьяков Виктор Елисеевич</font></a>: <a href=/d/dxjakow_w_e/proza-48.shtml><b>Однорукий</b></a>&nbsp;<small><b>27k</b> &nbsp; Оценка:<b>9.47*4</b> &nbsp;  Рассказ  <A HREF=/comment/d/dxjakow_w_e/proza-48>Комментарии</A> </small><br></DL> 
+<DL><DT><li><a href=/p/perowa_e_g><font color=#555555>Перова Евгения Aka Дженни</font></a>: <a href=/p/perowa_e_g/sosedi.shtml><b>Мы жили по соседству...</b></a>&nbsp;<small><b>26k</b> &nbsp; Оценка:<b>9.47*4</b> &nbsp;  Глава  <A HREF=/comment/p/perowa_e_g/sosedi>Комментарии</A> </small><br><DD><font color=#555555><i>Мы жили по соседству,   Встречались просто так.  Любовь прокралась в сердце,   Я сам не знаю, как...</i></font></DL> 
+<DL><DT><li><a href=/g/gubarx_w_a><font color=#555555>Горд Вячеслав</font></a>: <a href=/g/gubarx_w_a/marsiansky_malyi.shtml><b>Женушке-4.   Марсианский  мальчик твоей женщины</b></a>&nbsp;<small><b>22k</b> &nbsp; Оценка:<b>9.47*4</b> &nbsp;  Глава  <A HREF=/comment/g/gubarx_w_a/marsiansky_malyi>Комментарии</A> </small><br><DD><font color=#555555><i>Глава к повести  "ЖИВИ ВЕЧСНО",     Тот случай, когда посчитал необходимым публично рассказать о глубоко личном.</i></font></DL> 
+<DL><DT><li><a href=/p/pikulx_a_s><font color=#555555>Пикуль Андрей Сергеевич</font></a>: <a href=/p/pikulx_a_s/003.shtml><b>Вечность!</b></a>&nbsp;<small><b>21k</b> &nbsp; Оценка:<b>9.47*4</b> &nbsp;  Рассказ  <A HREF=/comment/p/pikulx_a_s/003>Комментарии</A> </small><br><DD><font color=#555555><i>Несколько слов о трепетных знакомствах и их последствиях</i></font></DL> 
+<DL><DT><li><a href=/t/krasnyjwolk><font color=#555555>Тюлин Дмитрий Юрьевич</font></a>: <a href=/t/krasnyjwolk/mezoyskaya_leda.shtml><b>Мезозойская Леда</b></a>&nbsp;<small><b>20k</b> &nbsp; Оценка:<b>9.47*4</b> &nbsp;  Рассказ  <A HREF=/comment/t/krasnyjwolk/mezoyskaya_leda>Комментарии</A> </small><br><DD><font color=#555555><i>Рассказ выходил в печатном виде трижды, в т.ч. - в журнале "Знание-сила: Фантастика" N2 (29)      &emsp;Необходимые пояснения:    Образ мезозойской Леды впервые посетил меня во время работы над блогом "Эволюция". "Яндекс" выдавал тег "Мезозойская Леда" к картине классика палеонтологической  ...</i></font></DL> 
+<DL><DT><li><a href=/b/berezhnaja_e_g><font color=#555555>Бережная Екатерина Георгиевна</font></a>: <a href=/b/berezhnaja_e_g/joxo.shtml><b>Доля-долюшка-судьбина</b></a>&nbsp;<small><b>18k</b> &nbsp; Оценка:<b>9.47*4</b> &nbsp;  Рассказ  <A HREF=/comment/b/berezhnaja_e_g/joxo>Комментарии</A> </small><br><DD><font color=#555555><i>I место -самый высокий каблук</i></font></DL> 
+<DL><DT><li><a href=/z/zorin_i_w><font color=#555555>Зорин Иван Васильевич</font></a>: <a href=/z/zorin_i_w/epistoljarnyjromans.shtml><b>Эпистолярный Романс</b></a>&nbsp;<small><b>17k</b> &nbsp; Оценка:<b>9.47*4</b> &nbsp;  Рассказ  <A HREF=/comment/z/zorin_i_w/epistoljarnyjromans>Комментарии</A> </small><br><DD><font color=#555555><i>Посвящается Лизе</i></font></DL> 
+<DL><DT><li><a href=/l/legenda><font color=#555555>Легенда</font></a>: <a href=/l/legenda/glaza_mamy.shtml><b>Глаза мамы</b></a>&nbsp;<small><b>16k</b> &nbsp; Оценка:<b>9.47*4</b> &nbsp;  Рассказ  <A HREF=/comment/l/legenda/glaza_mamy>Комментарии</A> </small><br><DD><font color=#555555><i>Трудная судьба простой женщины; одна беда следует за другой, и только редкие мгновения счастья, как лучики света в безысходности... Судьба, возможно, вашей соседки, случайной знакомой, школьной учительницы. Комментарии автора: написано на реальных событиях.   Кому будет интересно:  ...</i></font></DL> 
+<DL><DT><li><a href=/r/rozhkowa><font color=#555555>Рожкова Анна</font></a>: <a href=/r/rozhkowa/jawernusx.shtml><b>Я вернусь...</b></a>&nbsp;<small><b>11k</b> &nbsp; Оценка:<b>9.47*4</b> &nbsp;  Новелла  <A HREF=/comment/r/rozhkowa/jawernusx>Комментарии</A> </small><br><DD><font color=#555555><i>&lt;img src="http://agitki.ru/_ph/80/2/69154839.jpg?1435846206"</i></font></DL> 
+<DL><DT><li><a href=/p/prudkow_w_w><font color=#555555>Прудков Владимир</font></a>: <a href=/p/prudkow_w_w/2vnuk.shtml><b>По телеграмме</b></a>&nbsp;<small><b>8k</b> &nbsp; Оценка:<b>9.47*4</b> &nbsp;  Рассказ  <A HREF=/comment/p/prudkow_w_w/2vnuk>Комментарии</A> </small><br><DD><font color=#555555><i>Сильные духом.</i></font></DL> 
+<DL><DT><li><a href=/b/beljackaja_i_v><font color=#555555>Беляцкая Инна Викторовна</font></a>: <a href=/b/beljackaja_i_v/1767.shtml><b>Проза жизни. Клещ. (пролог)</b></a>&nbsp;<small><b>8k</b> &nbsp; Оценка:<b>9.47*4</b> &nbsp;  Глава  <A HREF=/comment/b/beljackaja_i_v/1767>Комментарии</A> </small><br></DL> 
+<DL><DT><li><a href=/w/wi_w_w><font color=#555555>Vi</font></a>: <a href=/w/wi_w_w/murchik.shtml><b>Мурчик</b></a>&nbsp;<small><b>8k</b> &nbsp; Оценка:<b>9.47*4</b> &nbsp;  Рассказ  <A HREF=/comment/w/wi_w_w/murchik>Комментарии</A> </small><br><DD><font color=#555555><i>Моему коту)</i></font></DL> 
+<DL><DT><li><a href=/t/tihonowa_t_w><font color=#555555>Тихонова Татьяна Викторовна</font></a>: <a href=/t/tihonowa_t_w/marmelad.shtml><b>Яблочный мармелад</b></a>&nbsp;<small><b>7k</b> &nbsp; Оценка:<b>9.47*4</b> &nbsp;  Рассказ  <A HREF=/comment/t/tihonowa_t_w/marmelad>Комментарии</A> </small><br><DD><font color=#555555><i>Четвертое место на Высоких Каблуках-3</i></font></DL> 
+<DL><DT><li><a href=/h/husnullin_a_s><font color=#555555>К.И.С.</font></a>: <a href=/h/husnullin_a_s/oblava.shtml><b>Кругом менты, кругом засада (М И Ф И)</b></a>&nbsp;<small><b>7k</b> &nbsp; Оценка:<b>9.47*4</b> &nbsp;  Миниатюра  <A HREF=/comment/h/husnullin_a_s/oblava>Комментарии</A> </small><br><DD><font color=#555555><i>Голова, смутно виднеющаяся в облаках табачного дыма, напоминает какого-то херувима... ни рук, ни ног, одна физиономия. Физиономия скорбно улыбается - не говорить же спасибо потенциальным задержанным! А народ галдит возмущённо: типа, имеем полное право! по какому-такому поводу?! и  ...</i></font></DL> 
+<DL><DT><li><a href=/b/bondarenko_ale><font color=#555555>Бондаренко Александр Александрович</font></a>: <a href=/b/bondarenko_ale/magnit.shtml><b>Эпизод в магазине , Утро переноса</b></a>&nbsp;<small><b>5k</b> &nbsp; Оценка:<b>9.47*4</b> &nbsp;  Глава  <A HREF=/comment/b/bondarenko_ale/magnit>Комментарии</A> </small><br><DD><font color=#555555><i>Главка к проекту "Волгоград - 1930"</i></font></DL> 
+<DL><DT><li><a href=/e/egorowa_n><font color=#555555>Егорова Нелли</font></a>: <a href=/e/egorowa_n/roundabout.shtml><b>Карусель</b></a>&nbsp;<small><b>5k</b> &nbsp; Оценка:<b>9.47*4</b> &nbsp;  Рассказ  <A HREF=/comment/e/egorowa_n/roundabout>Комментарии</A> </small><br><DD><font color=#555555><i>Зарисовки из глубин подсознания...</i></font></DL> 
+<DL><DT><li><a href=/p/pikulx_a_s><font color=#555555>Пикуль Андрей Сергеевич</font></a>: <a href=/p/pikulx_a_s/002.shtml><b>Мост</b></a>&nbsp;<small><b>4k</b> &nbsp; Оценка:<b>9.47*4</b> &nbsp;  Рассказ  <A HREF=/comment/p/pikulx_a_s/002>Комментарии</A> </small><br><DD><font color=#555555><i>Пара слов о трепетных знакомствах</i></font></DL> 
+<DL><DT><li><a href=/s/starickij_d><font color=#555555>Старицкий Дмитрий</font></a>: <a href=/s/starickij_d/pk.shtml><b>Эпоха первобытного коммунизма</b></a>&nbsp;<small><b>4k</b> &nbsp; Оценка:<b>9.47*4</b> &nbsp;  Рассказ  <A HREF=/comment/s/starickij_d/pk>Комментарии</A> </small><br></DL> 
+<DL><DT><li><a href=/w/wolgina_l_i><font color=#555555>Волгина Лариса Ивановна</font></a>: <a href=/w/wolgina_l_i/dartagnen.shtml><b>Д`артаньян и госпожа Бонасье</b></a>&nbsp;<small><b>4k</b> &nbsp; Оценка:<b>9.47*4</b> &nbsp;  Рассказ  <A HREF=/comment/w/wolgina_l_i/dartagnen>Комментарии</A> </small><br><DD><font color=#555555><i>Еще один рассказ о безответной любви...</i></font></DL> 
+<DL><DT><li><a href=/w/wrochek_s><font color=#555555>Врочек Шимун</font></a>: <a href=/w/wrochek_s/noir.shtml><b>Noir</b></a>&nbsp;<small><b>4k</b> &nbsp; Оценка:<b>9.47*4</b> &nbsp;  Рассказ  <A HREF=/comment/w/wrochek_s/noir>Комментарии</A> </small><br><DD><font color=#555555><i>записки ночью из холодного отеля</i></font></DL> 
+<DL><DT><li><a href=/c/cokota_o_p><font color=#555555>Цокота Ольга Павловна</font></a>: <a href=/c/cokota_o_p/shpilka1.shtml><b>Сережкино Сиротство</b></a>&nbsp;<small><b>4k</b> &nbsp; Оценка:<b>9.47*4</b> &nbsp;  Миниатюра  <A HREF=/comment/c/cokota_o_p/shpilka1>Комментарии</A> </small><br><DD><font color=#555555><i>Рассказ на одну букву.Второе место на конкурсе "Шпилька-7"</i></font></DL> 
+<DL><DT><li><a href=/f/fost_o_j><font color=#555555>Фост Ольга</font></a>: <a href=/f/fost_o_j/f191-1.shtml><b>Единственный</b></a>&nbsp;<small><b>4k</b> &nbsp; Оценка:<b>9.47*4</b> &nbsp;  Миниатюра  <A HREF=/comment/f/fost_o_j/f191-1>Комментарии</A> </small><br></DL> 
+<DL><DT><li><a href=/p/plotnikow_ewgenij_mihajlowich><font color=#555555>Плотников Евгений Михайлович</font></a>: <a href=/p/plotnikow_ewgenij_mihajlowich/vech.shtml><b>О любви и бессмертии</b></a>&nbsp;<small><b>3k</b> &nbsp; Оценка:<b>9.47*4</b> &nbsp;  Рассказ  <A HREF=/comment/p/plotnikow_ewgenij_mihajlowich/vech>Комментарии</A> </small><br><DD><font color=#555555><i>Про прабабушку и маму</i></font></DL> 
+<DL><DT><li><a href=/w/warsonofxew_s><font color=#555555>Варсонофьев Сергей</font></a>: <a href=/w/warsonofxew_s/volk.shtml><b>Волк</b></a>&nbsp;<small><b>3k</b> &nbsp; Оценка:<b>9.47*4</b> &nbsp;  Миниатюра  <A HREF=/comment/w/warsonofxew_s/volk>Комментарии</A> </small><br></DL> 
+<DL><DT><li><a href=/e/erik_a><font color=#555555>Ардаган Эрик</font></a>: <a href=/e/erik_a/aconcurs01.shtml><b>12-01 Клад!</b></a>&nbsp;<small><b>3k</b> &nbsp; Оценка:<b>9.47*4</b> &nbsp;  Рассказ  <A HREF=/comment/e/erik_a/aconcurs01>Комментарии</A> </small><br><DD><font color=#555555><i>Рассказ 12 конкурса</i></font></DL> 
+<DL><DT><li><a href=/z/zhenewskaja_s_w><font color=#555555>Женевская Сена</font></a>: <a href=/z/zhenewskaja_s_w/mame.shtml><b>Маме</b></a>&nbsp;<small><b>2k</b> &nbsp; Оценка:<b>9.47*4</b> &nbsp;  Миниатюра  <A HREF=/comment/z/zhenewskaja_s_w/mame>Комментарии</A> </small><br></DL> 
+<DL><DT><li><a href=/g/gorohow_aleksandr_wadimowich><font color=#555555>Горохов Александр Вадимович</font></a>: <a href=/g/gorohow_aleksandr_wadimowich/onas-65.shtml><b>Чаепитие с осенью</b></a>&nbsp;<small><b>2k</b> &nbsp; Оценка:<b>9.47*4</b> &nbsp;  Миниатюра </small><br></DL> 
+<DL><DT><li><a href=/a/arhipenko_o_a><font color=#555555>Леданика</font></a>: <a href=/a/arhipenko_o_a/devochka-1.shtml><b>Девочка с бантиками</b></a>&nbsp;<small><b>2k</b> &nbsp; Оценка:<b>9.47*4</b> &nbsp;  Рассказ  <A HREF=/comment/a/arhipenko_o_a/devochka-1>Комментарии</A> </small><br><DD><font color=#555555><i>Инверсия. "Чайлдфри". "Чайлдхейт"</i></font></DL> 
+<DL><DT><li><a href=/a/alawin_a><font color=#555555>Алавин Александр</font></a>: <a href=/a/alawin_a/jankoy.shtml><b>Джанкой</b></a>&nbsp;<small><b>1k</b> &nbsp; Оценка:<b>9.47*4</b> &nbsp;  Миниатюра  <A HREF=/comment/a/alawin_a/jankoy>Комментарии</A> </small><br><DD><font color=#555555><i>Короткая и легкая миниатюра</i></font></DL> 
+<DL><DT><li><a href=/l/lomachinskij_a_a><font color=#555555>Ломачинский  Андрей Анатольевич</font></a>: <a href=/l/lomachinskij_a_a/sbornik-2.shtml><b>*</b></a>&nbsp;<small><b>0k</b> &nbsp; Оценка:<b>9.47*4</b> &nbsp;  Рассказ  <A HREF=/comment/l/lomachinskij_a_a/sbornik-2>Комментарии</A> </small><br><DD><font color=#555555><i>Текст временно удалён по бумажной просьбе</i></font></DL> 
+<DL><DT><li><a href=/l/lezhawa_i_k><font color=#555555>Лежава Ирина Карловна</font></a>: <a href=/l/lezhawa_i_k/prichitanie.shtml><b>Причитание</b></a>&nbsp;<small><b>125k</b> &nbsp; Оценка:<b>9.45*6</b> &nbsp;  Повесть  <A HREF=/comment/l/lezhawa_i_k/prichitanie>Комментарии</A> </small><br><DD><font color=#555555><i>Повесть написана на грузинском материале и Грузии посвящается. Опубликована в литературно-художественном журнале "Новая литература".  В 2014 году переработанный текст повести вышел отдельной книгой в издательстве "Stella" (Германия).</i></font></DL> 
+<DL><DT><li><a href=/s/sereda_e_w><font color=#555555>Середа Елена</font></a>: <a href=/s/sereda_e_w/kamen_koroley_990.shtml><b>Камень королей. Глава 20. Братская любовь</b></a>&nbsp;<small><b>205k</b> &nbsp; Оценка:<b>9.31*5</b> &nbsp;  Глава  <A HREF=/comment/s/sereda_e_w/kamen_koroley_990>Комментарии</A> </small><br></DL> 
+<DL><DT><li><a href=/s/sladchij_k><font color=#555555>Сладчий Касим</font></a>: <a href=/s/sladchij_k/otec.shtml><b>Проза и поэзия</b></a>&nbsp;<small><b>199k</b> &nbsp; Оценка:<b>9.31*5</b> &nbsp;  Повесть </small><br></DL> 
+<DL><DT><li><a href=/k/kuznecow_k_n><font color=#555555>Кузнецов Константин Николаевич</font></a>: <a href=/k/kuznecow_k_n/100kg-3-39.shtml><b>Часть третья. Глава 39</b></a>&nbsp;<small><b>70k</b> &nbsp; Оценка:<b>9.31*5</b> &nbsp;  Глава </small><br><DD><font color=#555555><i>Третья часть 100 кг.</i></font></DL> 
+<DL><DT><li><a href=/e/efremow_a_n><font color=#555555>Ефремов Андрей Николаевич</font></a>: <a href=/e/efremow_a_n/nekhorosheemesto.shtml><b>Нехорошее Место</b></a>&nbsp;<small><b>34k</b> &nbsp; Оценка:<b>9.31*5</b> &nbsp;  Новелла  <A HREF=/comment/e/efremow_a_n/nekhorosheemesto>Комментарии</A> </small><br><DD><font color=#555555><i>    "...В Высочайше вверенной моему управлению области   все спокойно, никаких выдающихся преступлений нет".   (Из рапорта губернатора Якутской области   И.И. Крафт Иркутскому генерал-губернатору).</i></font></DL> 
+<DL><DT><li><a href=/p/popowskaja_i_i><font color=#555555>Поповская Ирина</font></a>: <a href=/p/popowskaja_i_i/raznoestor.shtml><b>Пейзаж без рамы</b></a>&nbsp;<small><b>23k</b> &nbsp; Оценка:<b>9.31*5</b> &nbsp;  Новелла  <A HREF=/comment/p/popowskaja_i_i/raznoestor>Комментарии</A> </small><br></DL> 
+<DL><DT><li><a href=/k/kutman_e><font color=#555555>Кутман Евгения</font></a>: <a href=/k/kutman_e/zefirki.shtml><b>В горе и в радости с чаем и зефирками</b></a>&nbsp;<small><b>15k</b> &nbsp; Оценка:<b>9.31*5</b> &nbsp;  Новелла  <A HREF=/comment/k/kutman_e/zefirki>Комментарии</A> </small><br><DD><font color=#555555><i>Бытовая фантастика.Нет ничего страшнее одиночества. Если начинаешь разговаривать с чайником и компьютером - жди беды. Или участкового, которого натравливает вредная соседка. Но всё заканчивается совсем не так ...</i></font></DL> 
+<DL><DT><li><a href=/a/aleksandr_slesarchuk><font color=#555555>Слесарчук Александр</font></a>: <a href=/a/aleksandr_slesarchuk/xb.shtml><b>Стоять!</b></a>&nbsp;<small><b>14k</b> &nbsp; Оценка:<b>9.31*5</b> &nbsp;  Рассказ  <A HREF=/comment/a/aleksandr_slesarchuk/xb>Комментарии</A> </small><br></DL> 
+<DL><DT><li><a href=/s/shlifowalxshik><font color=#555555>Шлифовальщик</font></a>: <a href=/s/shlifowalxshik/instruction.shtml><b>Памятка преемнику президента</b></a>&nbsp;<small><b>8k</b> &nbsp; Оценка:<b>9.31*5</b> &nbsp;  Эссе  <A HREF=/comment/s/shlifowalxshik/instruction>Комментарии</A> </small><br><DD><font color=#555555><i>Вышел на бумаге  В преддверии президентских выборов 2012 года хочется дать несколько советов</i></font></DL> 
+<DL><DT><li><a href=/r/rejn_o><font color=#555555>Рэйн О</font></a>: <a href=/r/rejn_o/ishtar3.shtml><b>Врата Иштар (вариант для Хиж)</b></a>&nbsp;<small><b>5k</b> &nbsp; Оценка:<b>9.31*5</b> &nbsp;  Миниатюра  <A HREF=/comment/r/rejn_o/ishtar3>Комментарии</A> </small><br></DL> 
+<DL><DT><li><a href=/e/ermakowa_marija_aleksandrowna><font color=#555555>Ермакова Мария Александровна</font></a>: <a href=/e/ermakowa_marija_aleksandrowna/tumannost.shtml><b>Туманность Ликандры</b></a>&nbsp;<small><b>4k</b> &nbsp; Оценка:<b>9.31*5</b> &nbsp;  Миниатюра  <A HREF=/comment/e/ermakowa_marija_aleksandrowna/tumannost>Комментарии</A> </small><br><DD><font color=#555555><i>Хиж-нано-2013</i></font></DL> 
+<DL><DT><li><a href=/m/matjuhin_a_a><font color=#555555>Матюхин Александр</font></a>: <a href=/m/matjuhin_a_a/celujushiesolnce.shtml><b>Целующие солнце</b></a>&nbsp;<small><b>521k</b> &nbsp; Оценка:<b>9.28*5</b> &nbsp;  Статья  <A HREF=/comment/m/matjuhin_a_a/celujushiesolnce>Комментарии</A> </small><br><DD><font color=#555555><i>Заигрывание с жизнью не всегда заканчивается хорошо. А заигрыванье с любовью всегда заканчивается плохо. Роман-позитив.  Участник 10-го Форума молодых писателей России</i></font></DL> 
+<DL><DT><li><a href=/g/galina_u><font color=#555555>Ушакова Галина</font></a>: <a href=/g/galina_u/urodina.shtml><b>Уродина</b></a>&nbsp;<small><b>73k</b> &nbsp; Оценка:<b>9.28*5</b> &nbsp;  Рассказ  <A HREF=/comment/g/galina_u/urodina>Комментарии</A> </small><br></DL> 
+<DL><DT><li><a href=/b/borodkin_a_p><font color=#555555>Бородкин Алексей Петрович</font></a>: <a href=/b/borodkin_a_p/fight.shtml><b>Битва</b></a>&nbsp;<small><b>29k</b> &nbsp; Оценка:<b>9.28*5</b> &nbsp;  Рассказ  <A HREF=/comment/b/borodkin_a_p/fight>Комментарии</A> </small><br></DL> 
+<DL><DT><li><a href=/s/sazonow_s_m><font color=#555555>Сазонов Сергей Дмитриевич</font></a>: <a href=/s/sazonow_s_m/pyl_c_planety.shtml><b>Пыль с планеты Юни</b></a>&nbsp;<small><b>22k</b> &nbsp; Оценка:<b>9.28*5</b> &nbsp;  Новелла  <A HREF=/comment/s/sazonow_s_m/pyl_c_planety>Комментарии</A> </small><br></DL> 
+<DL><DT><li><a href=/o/osanches><font color=#555555>О'Санчес</font></a>: <a href=/o/osanches/donos.shtml><b>Лук и донос</b></a>&nbsp;<small><b>15k</b> &nbsp; Оценка:<b>9.28*5</b> &nbsp;  Рассказ  <A HREF=/comment/o/osanches/donos>Комментарии</A> </small><br><DD><font color=#555555><i>Один из "армейских" рассказов о Луке</i></font></DL> 
+<DL><DT><li><a href=/g/grisha_r><font color=#555555>Растекай Гриша</font></a>: <a href=/g/grisha_r/zayac.shtml><b>Старый заяц</b></a>&nbsp;<small><b>13k</b> &nbsp; Оценка:<b>9.28*5</b> &nbsp;  Рассказ  <A HREF=/comment/g/grisha_r/zayac>Комментарии</A> </small><br></DL> 
+<DL><DT><li><a href=/s/semenow_igorx><font color=#555555>Семёнов Игорь</font></a>: <a href=/s/semenow_igorx/pylia-dyra.shtml><b>Тупое любопытство оружия</b></a>&nbsp;<small><b>12k</b> &nbsp; Оценка:<b>9.28*5</b> &nbsp;  Рассказ  <A HREF=/comment/s/semenow_igorx/pylia-dyra>Комментарии</A> </small><br><DD><font color=#555555><i>Небольшой милитаристский сюр. Ей-богу не соврал ни на буквочку. Поклонников Фрейда и иже с ними прошу не заглядывать - поймут неправильно. Пацифистам и либерастам тоже читать не советую. А вот заглавие мне не нравится. Может, кто подскажет вариант получше</i></font></DL> 
+<DL><DT><li><a href=/j/jakushina_n_a><font color=#555555>Якушина Наталья Анатольевна</font></a>: <a href=/j/jakushina_n_a/msworddoc-4.shtml><b>Мата Хари - английский шпион</b></a>&nbsp;<small><b>6k</b> &nbsp; Оценка:<b>9.28*5</b> &nbsp;  Рассказ  <A HREF=/comment/j/jakushina_n_a/msworddoc-4>Комментарии</A> </small><br><DD><font color=#555555><i>Юмористический рассказ о путешествие в плацкарте из Бреста в Москву и о том, как украсть секреты Родины. Рассказ занял 3-е место на конкурсе короткой юмористической прозы в 2010 году.</i></font></DL> 
+<DL><DT><li><a href=/d/drach_a_w><font color=#555555>Драч Александр Владимирович</font></a>: <a href=/d/drach_a_w/bez_poter.shtml><b>Без потерь</b></a>&nbsp;<small><b>5k</b> &nbsp; Оценка:<b>9.28*5</b> &nbsp;  Миниатюра  <A HREF=/comment/d/drach_a_w/bez_poter>Комментарии</A> </small><br></DL> 
+<DL><DT><li><a href=/a/anton_awajs><font color=#555555>Авайс Антон</font></a>: <a href=/a/anton_awajs/hulityahaben.shtml><b>Фулитяхабен</b></a>&nbsp;<small><b>5k</b> &nbsp; Оценка:<b>9.28*5</b> &nbsp;  Новелла  <A HREF=/comment/a/anton_awajs/hulityahaben>Комментарии</A> </small><br></DL> 
+<DL><DT><li><a href=/z/zaharowa_n_a><font color=#555555>Захарова Наталья Анатольевна</font></a>: <a href=/z/zaharowa_n_a/wwerh.shtml><b>Вверх</b></a>&nbsp;<small><b>4k</b> &nbsp; Оценка:<b>9.28*5</b> &nbsp;  Рассказ </small><br><DD><font color=#555555><i>Иногда требуется шагнуть вниз, чтобы взлететь вверх.</i></font></DL> 
+<DL><DT><li><a href=/i/iwliew_s_p><font color=#555555>Ивлиев Сергей Павлович</font></a>: <a href=/i/iwliew_s_p/0002-01.shtml><b>О белом холсте</b></a>&nbsp;<small><b>4k</b> &nbsp; Оценка:<b>9.28*5</b> &nbsp;  Рассказ  <A HREF=/comment/i/iwliew_s_p/0002-01>Комментарии</A> </small><br><DD><font color=#555555><i>Что мы видим, что нам дорого.   Что мы теряем.    Для чего это все... Прода 28.08.13</i></font></DL> 
+<DL><DT><li><a href=/s/semenow_igorx><font color=#555555>Семёнов Игорь</font></a>: <a href=/s/semenow_igorx/medved.shtml><b>Вот и поздоровались!</b></a>&nbsp;<small><b>3k</b> &nbsp; Оценка:<b>9.28*5</b> &nbsp;  Рассказ  <A HREF=/comment/s/semenow_igorx/medved>Комментарии</A> </small><br><DD><font color=#555555><i>Почти ни о чём - так... похихикать</i></font></DL> 
+<DL><DT><li><a href=/b/beljackaja_i_v><font color=#555555>Беляцкая Инна Викторовна</font></a>: <a href=/b/beljackaja_i_v/1794.shtml><b>Проза жизни. Сериал. (написано в 2018 году)</b></a>&nbsp;<small><b>48k</b> &nbsp; Оценка:<b>9.23*6</b> &nbsp;  Рассказ  <A HREF=/comment/b/beljackaja_i_v/1794>Комментарии</A> </small><br><DD><font color=#555555><i> История произошла на грани двух веков, все прелести и не прелести цивилизации присутствуют</i></font></DL> 
+<DL><DT><li><a href=/b/borodkin_a_p><font color=#555555>Бородкин Алексей Петрович</font></a>: <a href=/b/borodkin_a_p/marathon_pd.shtml><b>Марафон длиною в бесконечность</b></a>&nbsp;<small><b>40k</b> &nbsp; Оценка:<b>9.20*6</b> &nbsp;  Рассказ  <A HREF=/comment/b/borodkin_a_p/marathon_pd>Комментарии</A> </small><br><DD><font color=#555555><i>Урезанная конкурсная редакция.</i></font></DL> 
+<DL><DT><li><a href=/r/radionowa_w_a><font color=#555555>Радионова Виктория Александровна</font></a>: <a href=/r/radionowa_w_a/pomiluj.shtml><b>Помилуй мя</b></a>&nbsp;<small><b>33k</b> &nbsp; Оценка:<b>9.20*6</b> &nbsp;  Новелла  <A HREF=/comment/r/radionowa_w_a/pomiluj>Комментарии</A> </small><br></DL> 
+<DL><DT><li><a href=/s/sycko_k_a><font color=#555555>Ангел</font></a>: <a href=/s/sycko_k_a/slushaj.shtml><b>Слушай...</b></a>&nbsp;<small><b>4k</b> &nbsp; Оценка:<b>9.20*6</b> &nbsp;  Миниатюра  <A HREF=/comment/s/sycko_k_a/slushaj>Комментарии</A> </small><br><DD><font color=#555555><i>Это не о себе, не о ком-либо... Но это довольно таки страшно и больно. По крайней мере для меня.</i></font></DL> 
+<DL><DT><li><a href=/r/rub_a_w><font color=#555555>Руб Андрей Викторович</font></a>: <a href=/r/rub_a_w/istorijanaduwalowa.shtml><b>История надувалова...</b></a>&nbsp;<small><b>3k</b> &nbsp; Оценка:<b>9.20*6</b> &nbsp;  Статья  <A HREF=/comment/r/rub_a_w/istorijanaduwalowa>Комментарии</A> </small><br><DD><font color=#555555><i>Все знают..., но кому-то будет интересно....))</i></font></DL> 
+<DL><DT><li><a href=/h/husnullin_a_s><font color=#555555>Уралов Александр</font></a>: <a href=/h/husnullin_a_s/million_k_odnomu.shtml><b>Один на миллион</b></a>&nbsp;<small><b>31k</b> &nbsp; Оценка:<b>9.19*19</b> &nbsp;  Рассказ  <A HREF=/comment/h/husnullin_a_s/million_k_odnomu>Комментарии</A> </small><br><DD><font color=#555555><i>Даже в эпоху колонизации космоса есть свои счастливчики, которым достаётся шанс - один на миллион.</i></font></DL> 
+<DL><DT><li><a href=/g/grin_g><font color=#555555>Тихонова Вика</font></a>: <a href=/g/grin_g/ladywithanapple.shtml><b>Дама с яблоком</b></a>&nbsp;<small><b>7k</b> &nbsp; Оценка:<b>9.03*6</b> &nbsp;  Новелла  <A HREF=/comment/g/grin_g/ladywithanapple>Комментарии</A> </small><br><DD><font color=#555555><i>Воспоминания о былой любви.</i></font></DL> 
+<DL><DT><li><a href=/s/stekljannikow_a_a><font color=#555555>Стеклянников Александр А.</font></a>: <a href=/s/stekljannikow_a_a/prednazn_3.shtml><b>Предназначение 3 - Чья-то жизнь... (трилогия)</b></a>&nbsp;<small><b>264k</b> &nbsp; Оценка:<b>9.00*7</b> &nbsp;  Повесть </small><br></DL> 
+<DL><DT><li><a href=/p/pawlow_aleksej_aleksandrowich><font color=#555555>Павлов Алексей</font></a>: <a href=/p/pawlow_aleksej_aleksandrowich/matricababochki.shtml><b>Unlimited Link Works</b></a>&nbsp;<small><b>53k</b> &nbsp; Оценка:<b>9.00*6</b> &nbsp;  Рассказ  <A HREF=/comment/p/pawlow_aleksej_aleksandrowich/matricababochki>Комментарии</A> </small><br><DD><font color=#555555><i>Небольшое размышление о будущем, прогрессе и о том, нужны ли мы - нам? И да, Насуверс абсолютно ни при чём</i></font></DL> 
+<DL><DT><li><a href=/d/dnewnaja_s><font color=#555555>Дневная Сова</font></a>: <a href=/d/dnewnaja_s/plamjanashejzhizni.shtml><b>Пламя нашей жизни</b></a>&nbsp;<small><b>2134k</b> &nbsp; Оценка:<b>9.00*5</b> &nbsp;  Глава  <A HREF=/comment/d/dnewnaja_s/plamjanashejzhizni>Комментарии</A> </small><br><DD><font color=#555555><i>Пойти против сильнейшей мафиозной семьи - храбрость или безрассудство? Акиру больше нельзя назвать разменной монетой в партии выстроенной Вонголой. Своей судьбой она предпочитает руководить сама, но неизвестно к каким последствиям это приведет ее в будущем и с чем придется столкнуться.  ...</i></font></DL> 
+<DL><DT><li><a href=/w/wolxhina_g_a><font color=#555555>Тигринья</font></a>: <a href=/w/wolxhina_g_a/idm_1.shtml><b>Баронесса Воробышек</b></a>&nbsp;<small><b>186k</b> &nbsp; Оценка:<b>9.00*5</b> &nbsp;  Повесть  <A HREF=/comment/w/wolxhina_g_a/idm_1>Комментарии</A> </small><br><DD><font color=#555555><i>Это первая из историй "дорогой мамочки". Выполнив три обязательных контракта, чистокровная лямбда делает шаг к свободе. Из мира, в котором её оберегают Евгенические законы, она попадает в мир, где женщина бесправна. Из мира высоких технологий в мир средневековья. И вот оно было надо?  ...</i></font></DL> 
+<DL><DT><li><a href=/s/swechin_a><font color=#555555>Свечин Андрей</font></a>: <a href=/s/swechin_a/2gypsy2.shtml><b>Люди, звери, медведи, цыгане... (окончание)</b></a>&nbsp;<small><b>131k</b> &nbsp; Оценка:<b>9.00*5</b> &nbsp;  Глава  <A HREF=/comment/s/swechin_a/2gypsy2>Комментарии</A> </small><br></DL> 
+<DL><DT><li><a href=/m/matweewa_e><font color=#555555>Матвеева Эйли</font></a>: <a href=/m/matweewa_e/alli01.shtml><b>Решение</b></a>&nbsp;<small><b>91k</b> &nbsp; Оценка:<b>9.00*5</b> &nbsp;  Рассказ  <A HREF=/comment/m/matweewa_e/alli01>Комментарии</A> </small><br><DD><font color=#555555><i>Первый рассказ цикла.  Жизнь - штука непредсказуемая и изворотливая. Никогда не знаешь, что случится завтра; никогда не знаешь, чем обернётся та или иная ситуация. Для торговца Гина Юанона неожиданная смерть соседа - серьёзная помеха работе и нарушение привычного уклада. Для его жены  ...</i></font></DL> 
+<DL><DT><li><a href=/m/musin_r_i><font color=#555555>Мусин Ринат</font></a>: <a href=/m/musin_r_i/512.shtml><b>Негатив</b></a>&nbsp;<small><b>47k</b> &nbsp; Оценка:<b>9.00*5</b> &nbsp;  Сборник рассказов  <A HREF=/comment/m/musin_r_i/512>Комментарии</A> </small><br><DD><font color=#555555><i>1 часть : "Момент истины" заняла 8-е место на конкурсе "БС - 2". Четвертая часть "Волчата" была снята с конкурса по независящим от автора причинам. Текст содержит ненормативную лексику и сцены насилия.</i></font></DL> 
+<DL><DT><li><a href=/m/mudrowa_t_a><font color=#555555>Мудрая Татьяна Алексеевна</font></a>: <a href=/m/mudrowa_t_a/ognjan.shtml><b>Огняник</b></a>&nbsp;<small><b>40k</b> &nbsp; Оценка:<b>9.00*5</b> &nbsp;  Новелла  <A HREF=/comment/m/mudrowa_t_a/ognjan>Комментарии</A> </small><br></DL> 
+<DL><DT><li><a href=/m/mosenko_l><font color=#555555>Л. А.</font></a>: <a href=/m/mosenko_l/rabyjamanarry.shtml><b>Рабы Йаманарры (Пролог и Глава 1)</b></a>&nbsp;<small><b>31k</b> &nbsp; Оценка:<b>9.00*5</b> &nbsp;  Глава  <A HREF=/comment/m/mosenko_l/rabyjamanarry>Комментарии</A> </small><br><DD><font color=#555555><i>*Текст пережил ещё одну, существенную правку.* История о молодом воине Брэннане, который против воли стал рабом-бестиарием, мечтающим отвоевать свою свободу, и его богатой молодой хозяйке Коре, ставшей жертвой собственных опекунов. Ни раб, ни его госпожа не подозревают, что они лишь  ...</i></font></DL> 
+<DL><DT><li><a href=/t/tarasow_s><font color=#555555>Тарасов С. В.</font></a>: <a href=/t/tarasow_s/denxswjatogowalentina.shtml><b>День Святого Валентина</b></a>&nbsp;<small><b>23k</b> &nbsp; Оценка:<b>9.00*5</b> &nbsp;  Рассказ  <A HREF=/comment/t/tarasow_s/denxswjatogowalentina>Комментарии</A> </small><br><DD><font color=#555555><i>Модель жизни... Пример жизни... День жизни. Не обязательно быть ангелом, чтобы стать святым...</i></font></DL> 
+<DL><DT><li><a href=/t/tumanow_s><font color=#555555>Туманов Сергей</font></a>: <a href=/t/tumanow_s/sila.shtml><b>Сила вражьего слова</b></a>&nbsp;<small><b>20k</b> &nbsp; Оценка:<b>9.00*5</b> &nbsp;  Рассказ  <A HREF=/comment/t/tumanow_s/sila>Комментарии</A> </small><br><DD><font color=#555555><i>Писано специально для конкурса исторического рассказа... хотя сам рассказ получился антиисторический. Надеюсь, что среди богов, героев и прочих инопланетян, задействованных на данном конкурсе :))), мои скромные персонажи  будут выглядеть также достоверно :)На конкурсе тоже занял 5  ...</i></font></DL> 
+<DL><DT><li><a href=/p/prudkow_w_w><font color=#555555>Прудков Владимир</font></a>: <a href=/p/prudkow_w_w/nast-colonel.shtml><b>Настоящий полковник</b></a>&nbsp;<small><b>15k</b> &nbsp; Оценка:<b>9.00*5</b> &nbsp;  Рассказ  <A HREF=/comment/p/prudkow_w_w/nast-colonel>Комментарии</A> </small><br><DD><font color=#555555><i>Катя глянула на полковника и подумала: сексуальный маньяк! А вслух спросила: - Вы одинокий, да? И тут же покраснела. "Нет, это я сама сексуальная маньячка!"</i></font></DL> 
+<DL><DT><li><a href=/i/ilxina_i_i><font color=#555555>Ильина Ирина Игоревна</font></a>: <a href=/i/ilxina_i_i/dvedotheri.shtml><b>Две дочери</b></a>&nbsp;<small><b>13k</b> &nbsp; Оценка:<b>9.00*5</b> &nbsp;  Рассказ  <A HREF=/comment/i/ilxina_i_i/dvedotheri>Комментарии</A> </small><br><DD><font color=#555555><i>18 место из 58 в конкурсе Село Счастливое 2012г.</i></font></DL> 
+<DL><DT><li><a href=/s/shepak_w_k><font color=#555555>Щепак Владимир Карлович</font></a>: <a href=/s/shepak_w_k/proxymo.shtml><b>Proxymo</b></a>&nbsp;<small><b>5k</b> &nbsp; Оценка:<b>9.00*5</b> &nbsp;  Миниатюра  <A HREF=/comment/s/shepak_w_k/proxymo>Комментарии</A> </small><br><DD><font color=#555555><i>Антология ненависти</i></font></DL> 
+<DL><DT><li><a href=/i/iwa><font color=#555555>Ива</font></a>: <a href=/i/iwa/15.shtml><b>Зеркала</b></a>&nbsp;<small><b>3k</b> &nbsp; Оценка:<b>9.00*5</b> &nbsp;  Миниатюра  <A HREF=/comment/i/iwa/15>Комментарии</A> </small><br></DL> 
+<DL><DT><li><a href=/d/dawydowa_g_p><font color=#555555>Давыдова Галина Петровна</font></a>: <a href=/d/dawydowa_g_p/rim-14.shtml><b>Инструкция по применению мужчин</b></a>&nbsp;<small><b>2k</b> &nbsp; Оценка:<b>9.00*5</b> &nbsp;  Рассказ  <A HREF=/comment/d/dawydowa_g_p/rim-14>Комментарии</A> </small><br></DL> 
+<DL><DT><li><a href=/g/gawrilenko_d_s><font color=#555555>Гавриленко Дмитрий Сергеевич</font></a>: <a href=/g/gawrilenko_d_s/dmitrijsergeewichgawrilenko-159.shtml><b>8-е Марта</b></a>&nbsp;<small><b>0k</b> &nbsp; Оценка:<b>9.00*5</b> &nbsp;  Миниатюра  <A HREF=/comment/g/gawrilenko_d_s/dmitrijsergeewichgawrilenko-159>Комментарии</A> </small><br></DL> 
+<DL><DT><li><a href=/d/dmitriewa_n_g><font color=#555555>Миркина Зинаида</font></a>: <a href=/d/dmitriewa_n_g/ozerosariklen.shtml><b>Озеро Сариклен</b></a>&nbsp;<small><b>362k</b> &nbsp; Оценка:<b>9.00*4</b> &nbsp;  Роман </small><br><DD><font color=#555555><i>Опыт, который всю свою жизнь проговаривает Зинаида Миркина, это опыт слушания тайны жизни. Она умеет слушать закат, умеет слушать лес и море, она слышит молитву дерева, слышит свет и красоту даже самого неказистого человека.  Ее стихи и проза это удивительные струны того невидимого  ...</i></font></DL> 
+<DL><DT><li><a href=/s/sofija_a_r><font color=#555555>Розен София Аурелия</font></a>: <a href=/s/sofija_a_r/kuzja.shtml><b>История кота Кузи, Рыцаря, боровшегося с Драконом</b></a>&nbsp;<small><b>210k</b> &nbsp; Оценка:<b>9.00*4</b> &nbsp;  Статья  <A HREF=/comment/s/sofija_a_r/kuzja>Комментарии</A> </small><br><DD><font color=#555555><i>реалистичная фантасмагория</i></font></DL> 
+<DL><DT><li><a href=/n/nastasxja_w><font color=#555555>Васильевна Настасья</font></a>: <a href=/n/nastasxja_w/ljudiikoroli.shtml><b>Люди и короли</b></a>&nbsp;<small><b>172k</b> &nbsp; Оценка:<b>9.00*4</b> &nbsp;  Глава  <A HREF=/comment/n/nastasxja_w/ljudiikoroli>Комментарии</A> </small><br><DD><font color=#555555><i>Что делать,если ты - наследная принцесса, но на троне желают видеть исключительно мужчину. Инструкция по выживанию.       прода от 06.01</i></font></DL> 
+<DL><DT><li><a href=/e/elian><font color=#555555>Элиан</font></a>: <a href=/e/elian/fatedoc.shtml><b>Fate Stay Night -- Вопреки судьбе ~ Пробуждение</b></a>&nbsp;<small><b>152k</b> &nbsp; Оценка:<b>9.00*4</b> &nbsp;  Глава  <A HREF=/comment/e/elian/fatedoc>Комментарии</A> </small><br><DD><font color=#555555><i>Шестой финал Fate/Stay Night - "Пробуждение". Через неделю после исчезновения Сэйбер (финал "Continuation of the Dream") обнаруживается что канал, связывающий её с Широ всё ещё существует, и более того, существование канала угрожает его жизни так как магическая и жизненная энергия  ...</i></font></DL> 
+<DL><DT><li><a href=/s/stekljannikow_a_a><font color=#555555>Стеклянников Александр А.</font></a>: <a href=/s/stekljannikow_a_a/labirint.shtml><b>Лабиринт</b></a>&nbsp;<small><b>97k</b> &nbsp; Оценка:<b>9.00*4</b> &nbsp;  Рассказ </small><br></DL> 
+<DL><DT><li><a href=/a/arhangelxskaja_m_w><font color=#555555>Архангельская Мария Владимировна</font></a>: <a href=/a/arhangelxskaja_m_w/devushka.shtml><b>Девушка и смерть</b></a>&nbsp;<small><b>89k</b> &nbsp; Оценка:<b>9.00*4</b> &nbsp;  Повесть  <A HREF=/comment/a/arhangelxskaja_m_w/devushka>Комментарии</A> </small><br><DD><font color=#555555><i>  Я очень люблю фильм-мюзикл Дж. Шумахера "Призрак Оперы", читала и роман Леру. Данное произведение является честным и откровенным перепевом того же сюжета, немного с добавлением мистики. Честно признаюсь, что с театром вообще, и с балетом в частности, знакома исключительно как зритель,  ...</i></font></DL> 
+<DL><DT><li><a href=/k/kotolewskij_s_i><font color=#555555>Котолевский Станислав Игоревич</font></a>: <a href=/k/kotolewskij_s_i/astronaut.shtml><b>Астронавт</b></a>&nbsp;<small><b>76k</b> &nbsp; Оценка:<b>9.00*4</b> &nbsp;  Рассказ </small><br></DL> 
+<DL><DT><li><a href=/b/berdnik_w><font color=#555555>Бердник Виктор</font></a>: <a href=/b/berdnik_w/vb9.shtml><b>La Costa de Raton</b></a>&nbsp;<small><b>54k</b> &nbsp; Оценка:<b>9.00*4</b> &nbsp;  Рассказ  <A HREF=/comment/b/berdnik_w/vb9>Комментарии</A> </small><br><DD><font color=#555555><i>Пять печатных публикации: в России, в США, в Канаде</i></font></DL> 
+<DL><DT><li><a href=/s/setroi><font color=#555555>Setroi</font></a>: <a href=/s/setroi/glawa15.shtml><b>Глава 15</b></a>&nbsp;<small><b>42k</b> &nbsp; Оценка:<b>9.00*4</b> &nbsp;  Глава </small><br></DL> 
+<DL><DT><li><a href=/k/koptewa_d_a><font color=#555555>Коптева Дарья Андреевна</font></a>: <a href=/k/koptewa_d_a/zelezka.shtml><b>Железка</b></a>&nbsp;<small><b>41k</b> &nbsp; Оценка:<b>9.00*4</b> &nbsp;  Рассказ  <A HREF=/comment/k/koptewa_d_a/zelezka>Комментарии</A> </small><br><DD><font color=#555555><i>Анжелика ненавидела киборга Аррена с детства. Эта ненависть не дает ей покоя, ее она пронесла сквозь время.   И дураки. Вокруг нее одни дураки.</i></font></DL> 
+<DL><DT><li><a href=/d/d_o_k><font color=#555555>Д О К</font></a>: <a href=/d/d_o_k/sutki.shtml><b>Сутки</b></a>&nbsp;<small><b>39k</b> &nbsp; Оценка:<b>9.00*4</b> &nbsp;  Рассказ  <A HREF=/comment/d/d_o_k/sutki>Комментарии</A> </small><br><DD><font color=#555555><i>Оргазм в кастрюльке и популярная психиатрия. Разные мысли одним утром в одной постели. Одиночество и жареная картошка. 24 часа.</i></font></DL> 
+<DL><DT><li><a href=/g/gufeld_z><font color=#555555>Гуфельд Зэев</font></a>: <a href=/g/gufeld_z/ingresso_all_inferno.shtml><b>Ingresso all'inferno</b></a>&nbsp;<small><b>34k</b> &nbsp; Оценка:<b>9.00*4</b> &nbsp;  Рассказ  <A HREF=/comment/g/gufeld_z/ingresso_all_inferno>Комментарии</A> </small><br><DD><font color=#555555><i>В декабре 2012-го путешествовал по Северной Италии. И был очарован ею настолько же, насколько и замёрз.  Однажды мне приснился страшный сон. Первая мысль при пробуждении: "Вау! Да это же рассказ!"  И возможность ещё раз ощутить Северную Италию.  Почти весь рассказ писал в привезённой  ...</i></font></DL> 
+<DL><DT><li><a href=/a/arhangelxskaja_m_w><font color=#555555>Архангельская Мария Владимировна</font></a>: <a href=/a/arhangelxskaja_m_w/vdova.shtml><b>Глава 20. Соломенная вдова</b></a>&nbsp;<small><b>34k</b> &nbsp; Оценка:<b>9.00*4</b> &nbsp;  Глава  <A HREF=/comment/a/arhangelxskaja_m_w/vdova>Комментарии</A> </small><br></DL> 
+<DL><DT><li><a href=/j/jaroslaw_w><font color=#555555>Вал Ярослав</font></a>: <a href=/j/jaroslaw_w/pnevmoniya.shtml><b>Пневмония</b></a>&nbsp;<small><b>32k</b> &nbsp; Оценка:<b>9.00*4</b> &nbsp;  Рассказ  <A HREF=/comment/j/jaroslaw_w/pnevmoniya>Комментарии</A> </small><br></DL> 
+<DL><DT><li><a href=/m/mudrowa_t_a><font color=#555555>Мудрая Татьяна Алексеевна</font></a>: <a href=/m/mudrowa_t_a/saga.shtml><b> Сага о Йорун Ночное Солнце</b></a>&nbsp;<small><b>30k</b> &nbsp; Оценка:<b>9.00*4</b> &nbsp;  Рассказ  <A HREF=/comment/m/mudrowa_t_a/saga>Комментарии</A> </small><br><DD><font color=#555555><i>        Моя виса - только последняя, прочие - классика. Также рекомендую прочесть статью:         Исландская сага  как мое личное переживание      </i></font></DL> 
+<DL><DT><li><a href=/r/rozhkowa><font color=#555555>Рожкова Анна</font></a>: <a href=/r/rozhkowa/igrjanulgrom.shtml><b>И грянул гром</b></a>&nbsp;<small><b>28k</b> &nbsp; Оценка:<b>9.00*4</b> &nbsp;  Рассказ  <A HREF=/comment/r/rozhkowa/igrjanulgrom>Комментарии</A> </small><br></DL> 
+<DL><DT><li><a href=/b/borodkin_a_p><font color=#555555>Бородкин Алексей Петрович</font></a>: <a href=/b/borodkin_a_p/laggard_the.shtml><b>Отставший</b></a>&nbsp;<small><b>28k</b> &nbsp; Оценка:<b>9.00*4</b> &nbsp;  Новелла  <A HREF=/comment/b/borodkin_a_p/laggard_the>Комментарии</A> </small><br></DL> 
+<DL><DT><li><a href=/s/strelxcowa_m_e><font color=#555555>Каролина Клинтон</font></a>: <a href=/s/strelxcowa_m_e/taniamania.shtml><b>Taniamania</b></a>&nbsp;<small><b>27k</b> &nbsp; Оценка:<b>9.00*4</b> &nbsp;  Рассказ  <A HREF=/comment/s/strelxcowa_m_e/taniamania>Комментарии</A> </small><br><DD><font color=#555555><i>Первое место на конкурсе "Музыка, которая меня вдохновляет" от Русского писательского клуба.</i></font></DL> 
+<DL><DT><li><a href=/w/wagapow_a_s><font color=#555555>Якобсон Р.</font></a>: <a href=/w/wagapow_a_s/jacobson.shtml><b>О  лингвистических  аспектах  перевода</b></a>&nbsp;<small><b>27k</b> &nbsp; Оценка:<b>9.00*4</b> &nbsp;  Статья </small><br><DD><font color=#555555><i>Р. Якобсон  О ЛИНГВИСТИЧЕСКИХ АСПЕКТАХ ПЕРЕВОДА (Вопросы теории перевода в зарубежной лингвистике. - М., 1978. - С. 16-24)</i></font></DL> 
+<DL><DT><li><a href=/p/prudkow_w_w><font color=#555555>Прудkов Владим</font></a>: <a href=/p/prudkow_w_w/strelok-1.shtml><b>Самая страшная месть</b></a>&nbsp;<small><b>25k</b> &nbsp; Оценка:<b>9.00*4</b> &nbsp;  Рассказ  <A HREF=/comment/p/prudkow_w_w/strelok-1>Комментарии</A> </small><br></DL> 
+<DL><DT><li><a href=/p/pritoga_i><font color=#555555>Притога Ирина</font></a>: <a href=/p/pritoga_i/kogdakonchajutsjawojny.shtml><b>Когда кончается война...</b></a>&nbsp;<small><b>22k</b> &nbsp; Оценка:<b>9.00*4</b> &nbsp;  Рассказ  <A HREF=/comment/p/pritoga_i/kogdakonchajutsjawojny>Комментарии</A> </small><br><DD><font color=#555555><i>Небольшая зарисовка</i></font></DL> 
+<DL><DT><li><a href=/s/sobolew_i_a><font color=#555555>Соболев Иван Анатольевич</font></a>: <a href=/s/sobolew_i_a/mez_snom_i_javju.shtml><b>Меж сном и явью</b></a>&nbsp;<small><b>22k</b> &nbsp; Оценка:<b>9.00*4</b> &nbsp;  Рассказ  <A HREF=/comment/s/sobolew_i_a/mez_snom_i_javju>Комментарии</A> </small><br></DL> 
+<DL><DT><li><a href=/i/izmajlowa_k_a><font color=#555555>Измайлова Кира</font></a>: <a href=/i/izmajlowa_k_a/lampa.shtml><b>Лампа Ильича</b></a>&nbsp;<small><b>22k</b> &nbsp; Оценка:<b>9.00*4</b> &nbsp;  Рассказ  <A HREF=/comment/i/izmajlowa_k_a/lampa>Комментарии</A> </small><br><DD><font color=#555555><i>Рассказ занял второе место на конкурсе "Очевидное-невероятное". Задача была интересная: текст должен представлять собой письменное свидетельство очевидца (неважно, письмо, дневник, отчет, etc.) о фантастическом событии. Причем происходить оно должно в определенном месте. Мне по жребию  ...</i></font></DL> 
+<DL><DT><li><a href=/i/ilxina_i_i><font color=#555555>Айрис Канна, Ильина Ирина</font></a>: <a href=/i/ilxina_i_i/dinaieeprinzi.shtml><b>Дина и ее принцы</b></a>&nbsp;<small><b>21k</b> &nbsp; Оценка:<b>9.00*4</b> &nbsp;  Рассказ  <A HREF=/comment/i/ilxina_i_i/dinaieeprinzi>Комментарии</A> </small><br></DL> 
+<DL><DT><li><a href=/d/djadjushka_s><font color=#555555>Дядюшкин Сэм</font></a>: <a href=/d/djadjushka_s/kupric1.shtml><b>Куприк</b></a>&nbsp;<small><b>17k</b> &nbsp; Оценка:<b>9.00*4</b> &nbsp;  Рассказ  <A HREF=/comment/d/djadjushka_s/kupric1>Комментарии</A> </small><br><DD><font color=#555555><i>За фасадом достижений и великих строек шла  совсем другая жизнь... СССР, конец 70-х.    </i></font></DL> 
+<DL><DT><li><a href=/k/kutman_e><font color=#555555>Кутман Евгения</font></a>: <a href=/k/kutman_e/o_noyabre.shtml><b>О ноябре, вечности и дурных привычках</b></a>&nbsp;<small><b>15k</b> &nbsp; Оценка:<b>9.00*4</b> &nbsp;  Рассказ  <A HREF=/comment/k/kutman_e/o_noyabre>Комментарии</A> </small><br><DD><font color=#555555><i>Рассказ-эмоция, рассказ-настроение.   Когда не хочешь идти вперед и не можешь вернуться назад есть риск навсегда остаться в "одном единственном дне", пытаясь переосмыслить и переписать случившееся.</i></font></DL> 
+<DL><DT><li><a href=/o/orlow_b_l><font color=#555555>Орлов Борис Львович</font></a>: <a href=/o/orlow_b_l/wkuschereshninagubah.shtml><b>Вкус черешни на губах</b></a>&nbsp;<small><b>14k</b> &nbsp; Оценка:<b>9.00*4</b> &nbsp;  Рассказ  <A HREF=/comment/o/orlow_b_l/wkuschereshninagubah>Комментарии</A> </small><br><DD><font color=#555555><i>Маленькая правда о маленькой войне</i></font></DL> 
+<DL><DT><li><a href=/b/budenkowa_t_p><font color=#555555>Буденкова Татьяна Петровна</font></a>: <a href=/b/budenkowa_t_p/elizaweta.shtml><b>Елизавета</b></a>&nbsp;<small><b>13k</b> &nbsp; Оценка:<b>9.00*4</b> &nbsp;  Рассказ  <A HREF=/comment/b/budenkowa_t_p/elizaweta>Комментарии</A> </small><br><DD><font color=#555555><i>Говорят, Надежда умирает последней. А как живётся с этой умирающей Надеждой на Любовь? Верить? Надеяться? А вдруг мимолётная встреча и есть та Любовь, что выделена судьбой?</i></font></DL> 
+<DL><DT><li><a href=/j/jakowlew_m_l><font color=#555555>Яковлев Максим Леонидович</font></a>: <a href=/j/jakowlew_m_l/dar.shtml><b>Дар случайный...</b></a>&nbsp;<small><b>12k</b> &nbsp; Оценка:<b>9.00*4</b> &nbsp;  Рассказ  <A HREF=/comment/j/jakowlew_m_l/dar>Комментарии</A> </small><br><DD><font color=#555555><i>Святочный рассказ, не поспевший к Рождественскому конкурсу...</i></font></DL> 
+<DL><DT><li><a href=/i/iwakin_a_g><font color=#555555>Ивакин Алексей Геннадьевич</font></a>: <a href=/i/iwakin_a_g/eu.shtml><b>У гимнастерки тот же цвет...</b></a>&nbsp;<small><b>11k</b> &nbsp; Оценка:<b>9.00*4</b> &nbsp;  Эссе  <A HREF=/comment/i/iwakin_a_g/eu>Комментарии</A> </small><br></DL> 
+<DL><DT><li><a href=/r/rjumina_m_w><font color=#555555>Рюмина Марина Викторовна</font></a>: <a href=/r/rjumina_m_w/k1.shtml><b>Графиня</b></a>&nbsp;<small><b>10k</b> &nbsp; Оценка:<b>9.00*4</b> &nbsp;  Рассказ  <A HREF=/comment/r/rjumina_m_w/k1>Комментарии</A> </small><br><DD><font color=#555555><i>В основу сюжета рассказа взят реальный случай.</i></font></DL> 
+<DL><DT><li><a href=/w/woroncowa_k_w><font color=#555555>Воронцова Кристина</font></a>: <a href=/w/woroncowa_k_w/sent_mail.shtml><b>Sent mail</b></a>&nbsp;<small><b>10k</b> &nbsp; Оценка:<b>9.00*4</b> &nbsp;  Рассказ  <A HREF=/comment/w/woroncowa_k_w/sent_mail>Комментарии</A> </small><br><DD><font color=#555555><i>Не обижайте мам!!! Берегите их :)</i></font></DL> 
+<DL><DT><li><a href=/k/karin_g><font color=#555555>Глейзер Карин</font></a>: <a href=/k/karin_g/agojuacsbwces.shtml><b>Восьмое апреля</b></a>&nbsp;<small><b>10k</b> &nbsp; Оценка:<b>9.00*4</b> &nbsp;  Глава  <A HREF=/comment/k/karin_g/agojuacsbwces>Комментарии</A> </small><br><DD><font color=#555555><i>Вишнёвые стихи...</i></font></DL> 
+<DL><DT><li><a href=/o/ollaris><font color=#555555>Олларис</font></a>: <a href=/o/ollaris/3.shtml><b>Утренний кекс</b></a>&nbsp;<small><b>9k</b> &nbsp; Оценка:<b>9.00*4</b> &nbsp;  Миниатюра </small><br><DD><font color=#555555><i>  Ты, такой мягкий и доступный, нежный и роскошный. Твоё тело, спрятанное наполовину под краем одеяла, проходящим вдоль твоего позвонка по центру и одновременно открывающим часть спины и шикарный изгиб правого бока - просто завораживает. Хочется тихонько подойти к краю дивана, присесть  ...</i></font></DL> 
+<DL><DT><li><a href=/r/ryboreckij_a><font color=#555555>Рыборецкий Александр</font></a>: <a href=/r/ryboreckij_a/khamsa.shtml><b>Кулинарное. К вопросу о хамсе</b></a>&nbsp;<small><b>9k</b> &nbsp; Оценка:<b>9.00*4</b> &nbsp;  Очерк  <A HREF=/comment/r/ryboreckij_a/khamsa>Комментарии</A> </small><br><DD><font color=#555555><i>Спасибо Елене Блонди за идею и серьезную правку.</i></font></DL> 
+<DL><DT><li><a href=/b/bahmajer_g_w><font color=#555555>Бахмайер Галина Владимировна</font></a>: <a href=/b/bahmajer_g_w/othithernye.shtml><b>Очи черные</b></a>&nbsp;<small><b>7k</b> &nbsp; Оценка:<b>9.00*4</b> &nbsp;  Рассказ  <A HREF=/comment/b/bahmajer_g_w/othithernye>Комментарии</A> </small><br><DD><font color=#555555><i>Знать, увидел вас я в недобрый час...</i></font></DL> 
+<DL><DT><li><a href=/g/gusew_wladimir_gennadxewich><font color=#555555>Гусев Вэ Гэ</font></a>: <a href=/g/gusew_wladimir_gennadxewich/11.shtml><b>Пудра, розы, с неба звёзды...</b></a>&nbsp;<small><b>7k</b> &nbsp; Оценка:<b>9.00*4</b> &nbsp;  Рассказ  <A HREF=/comment/g/gusew_wladimir_gennadxewich/11>Комментарии</A> </small><br><DD><font color=#555555><i>Дню святого Валентина (прости, Господи) посвящается. Звучит песня "Ca Valait la Peine" в исполнении Coralie Clement.</i></font></DL> 
+<DL><DT><li><a href=/v/voronkov_michael><font color=#555555>Voronkov Michael</font></a>: <a href=/v/voronkov_michael/maryjane.shtml><b>Мэри Джейн</b></a>&nbsp;<small><b>6k</b> &nbsp; Оценка:<b>9.00*4</b> &nbsp;  Миниатюра  <A HREF=/comment/v/voronkov_michael/maryjane>Комментарии</A> </small><br><DD><font color=#555555><i>Западная Индиана.</i></font></DL> 
+<DL><DT><li><a href=/k/karin_g><font color=#555555>Глейзер Карин</font></a>: <a href=/k/karin_g/nostalxgicheskajahanuka.shtml><b>Ностальгическая Ханука</b></a>&nbsp;<small><b>6k</b> &nbsp; Оценка:<b>9.00*4</b> &nbsp;  Глава  <A HREF=/comment/k/karin_g/nostalxgicheskajahanuka>Комментарии</A> </small><br></DL> 
+
+<center><b>Страниц (1166):</b>  <b>1</b> <a href=index_janr_5-2.shtml>2</a> <a href=index_janr_5-3.shtml>3</a> <a href=index_janr_5-4.shtml>4</a> <a href=index_janr_5-5.shtml>5</a> <a href=index_janr_5-6.shtml>6</a> <a href=index_janr_5-7.shtml>7</a> <a href=index_janr_5-8.shtml>8</a> <a href=index_janr_5-9.shtml>9</a> <a href=index_janr_5-10.shtml>10</a> <a href=index_janr_5-11.shtml>11</a>  ... <a href=index_janr_5-1166.shtml>1166</a></center>
+
+
+
+<!------------------ Подножие ------------------------>
+
+
+
+
+<hr size=2 noshade>
+<p><center><i><a href="/p/petrienko_p_w/">Связаться с программистом сайта</a>.</i></center>
+<p><noindex><table border=0><tr><td><!--TopList LOGO--><a target=_tophref="http://top.mail.ru/jump?from=77427"><imgsrc="https://top.list.ru/counter?id=77427;t=30;l=1"border=0 height=31 width=88alt="TopList"></a><!--TopList LOGO--></td></tr></table></noindex><noindex><!--TopList COUNTER--><img height=1 width=1src="https://top.list.ru/counter?id=77427"alt=""><!--TopList COUNTER--></noindex>
+<p>
+<noindex><b>
+
+<!-- 
+2019: 28.05 x , 01.09 x, 04.12 x
+2020: 28.02 4 , 04.06 3, 07.09 3
+2021: 07.02 3 , 31.07 1, 26.11 3
+2024: 19.03 2
+2026: 29.08 2
+-->
+
+<p><font size="2">Новые книги авторов СИ, вышедшие из печати:<br>
+
+<!-- 10.03.2024 -->
+О.Болдырева&nbsp;<a href=/b/boldyrewa_o_m/kradysh.shtml>"Крадуш. Чужие души"</a>
+М.Николаев&nbsp;<a href=/n/nikolaew_m_p/invasion.shtml>"Вторжение на Землю"</a>
+
+<center><i><small><a href=/d/denisowa_e/1.shtml>Как попасть в этoт список</a></small></i></center>
+
+</font>
+</b></noindex>
+<p>
+<div align=center>
+<a href=https://leather-time.ru>Кожевенное мастерство</a> |
+Сайт <a href=http://www.artlib.ru>"Художники"</a> |
+<a href=http://www.recself.ru/?id=2025&idr=0>Доска об'явлений "Книги"</a></div>
+</body>
+</html>

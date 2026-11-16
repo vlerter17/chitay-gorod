@@ -1,0 +1,14 @@
+<HEAD><TITLE>404 Not Found</TITLE></HEAD>
+<BODY></pre><H2>404 Not Found</H2>
+<b>The requested URL:</b>  <font color=blue> http://www.lib.ru/PROZA/SOLZHENICYN/ivan_den.txt </font>:<br>Can't open /PROZA/SOLZHENICYN/ivan_den.txt.<br>
+<b>Referer:</b> <br>
+<p>
+рП ЧУЕН РТПВМЕНБН РЙЫЙФЕ <a href=mailto:max&#64lib&#46ru>max&#64lib&#46ru</a><br>
+<hr noshade>
+<dl>
+<li><a href=/>чПЪЧТБФ Ч вЙВМЙПФЕЛХ (www.lib.ru)</a><br>
+<li><a href=./>чПЪЧТБФ Ч ФЕЛХЭЙК ТБЪДЕМ</a><br>
+<li>чПЪНПЦОП, ЬФБ УФТБОЙГБ ОБКДЕФУС ОБ <a href=Mirrors>ЪЕТЛБМБИ ВЙВМЙПФЕЛЙ</a>
+<li><form action=GrepSearch method=GET><b>рПЙУЛ Ч ФЕЛХЭЕН ТБЪДЕМЕ:</b><small> <INPUT TYPE=text NAME=Search> </small></form>
+</dl>
+</BODY>

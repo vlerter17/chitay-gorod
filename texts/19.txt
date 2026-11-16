@@ -1,0 +1,14 @@
+<HEAD><TITLE>404 Not Found</TITLE></HEAD>
+<BODY></pre><H2>404 Not Found</H2>
+<b>The requested URL:</b>  <font color=blue> http://www.lib.ru/PROZA/SHOLOHOW/tihijdon12.txt </font>:<br>жБКМ ОЕДПУФХРЕО Ч ПФЛТЩФПН ДПУФХРЕ.<br>
+<b>Referer:</b> <br>
+<p>
+рП ЧУЕН РТПВМЕНБН РЙЫЙФЕ <a href=mailto:max&#64lib&#46ru>max&#64lib&#46ru</a><br>
+<hr noshade>
+<dl>
+<li><a href=/>чПЪЧТБФ Ч вЙВМЙПФЕЛХ (www.lib.ru)</a><br>
+<li><a href=./>чПЪЧТБФ Ч ФЕЛХЭЙК ТБЪДЕМ</a><br>
+
+<li><form action=GrepSearch method=GET><b>рПЙУЛ Ч ФЕЛХЭЕН ТБЪДЕМЕ:</b><small> <INPUT TYPE=text NAME=Search> </small></form>
+</dl>
+</BODY>
