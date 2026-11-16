@@ -1,26 +1,24 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // ===== ПРОВЕРКА АВТОРИЗАЦИИ =====
+document.addEventListener('DOMContentLoaded', async () => {
     let currentUser = null;
-    try {
-        const raw = localStorage.getItem('cg_user');
-        currentUser = raw ? JSON.parse(raw) : null;
-    } catch (e) { currentUser = null; }
+    let cartData = [];
 
-    if (!currentUser) {
-        window.location.href = 'login.html?redirect=payment.html';
+    try {
+        const resp = await fetch('/api/user');
+        const data = await resp.json();
+        if (!data.user) {
+            window.location.href = 'login.html?redirect=payment.html';
+            return;
+        }
+        currentUser = data.user;
+        cartData = data.cart;
+    } catch (e) {
+        window.location.href = 'login.html';
         return;
     }
-
-    // ===== ДАННЫЕ КОРЗИНЫ =====
-    let cartData = [];
-    try { cartData = JSON.parse(localStorage.getItem('cg_cart') || '[]'); }
-    catch (e) { cartData = []; }
-    cartData = cartData.map(item => typeof item === 'object' ? item.id : item).filter(Boolean);
 
     const userInfo = document.getElementById('paymentUserInfo');
     userInfo.innerHTML = `<p><strong>Пользователь:</strong> ${currentUser.name}</p><p><strong>Email:</strong> ${currentUser.email}</p>`;
 
-    // ===== ОТОБРАЖЕНИЕ ТОВАРОВ =====
     const paymentItems = document.getElementById('paymentItems');
     let subtotal = 0;
 
@@ -50,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('paymentTotal').textContent = subtotal + ' ₽';
     document.getElementById('paymentSubmitAmount').textContent = subtotal + ' ₽';
 
-    // ===== ФОРМАТИРОВАНИЕ КАРТЫ =====
+    // Форматирование карты
     const cardNumberInput = document.getElementById('cardNumber');
     const cardExpiryInput = document.getElementById('cardExpiry');
     const cardCvcInput = document.getElementById('cardCvc');
@@ -73,17 +71,19 @@ document.addEventListener('DOMContentLoaded', () => {
         this.value = this.value.replace(/\D/g, '').substring(0, 3);
     });
 
-    // ===== ОПЛАТА =====
-    document.getElementById('paymentForm').addEventListener('submit', function (e) {
+    // Оплата
+    document.getElementById('paymentForm').addEventListener('submit', async function (e) {
         e.preventDefault();
-
         if (cartData.length === 0) { alert('Корзина пуста!'); return; }
 
         const btn = document.getElementById('paymentSubmit');
         btn.disabled = true;
         btn.textContent = 'Обработка...';
 
-        setTimeout(() => {
+        try {
+            const resp = await fetch('/api/purchase', { method: 'POST' });
+            if (!resp.ok) throw new Error('Ошибка оплаты');
+
             document.getElementById('paymentContainer').style.display = 'none';
             document.getElementById('paymentSuccess').style.display = 'flex';
             document.getElementById('successName').textContent = currentUser.name;
@@ -103,16 +103,12 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('receiptId').textContent = 'CG-' + Math.random().toString(36).substring(2, 10).toUpperCase();
             document.getElementById('receiptDate').textContent = new Date().toLocaleString('ru-RU');
 
-            const key = 'cg_purchased_' + currentUser.email;
-            let purchased = [];
-            try { purchased = JSON.parse(localStorage.getItem(key) || '[]'); } catch (e) {}
-            cartData.forEach(id => { if (!purchased.includes(id)) purchased.push(id); });
-            localStorage.setItem(key, JSON.stringify(purchased));
-
-            localStorage.setItem('cg_cart', '[]');
-
             setTimeout(() => { window.location.href = 'account.html'; }, 3500);
-        }, 1500);
+        } catch (e) {
+            alert(e.message);
+            btn.disabled = false;
+            btn.textContent = 'Оплатить';
+        }
     });
 
     document.getElementById('successBtn').addEventListener('click', () => {

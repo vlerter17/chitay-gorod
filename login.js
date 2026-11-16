@@ -1,22 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
     const cursor = document.getElementById('cursor');
-    document.addEventListener('mousemove', (e) => {
-        cursor.style.left = e.clientX + 'px';
-        cursor.style.top = e.clientY + 'px';
-    });
-    document.querySelectorAll('a, button, input').forEach(el => {
-        el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
-        el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
-    });
+    if (cursor) {
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+        document.querySelectorAll('a, button, input').forEach(el => {
+            el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+            el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+        });
+    }
 
-    const API_URL = 'https://server.de2.netrun.io';
     const redirect = new URLSearchParams(location.search).get('redirect') || 'index.html';
-
     const loginForm = document.getElementById('loginForm');
     const registerForm = document.getElementById('registerForm');
     const tabs = document.querySelectorAll('.auth-tab');
 
-    // ===== ИНДИКАТОР ПАРОЛЯ =====
+    // ИНДИКАТОР ПАРОЛЯ
     const regPassword = document.getElementById('regPassword');
     const strengthBar = document.createElement('div');
     strengthBar.className = 'password-strength';
@@ -46,7 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (regPassword) regPassword.addEventListener('input', updateStrength);
 
-    // ===== ПЕРЕКЛЮЧЕНИЕ ВКЛАДОК =====
     tabs.forEach(tab => {
         tab.addEventListener('click', () => {
             tabs.forEach(t => t.classList.remove('active'));
@@ -61,25 +60,28 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    function getUsers() {
-        try { return JSON.parse(localStorage.getItem('cg_users') || '[]'); }
-        catch (e) { return []; }
-    }
-
-    // ===== ВХОД =====
-    loginForm.addEventListener('submit', (e) => {
+    // ВХОД
+    loginForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         const email = document.getElementById('loginEmail').value.trim().toLowerCase();
         const password = document.getElementById('loginPassword').value;
         const errorEl = document.getElementById('loginError');
-        const users = getUsers();
-        const user = users.find(u => u.email === email && u.password === password);
-        if (!user) { errorEl.textContent = 'Неверный email или пароль'; return; }
-        localStorage.setItem('cg_user', JSON.stringify({ name: user.name, email: user.email }));
-        window.location.href = redirect;
+
+        try {
+            const resp = await fetch('/api/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, password })
+            });
+            const data = await resp.json();
+            if (!resp.ok) throw new Error(data.error);
+            window.location.href = redirect;
+        } catch (err) {
+            errorEl.textContent = err.message || 'Ошибка входа';
+        }
     });
 
-    // ===== РЕГИСТРАЦИЯ С ОТПРАВКОЙ КОДА =====
+    // РЕГИСТРАЦИЯ
     const verifyGroup = document.getElementById('verifyGroup');
     const verifyCodeInput = document.getElementById('verifyCode');
     const regEmailInput = document.getElementById('regEmail');
@@ -88,15 +90,13 @@ document.addEventListener('DOMContentLoaded', () => {
     regEmailInput?.addEventListener('blur', async () => {
         const email = regEmailInput.value.trim().toLowerCase();
         const errorEl = document.getElementById('registerError');
-
-        if (!email || !email.includes('@')) return;
-        if (codeWasSent) return;
+        if (!email || !email.includes('@') || codeWasSent) return;
 
         errorEl.style.color = '#999';
-        errorEl.textContent = 'Отправляем код на почту...';
+        errorEl.textContent = 'Отправляем код...';
 
         try {
-            const resp = await fetch(`${API_URL}/api/send-code`, {
+            const resp = await fetch('/api/send-code', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email })
@@ -106,14 +106,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 codeWasSent = true;
                 verifyGroup.style.display = 'block';
                 errorEl.style.color = '#2ecc71';
-                errorEl.textContent = 'Код отправлен! Проверьте почту и папку «Спам».';
+                errorEl.textContent = 'Код отправлен!';
             } else {
                 errorEl.style.color = '#e74c3c';
-                errorEl.textContent = data.error || 'Не удалось отправить код';
+                errorEl.textContent = data.error || 'Ошибка';
             }
         } catch (err) {
             errorEl.style.color = '#e74c3c';
-            errorEl.textContent = 'Сервер недоступен. Запустите python server.py';
+            errorEl.textContent = 'Сервер недоступен.';
         }
     });
 
@@ -125,49 +125,61 @@ document.addEventListener('DOMContentLoaded', () => {
         const errorEl = document.getElementById('registerError');
         errorEl.style.color = '#e74c3c';
 
-        if (!codeWasSent) {
-            errorEl.textContent = 'Сначала укажите email — мы отправим код.';
-            return;
-        }
-        if (password.length < 6) {
-            errorEl.textContent = 'Пароль должен быть не менее 6 символов';
-            return;
-        }
-        if (!/[A-Za-z]/.test(password) || !/\d/.test(password)) {
-            errorEl.textContent = 'Пароль должен содержать буквы и цифры';
-            return;
-        }
-
+        if (!codeWasSent) return errorEl.textContent = 'Сначала укажите email.';
+        if (password.length < 6) return errorEl.textContent = 'Пароль слишком короткий';
+        
         const enteredCode = (verifyCodeInput.value || '').trim();
-        if (enteredCode.length !== 6) {
-            errorEl.textContent = 'Введите 6-значный код из письма';
-            return;
-        }
+        if (enteredCode.length !== 6) return errorEl.textContent = 'Введите 6-значный код';
 
         try {
-            const resp = await fetch(`${API_URL}/api/verify-code`, {
+            const verifyResp = await fetch('/api/verify-code', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email, code: enteredCode })
             });
-            const data = await resp.json();
-            if (!resp.ok) {
-                errorEl.textContent = data.error || 'Неверный код';
-                return;
+            if (!verifyResp.ok) {
+                const d = await verifyResp.json();
+                throw new Error(d.error || 'Неверный код');
             }
-        } catch (err) {
-            errorEl.textContent = 'Сервер недоступен. Проверьте, что python server.py запущен.';
-            return;
-        }
 
-        const users = getUsers();
-        if (users.some(u => u.email === email)) {
-            errorEl.textContent = 'Пользователь с таким email уже существует';
-            return;
+            const regResp = await fetch('/api/register', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name, email, password })
+            });
+            const regData = await regResp.json();
+            if (!regResp.ok) throw new Error(regData.error);
+
+            await fetch('/api/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, password })
+            });
+            window.location.href = redirect;
+        } catch (err) {
+            errorEl.textContent = err.message;
         }
-        users.push({ name, email, password });
-        localStorage.setItem('cg_users', JSON.stringify(users));
-        localStorage.setItem('cg_user', JSON.stringify({ name, email }));
-        window.location.href = redirect;
     });
+
+    // ЗАБЫЛИ ПАРОЛЬ
+    const forgotLink = document.getElementById('forgotPasswordLink');
+    if (forgotLink) {
+        forgotLink.addEventListener('click', async (e) => {
+            e.preventDefault();
+            const email = prompt('Введите ваш email для восстановления:');
+            if (!email) return;
+            
+            try {
+                const resp = await fetch('/api/forgot-password', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email })
+                });
+                const data = await resp.json();
+                alert(data.message || 'Проверьте почту');
+            } catch (err) {
+                alert('Ошибка отправки запроса');
+            }
+        });
+    }
 });

@@ -1,35 +1,45 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
     // ===== КУРСОР =====
     const cursor = document.getElementById('cursor');
-    document.addEventListener('mousemove', (e) => {
-        cursor.style.left = e.clientX + 'px';
-        cursor.style.top = e.clientY + 'px';
-    });
-    const bindHover = () => {
-        document.querySelectorAll('a, button, .account-book').forEach(el => {
-            el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
-            el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+    if (cursor) {
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
         });
-    };
-    bindHover();
+        const bindHover = () => {
+            document.querySelectorAll('a, button, .account-book').forEach(el => {
+                el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+                el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+            });
+        };
+        bindHover();
+    }
 
-    // ===== ПОЛЬЗОВАТЕЛЬ =====
+    // ===== ЗАГРУЗКА ПОЛЬЗОВАТЕЛЯ =====
     let user = null;
-    try {
-        const raw = localStorage.getItem('cg_user');
-        user = raw ? JSON.parse(raw) : null;
-    } catch (e) { user = null; }
+    let purchases = [];
+    let cart = [];
 
-    if (!user) {
-        window.location.href = 'login.html?redirect=account.html';
+    try {
+        const resp = await fetch('/api/user');
+        const data = await resp.json();
+        if (!data.user) {
+            window.location.href = 'login.html?redirect=account.html';
+            return;
+        }
+        user = data.user;
+        purchases = data.purchases;
+        cart = data.cart;
+    } catch (e) {
+        window.location.href = 'login.html';
         return;
     }
 
     document.getElementById('headerUser').innerHTML = `
         <span>👤 ${user.name}</span>
         <button class="btn-logout" id="logoutBtn">Выйти</button>`;
-    document.getElementById('logoutBtn').addEventListener('click', () => {
-        localStorage.removeItem('cg_user');
+    document.getElementById('logoutBtn').addEventListener('click', async () => {
+        await fetch('/api/logout', { method: 'POST' });
         window.location.href = 'index.html';
     });
 
@@ -37,14 +47,9 @@ document.addEventListener('DOMContentLoaded', () => {
         <p><strong>Имя:</strong> ${user.name}</p>
         <p><strong>Email:</strong> ${user.email}</p>`;
 
-    // ===== ДОСТУПНЫЕ КНИГИ =====
-    const purchasedKey = 'cg_purchased_' + user.email;
-    let purchased = [];
-    try { purchased = JSON.parse(localStorage.getItem(purchasedKey) || '[]'); } catch (e) {}
-    purchased = purchased.filter(id => booksData[id]).map(Number);
-
-    const freeBooks = Object.keys(booksData).filter(id => booksData[id].free).map(Number);
-    const allAvailable = [...new Set([...purchased, ...freeBooks])];
+    // ===== КНИГИ =====
+    const freeBooks = Object.keys(booksData).filter(id => booksData[id].free && booksData[id].available !== false).map(Number);
+    const allAvailable = [...new Set([...purchases, ...freeBooks])];
 
     const booksEl = document.getElementById('accountBooks');
     if (allAvailable.length === 0) {
@@ -52,7 +57,6 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         allAvailable.forEach(id => {
             const book = booksData[id];
-            const isFree = book.free;
             const card = document.createElement('div');
             card.className = 'account-book';
             card.innerHTML = `
@@ -60,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="account-book__info">
                     <div class="account-book__title">${book.title}</div>
                     <div class="account-book__author">${book.author}</div>
-                    <button class="account-book__read" data-id="${id}">Читать${isFree ? ' (бесплатно)' : ''}</button>
+                    <button class="account-book__read" data-id="${id}">Читать</button>
                 </div>`;
             attachCover(card.querySelector('img'), book, Number(id));
             booksEl.appendChild(card);
@@ -72,10 +76,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ===== КОРЗИНА =====
-    let cart = [];
-    try { cart = JSON.parse(localStorage.getItem('cg_cart') || '[]'); } catch (e) {}
-    cart = cart.map(item => typeof item === 'object' ? item.id : item).filter(id => booksData[id]).map(Number);
-
     const cartEl = document.getElementById('accountCart');
     if (cart.length === 0) {
         cartEl.innerHTML = '<p class="account-empty">Корзина пуста.</p>';
@@ -83,6 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let total = 0;
         cart.forEach(id => {
             const book = booksData[id];
+            if(!book) return;
             total += book.price;
             const line = document.createElement('div');
             line.className = 'cart-line';
@@ -102,17 +103,20 @@ document.addEventListener('DOMContentLoaded', () => {
         cartEl.appendChild(actions);
 
         cartEl.querySelectorAll('.cart-line__remove').forEach(btn => {
-            btn.addEventListener('click', () => {
+            btn.addEventListener('click', async () => {
                 const id = Number(btn.dataset.id);
-                const newCart = cart.filter(x => x !== id);
-                localStorage.setItem('cg_cart', JSON.stringify(newCart));
+                await fetch('/api/cart', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ action: "remove", book_id: id })
+                });
                 location.reload();
             });
         });
     }
 
     // =============================================
-    // ===== ЧИТАЛКА (постраничная) =====
+    // ===== ЧИТАЛКА =====
     // =============================================
     const reader = document.getElementById('reader');
     const readerMeta = document.getElementById('readerMeta');
@@ -126,15 +130,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const readerNext = document.getElementById('readerNext');
     const readerBack = document.getElementById('readerBack');
 
-    // Размер страницы в символах (≈1 страница книги)
     const CHARS_PER_PAGE = 1800;
-
     let pages = [];
     let currentPage = 0;
-    let currentBookId = null;
     let currentBookTitle = '';
 
-    // Разбить текст на страницы по границам слов/абзацев
     function paginate(text, charsPerPage = CHARS_PER_PAGE) {
         if (!text) return ['Текст книги скоро появится.'];
         const paragraphs = text.split(/\n\s*\n/).filter(p => p.trim());
@@ -150,7 +150,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const clean = para.trim();
             if (!clean) return;
 
-            // Если абзац сам по себе больше страницы — режем по словам
             if (clean.length > charsPerPage) {
                 pushBuf();
                 const words = clean.split(/\s+/);
@@ -165,7 +164,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
                 if (cur.trim()) result.push(cur.trim());
             } else {
-                // Добавляем абзац, если хватает места
                 if ((buf + '\n\n' + clean).trim().length > charsPerPage) {
                     pushBuf();
                     buf = clean;
@@ -178,21 +176,6 @@ document.addEventListener('DOMContentLoaded', () => {
         return result.length ? result : ['Текст книги скоро появится.'];
     }
 
-    // Попытка загрузить текст: сначала texts/ID.txt, потом book.text
-    async function loadBookText(bookId, book) {
-        try {
-            const resp = await fetch(`texts/${bookId}.txt`);
-            if (resp.ok) {
-                const t = await resp.text();
-                if (t && t.trim().length > 100) return t;
-            }
-        } catch (e) {
-            // нет файла — не страшно
-        }
-        return book.text || 'Текст книги скоро появится.';
-    }
-
-    // Отрисовка текущей страницы
     function renderPage() {
         if (!pages.length) return;
         currentPage = Math.max(0, Math.min(currentPage, pages.length - 1));
@@ -209,27 +192,37 @@ document.addEventListener('DOMContentLoaded', () => {
         readerPrev.disabled = currentPage === 0;
         readerNext.disabled = currentPage === pages.length - 1;
 
-        // Всегда прокручиваем страницу вверх
         const pageEl = document.querySelector('.reader__page');
         if (pageEl) pageEl.scrollTop = 0;
     }
 
-    // Открытие читалки
     async function openReader(bookId) {
         const book = booksData[bookId];
         if (!book) return;
-        currentBookId = bookId;
+        
         currentBookTitle = book.title;
-
         readerMeta.innerHTML = `<strong>${book.title}</strong><span>${book.author}</span>`;
-        readerPageText.textContent = 'Загрузка текста…';
         reader.classList.add('active');
         document.body.style.overflow = 'hidden';
 
-        const fullText = await loadBookText(bookId, book);
-        pages = paginate(fullText);
-        currentPage = 0;
-        renderPage();
+        if (book.available === false) {
+            pages = ['🚧 Книга скоро появится в нашей библиотеке! 🚧'];
+            currentPage = 0;
+            renderPage();
+            return;
+        }
+
+        readerPageText.textContent = 'Загрузка...';
+        try {
+            const resp = await fetch(`texts/${bookId}.txt`);
+            if (!resp.ok) throw new Error('Файл не найден');
+            const text = await resp.text();
+            pages = paginate(text);
+            currentPage = 0;
+            renderPage();
+        } catch (e) {
+            readerPageText.textContent = 'Ошибка: текст книги не найден в базе.';
+        }
     }
 
     function closeReader() {
@@ -237,10 +230,8 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = '';
         pages = [];
         currentPage = 0;
-        currentBookId = null;
     }
 
-    // Кнопки
     readerBack.addEventListener('click', closeReader);
     readerPrev.addEventListener('click', () => {
         if (currentPage > 0) { currentPage--; renderPage(); }
@@ -249,7 +240,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (currentPage < pages.length - 1) { currentPage++; renderPage(); }
     });
 
-    // Клавиши: стрелки, PageUp/PageDown, Escape
     document.addEventListener('keydown', (e) => {
         if (!reader.classList.contains('active')) {
             if (deleteModal.classList.contains('active') && e.key === 'Escape') {
@@ -287,28 +277,19 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.target === deleteModal) deleteModal.classList.remove('active');
     });
 
-    deleteConfirm.addEventListener('click', () => {
+    deleteConfirm.addEventListener('click', async () => {
         const pwd = deletePassword.value;
         if (!pwd) { deleteError.textContent = 'Введите пароль'; return; }
 
-        let users = [];
-        try { users = JSON.parse(localStorage.getItem('cg_users') || '[]'); } catch (e) {}
-        const account = users.find(u => u.email === user.email);
-        if (!account || account.password !== pwd) {
-            deleteError.textContent = 'Неверный пароль';
-            return;
+        try {
+            const resp = await fetch('/api/delete-account', { method: 'POST' });
+            if (!resp.ok) throw new Error('Ошибка удаления');
+            
+            deleteModal.classList.remove('active');
+            alert('Аккаунт удалён.');
+            window.location.href = 'index.html';
+        } catch (e) {
+            deleteError.textContent = 'Ошибка сервера';
         }
-
-        users = users.filter(u => u.email !== user.email);
-        localStorage.setItem('cg_users', JSON.stringify(users));
-        localStorage.removeItem('cg_user');
-        localStorage.removeItem('cg_purchased_' + user.email);
-        localStorage.removeItem('cg_cart');
-
-        deleteModal.classList.remove('active');
-        alert('Аккаунт удалён. Все данные стёрты.');
-        window.location.href = 'index.html';
     });
-
-    bindHover();
 });

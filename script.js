@@ -1,8 +1,53 @@
 document.addEventListener('DOMContentLoaded', () => {
     const intro = document.getElementById('intro');
     const mainSite = document.getElementById('mainSite');
+    let currentUser = null;
 
-    // ===== ПРЕДЗАГРУЗКА ОБЛОЖЕК ВО ВРЕМЯ ИНТРО =====
+    // ===== АВТОРИЗАЦИЯ =====
+    async function checkAuth() {
+        try {
+            const resp = await fetch('/api/user');
+            const data = await resp.json();
+            currentUser = data.user;
+            updateHeader();
+        } catch (e) {
+            currentUser = null;
+            updateHeader();
+        }
+    }
+
+    function updateHeader() {
+        const headerUser = document.getElementById('headerUser');
+        const heroButton = document.getElementById('heroButton');
+        if (!headerUser) return;
+        
+        if (currentUser) {
+            headerUser.innerHTML = `
+                <div class="user-info">
+                    <span>👤 ${currentUser.name}</span>
+                    <a href="account.html" class="btn-account">Аккаунт</a>
+                    <button class="btn-logout" id="logoutBtn">Выйти</button>
+                </div>`;
+            document.getElementById('logoutBtn').addEventListener('click', async () => {
+                await fetch('/api/logout', { method: 'POST' });
+                location.reload();
+            });
+            if (heroButton) {
+                heroButton.textContent = 'Перейти в аккаунт';
+                heroButton.href = 'account.html';
+            }
+        } else {
+            headerUser.innerHTML = `<a href="login.html" class="btn-login">Войти</a>`;
+            if (heroButton) {
+                heroButton.textContent = 'Начать читать';
+                heroButton.href = 'login.html';
+            }
+        }
+    }
+
+    checkAuth();
+
+    // ===== ИНТРО =====
     function preloadCovers(done, maxMs) {
         const ids = Object.keys(booksData || {});
         if (!ids.length) { done(); return; }
@@ -39,43 +84,6 @@ document.addEventListener('DOMContentLoaded', () => {
         preloadCovers(hideIntro, 4000);
     }
 
-    // ===== ПОЛЬЗОВАТЕЛЬ =====
-    function getUser() {
-        try {
-            const raw = localStorage.getItem('cg_user');
-            return raw ? JSON.parse(raw) : null;
-        } catch (e) { return null; }
-    }
-
-    function updateHeader() {
-        const user = getUser();
-        const headerUser = document.getElementById('headerUser');
-        const heroButton = document.getElementById('heroButton');
-        if (!headerUser) return;
-        if (user) {
-            headerUser.innerHTML = `
-                <div class="user-info">
-                    <span>👤 ${user.name}</span>
-                    <a href="account.html" class="btn-account">Аккаунт</a>
-                    <button class="btn-logout" id="logoutBtn">Выйти</button>
-                </div>`;
-            const logoutBtn = document.getElementById('logoutBtn');
-            if (logoutBtn) {
-                logoutBtn.addEventListener('click', () => {
-                    localStorage.removeItem('cg_user');
-                    location.reload();
-                });
-            }
-            if (heroButton) {
-                heroButton.textContent = 'Перейти в аккаунт';
-                heroButton.href = 'account.html';
-            }
-        } else {
-            headerUser.innerHTML = `<a href="login.html" class="btn-login">Войти</a>`;
-        }
-    }
-    updateHeader();
-
     // ===== КУРСОР =====
     const cursor = document.getElementById('cursor');
     if (cursor) {
@@ -102,6 +110,8 @@ document.addEventListener('DOMContentLoaded', () => {
             card.className = 'book-card';
             card.dataset.book = id;
             const priceLabel = book.free ? 'Бесплатно' : `${book.price} ₽`;
+            const comingSoonBadge = book.available === false ? '<span class="badge-coming-soon" style="color: #ff9800; font-size: 12px; font-weight: bold; display: block; margin-top: 5px;">Coming Soon</span>' : '';
+
             card.innerHTML = `
                 <div class="book-card__image-wrap">
                     <img class="book-card__image" alt="${book.title}">
@@ -110,9 +120,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     <h3 class="book-card__title">${book.title}</h3>
                     <p class="book-card__author">${book.author}</p>
                     <p class="book-card__price">${priceLabel}</p>
+                    ${comingSoonBadge}
                 </div>`;
             const imgEl = card.querySelector('.book-card__image');
-            attachCover(imgEl, book, idx);
+            attachCover(imgEl, book, Number(id));
             booksGrid.appendChild(card);
         });
     }
@@ -121,17 +132,30 @@ document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('modal');
     const modalClose = document.getElementById('modalClose');
     const modalBuy = document.getElementById('modalBuy');
+    const priceLabel = document.getElementById('modalPrice');
     let currentBookId = null;
 
     function openModal(id) {
         const book = booksData[id];
         if (!book) return;
         currentBookId = id;
+        
         document.getElementById('modalTitle').textContent = book.title;
         document.getElementById('modalAuthor').textContent = 'Автор: ' + book.author;
-        document.getElementById('modalDescription').textContent = book.description;
-        const priceLabel = book.free ? 'Бесплатно (после входа)' : book.price + ' ₽';
-        document.getElementById('modalPrice').textContent = 'Цена: ' + priceLabel;
+        document.getElementById('modalDescription').textContent = book.description || '';
+        
+        if (book.available === false) {
+            priceLabel.textContent = 'Скоро в продаже';
+            modalBuy.textContent = 'Coming Soon';
+            modalBuy.disabled = true;
+            modalBuy.style.opacity = '0.5';
+        } else {
+            priceLabel.textContent = 'Цена: ' + (book.free ? 'Бесплатно (после входа)' : book.price + ' ₽');
+            modalBuy.textContent = book.free ? 'Читать' : 'Купить';
+            modalBuy.disabled = false;
+            modalBuy.style.opacity = '1';
+        }
+
         const modalImg = document.getElementById('modalImage');
         modalImg.alt = book.title;
         attachCover(modalImg, book, Number(id));
@@ -152,25 +176,37 @@ document.addEventListener('DOMContentLoaded', () => {
         modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
         document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
 
-        modalBuy.addEventListener('click', () => {
+        modalBuy.addEventListener('click', async () => {
             if (!currentBookId) return;
-            const user = getUser();
-            if (!user) {
-                if (confirm('Чтобы купить или читать книгу, нужно войти в аккаунт. Перейти на страницу входа?')) {
+            const book = booksData[currentBookId];
+            
+            if (book.available === false) {
+                alert('Эта книга скоро появится в нашей библиотеке!');
+                return;
+            }
+
+            if (!currentUser) {
+                if (confirm('Чтобы купить или читать книгу, нужно войти. Перейти на страницу входа?')) {
                     window.location.href = 'login.html?redirect=index.html';
                 }
                 return;
             }
-            const book = booksData[currentBookId];
+            
             if (book.free) {
                 window.location.href = 'account.html';
                 return;
             }
-            const cart = JSON.parse(localStorage.getItem('cg_cart') || '[]');
-            const idNum = Number(currentBookId);
-            if (!cart.includes(idNum)) cart.push(idNum);
-            localStorage.setItem('cg_cart', JSON.stringify(cart));
-            window.location.href = 'payment.html';
+            
+            try {
+                await fetch('/api/cart', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ action: "add", book_id: Number(currentBookId) })
+                });
+                window.location.href = 'payment.html';
+            } catch (e) {
+                alert('Ошибка добавления в корзину');
+            }
         });
     }
 
@@ -194,24 +230,37 @@ document.addEventListener('DOMContentLoaded', () => {
             aiMessages.scrollTop = aiMessages.scrollHeight;
         }
 
-        function getBotResponse(text) {
-            const lower = text.toLowerCase();
-            if (lower.includes('привет') || lower.includes('здравств')) return 'Привет! Я ИИ-помощник Читай-Город. Чем могу помочь?';
-            if (lower.includes('книг') || lower.includes('каталог')) return 'У нас в каталоге 50 книг! Прокрутите вниз до раздела «Каталог».';
-            if (lower.includes('бесплат') || lower.includes('читать')) return 'Некоторые книги можно читать бесплатно после регистрации. Ищите пометку «Бесплатно».';
-            if (lower.includes('оплат') || lower.includes('купить') || lower.includes('корзин')) return 'Нажмите на книгу, выберите «Купить» — откроется страница оплаты. Оплата демонстрационная.';
-            if (lower.includes('регистр') || lower.includes('вход') || lower.includes('войти')) return 'Нажмите «Войти» в шапке сайта. Регистрация бесплатная.';
-            if (lower.includes('контакт') || lower.includes('телефон')) return 'Наш телефон: +7 (999) 123-45-67. Email: info@chitay-gorod.ru';
-            if (lower.includes('спасибо')) return 'Всегда пожалуйста! Если будут вопросы — обращайтесь!';
-            return 'Я ИИ-помощник Читай-Город. Спросите о книгах, оплате, регистрации или чтении онлайн!';
-        }
-
-        function sendMessage() {
+        async function sendMessage() {
             const text = aiInput.value.trim();
             if (!text) return;
+            
             addMessage(text, true);
             aiInput.value = '';
-            setTimeout(() => addMessage(getBotResponse(text), false), 400);
+            
+            const loadingMsg = document.createElement('div');
+            loadingMsg.className = 'ai-message ai-message--bot';
+            loadingMsg.textContent = 'Печатает...';
+            aiMessages.appendChild(loadingMsg);
+            aiMessages.scrollTop = aiMessages.scrollHeight;
+            
+            try {
+                const resp = await fetch('/api/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ message: text })
+                });
+                const data = await resp.json();
+                loadingMsg.remove();
+                
+                if (data.reply) {
+                    addMessage(data.reply, false);
+                } else {
+                    addMessage('Извините, произошла ошибка.', false);
+                }
+            } catch (e) {
+                loadingMsg.remove();
+                addMessage('Сервер недоступен.', false);
+            }
         }
 
         aiSend.addEventListener('click', sendMessage);
