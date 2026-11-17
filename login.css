@@ -3,8 +3,7 @@ body { font-family: 'Georgia', serif; background: #0f0f1a; color: #fff; min-heig
 .cursor {
     position: fixed; width: 10px; height: 10px; background: #e8d5b7;
     border-radius: 50%; pointer-events: none; z-index: 10000;
-    transform: translate(-50%, -50%);
-    transition: width 0.2s, height 0.2s, background 0.2s, border 0.2s;
+    transform: translate(-50%, -50%); transition: width 0.2s, height 0.2s, background 0.2s, border 0.2s;
     box-shadow: 0 0 12px rgba(232,213,183,0.8);
 }
 .cursor.hover { width: 30px; height: 30px; background: transparent; border: 2px solid #e8d5b7; }
@@ -12,11 +11,20 @@ body { font-family: 'Georgia', serif; background: #0f0f1a; color: #fff; min-heig
 .auth-page { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 40px 20px; position: relative; }
 .auth-back { position: absolute; top: 30px; left: 30px; color: #e8d5b7; text-decoration: none; font-size: 16px; }
 .auth-back:hover { color: #fff; }
-.auth-card { background: #1a1a2e; border-radius: 18px; padding: 40px; width: 100%; max-width: 420px; }
+
+.auth-card { background: #1a1a2e; border-radius: 18px; padding: 40px; width: 100%; max-width: 420px; box-shadow: 0 10px 40px rgba(0,0,0,0.5); }
 .auth-title { text-align: center; color: #e8d5b7; font-size: 32px; margin-bottom: 25px; }
+
 .auth-tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 25px; background: #131322; padding: 6px; border-radius: 10px; }
 .auth-tab { background: transparent; border: none; color: #999; padding: 12px; border-radius: 8px; font-size: 16px; cursor: none; transition: all 0.3s; font-family: inherit; }
 .auth-tab.active { background: #667eea; color: #fff; }
+
+/* Новые вкладки выбора метода входа */
+.method-tabs { display: flex; justify-content: center; gap: 15px; margin-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px; }
+.method-tab { background: transparent; border: none; color: #888; font-size: 14px; cursor: none; font-family: inherit; padding: 5px 0; position: relative; }
+.method-tab.active { color: #e8d5b7; font-weight: bold; }
+.method-tab.active::after { content: ''; position: absolute; bottom: -11px; left: 0; width: 100%; height: 2px; background: #e8d5b7; }
+
 .auth-group { margin-bottom: 18px; }
 .auth-group label { display: block; font-size: 14px; color: #999; margin-bottom: 8px; }
 .auth-group input {
@@ -25,6 +33,11 @@ body { font-family: 'Georgia', serif; background: #0f0f1a; color: #fff; min-heig
     color: #fff; font-size: 16px; outline: none; transition: border-color 0.3s;
 }
 .auth-group input:focus { border-color: #667eea; }
+
+.btn-small { background: #667eea; border: none; color: #fff; padding: 0 15px; border-radius: 10px; cursor: none; font-family: inherit; transition: background 0.3s; }
+.btn-small:hover { background: #764ba2; }
+.btn-small:disabled { background: #555; cursor: not-allowed; }
+
 .auth-submit {
     width: 100%; padding: 16px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     border: none; border-radius: 10px; color: #fff; font-size: 18px; font-weight: bold;
