@@ -18,19 +18,30 @@ app = Flask(__name__, static_folder='.', static_url_path='')
 app.secret_key = os.environ.get('SECRET_KEY', 'super_secret_key_chitay_gorod_2024')
 CORS(app, supports_credentials=True)
 
+# Если база на Netrun лежит в /data, используем её. Иначе - локально.
 DB_PATH = '/data/library.db' if os.path.exists('/data') else 'library.db'
 
 def init_db():
     conn = sqlite3.connect(DB_PATH)
     c = conn.cursor()
+    # Создаем таблицы, если их нет
     c.execute('''CREATE TABLE IF NOT EXISTS users 
-                 (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, email TEXT UNIQUE, password TEXT, totp_secret TEXT)''')
+                 (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, email TEXT UNIQUE, password TEXT)''')
     c.execute('''CREATE TABLE IF NOT EXISTS purchases 
                  (user_id INTEGER, book_id INTEGER, PRIMARY KEY (user_id, book_id))''')
     c.execute('''CREATE TABLE IF NOT EXISTS cart 
                  (user_id INTEGER, book_id INTEGER, PRIMARY KEY (user_id, book_id))''')
     c.execute('''CREATE TABLE IF NOT EXISTS reset_tokens 
                  (email TEXT, token TEXT UNIQUE, expires_at DATETIME)''')
+    
+    # АВТО-ОБНОВЛЕНИЕ: Добавляем колонку totp_secret, если её нет (для старых баз)
+    try:
+        c.execute("ALTER TABLE users ADD COLUMN totp_secret TEXT")
+        print("Колонка totp_secret успешно добавлена в базу данных.")
+    except sqlite3.OperationalError:
+        # Если колонка уже существует, SQLite выдаст ошибку, мы её просто игнорируем
+        pass
+        
     conn.commit()
     conn.close()
 
@@ -266,7 +277,7 @@ def forgot_password():
     conn.close()
 
     reset_link = f"http://localhost:5000/reset-password.html?token={token}"
-    # На Netrun замените на ваш домен (например, https://server.de2.netrun.io/reset-password.html?token={token})
+    # На Netrun замените на ваш домен
 
     html = f"""
     <div style="font-family: Arial, sans-serif; max-width: 500px; margin: 0 auto;">
@@ -420,7 +431,7 @@ def serve_static(path):
 
 @app.route('/')
 def serve_index():
-    return send_from_directory('.', 'index.html')
+    return send_from_directory('index.html')
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
