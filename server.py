@@ -115,28 +115,39 @@ def send_code():
     if not email or "@" not in email:
         return jsonify({"error": "Введите корректный email"}), 400
     
+    conn = sqlite3.connect(DB_PATH)
+    c = conn.cursor()
+    c.execute("SELECT id FROM users WHERE email = ?", (email,))
+    user_exists = c.fetchone() is not None
+    conn.close()
+
+    if action == "register":
+        if user_exists:
+            # Красивый ответ для фронтенда, если аккаунт уже есть
+            return jsonify({
+                "error": "Этот email уже зарегистрирован.",
+                "message": "У вас уже есть аккаунт! Хотите войти по коду или паролю?",
+                "exists": True
+            }), 409
+
     if action == "login":
-        conn = sqlite3.connect(DB_PATH)
-        c = conn.cursor()
-        c.execute("SELECT id FROM users WHERE email = ?", (email,))
-        if not c.fetchone():
-            conn.close()
+        if not user_exists:
             return jsonify({"error": "Пользователь с таким email не найден"}), 404
-        conn.close()
 
     existing = codes_db.get(email)
     if existing and existing.get("sent_at", 0) + 30 > time.time():
-        return jsonify({"error": "Подождите 30 секунд"}), 429
+        return jsonify({"error": "Подождите 30 секунд перед повторной отправкой"}), 429
     
     code = str(random.randint(100000, 999999))
-    title = "Код для входа" if action == "login" else "Подтверждение регистрации"
-    desc = "Используйте этот код для входа в ваш аккаунт." if action == "login" else "Введите этот код, чтобы завершить создание аккаунта."
+    title = "Код для входа" if action == "login" else "Добро пожаловать в Читай-Город!"
+    desc = "Используйте этот код для безопасного входа в ваш аккаунт." if action == "login" else "Вы почти у цели! Введите этот код, чтобы завершить создание аккаунта и начать читать."
+    
     html = get_beautiful_email_html(title, code, desc)
     
-    if send_email(email, f"{title} — Читай-Город", html):
+    if send_email(email, f"{title} 📚", html):
         codes_db[email] = {"code": code, "expires": time.time() + CODE_TTL, "sent_at": time.time()}
-        return jsonify({"message": "Код отправлен"})
-    return jsonify({"error": "Не удалось отправить"}), 500
+        return jsonify({"message": "Код успешно отправлен на вашу почту!"})
+    return jsonify({"error": "Не удалось отправить письмо. Проверьте email."}), 500
 
 @app.route("/api/verify-code", methods=["POST"])
 def verify_code():
