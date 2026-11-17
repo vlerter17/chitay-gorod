@@ -24,9 +24,10 @@ DB_PATH = '/data/library.db' if os.path.exists('/data') else 'library.db'
 def init_db():
     conn = sqlite3.connect(DB_PATH)
     c = conn.cursor()
-    # Создаем таблицы, если их нет
+    
+    # Создаем таблицы, если их нет (сразу включаем totp_secret для новых баз)
     c.execute('''CREATE TABLE IF NOT EXISTS users 
-                 (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, email TEXT UNIQUE, password TEXT)''')
+                 (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, email TEXT UNIQUE, password TEXT, totp_secret TEXT)''')
     c.execute('''CREATE TABLE IF NOT EXISTS purchases 
                  (user_id INTEGER, book_id INTEGER, PRIMARY KEY (user_id, book_id))''')
     c.execute('''CREATE TABLE IF NOT EXISTS cart 
@@ -34,15 +35,22 @@ def init_db():
     c.execute('''CREATE TABLE IF NOT EXISTS reset_tokens 
                  (email TEXT, token TEXT UNIQUE, expires_at DATETIME)''')
     
-    # АВТО-ОБНОВЛЕНИЕ: Добавляем колонку totp_secret, если её нет (для старых баз)
-    try:
-        c.execute("ALTER TABLE users ADD COLUMN totp_secret TEXT")
-        print("Колонка totp_secret успешно добавлена в базу данных.")
-    except sqlite3.OperationalError:
-        # Если колонка уже существует, SQLite выдаст ошибку, мы её просто игнорируем
-        pass
+    # АВТО-ОБНОВЛЕНИЕ: Проверяем, есть ли колонка totp_secret (для старых баз)
+    c.execute("PRAGMA table_info(users)")
+    columns = [row[1] for row in c.fetchall()]
+    
+    if 'totp_secret' not in columns:
+        try:
+            c.execute("ALTER TABLE users ADD COLUMN totp_secret TEXT")
+            conn.commit()
+            print("✅ Колонка totp_secret успешно добавлена в базу данных.")
+        except sqlite3.OperationalError as e:
+            print(f"❌ КРИТИЧЕСКАЯ ОШИБКА: Не удалось добавить колонку totp_secret.")
+            print(f"Причина: {e}")
+            print(f"Проверьте права на запись для файла базы данных: {DB_PATH}")
+    else:
+        print("ℹ️ Колонка totp_secret уже существует в таблице users.")
         
-    conn.commit()
     conn.close()
 
 init_db()
