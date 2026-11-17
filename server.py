@@ -68,8 +68,11 @@ CODE_TTL = 10 * 60
 def send_email(to_email, subject, html_content):
     msg = MIMEMultipart("alternative")
     msg["Subject"] = subject
-    msg["From"] = f"Читай-Город <{FROM_EMAIL}>"
+    
+    # ИСПРАВЛЕНИЕ: Яндекс требует, чтобы From был ровно таким же, как логин SMTP_USER
+    msg["From"] = FROM_EMAIL  
     msg["To"] = to_email
+    
     msg.attach(MIMEText(html_content, "html", "utf-8"))
     try:
         context = ssl.create_default_context()
