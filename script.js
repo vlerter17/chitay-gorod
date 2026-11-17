@@ -6,7 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // ===== АВТОРИЗАЦИЯ =====
     async function checkAuth() {
         try {
-            const resp = await fetch('/api/user');
+            const resp = await fetch('/api/user', {
+                credentials: 'include' // Гарантирует отправку куки сессии
+            });
             const data = await resp.json();
             currentUser = data.user;
             updateHeader();
