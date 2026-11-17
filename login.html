@@ -55,7 +55,7 @@
                 </p>
             </form>
 
-            <!-- ФОРМА РЕГИСТРАЦИИ (Без изменений) -->
+            <!-- ФОРМА РЕГИСТРАЦИИ -->
             <form class="auth-form" id="registerForm" style="display:none;">
                 <div class="auth-group">
                     <label>Имя</label>
@@ -63,7 +63,10 @@
                 </div>
                 <div class="auth-group">
                     <label>Email</label>
-                    <input type="email" id="regEmail" required>
+                    <div style="display: flex; gap: 10px;">
+                        <input type="email" id="regEmail" required style="flex: 1;">
+                        <button type="button" id="sendRegCodeBtn" class="btn-small">Получить код</button>
+                    </div>
                 </div>
                 <div class="auth-group" id="verifyGroup" style="display:none;">
                     <label>Код из письма</label>
