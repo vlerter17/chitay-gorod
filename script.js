@@ -31,7 +31,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     <button class="btn-logout" id="logoutBtn">Выйти</button>
                 </div>`;
             document.getElementById('logoutBtn').addEventListener('click', async () => {
-                await fetch('/api/logout', { method: 'POST' });
+                await fetch('/api/logout', { 
+                    method: 'POST',
+                    credentials: 'include'
+                });
                 location.reload();
             });
             if (heroButton) {
