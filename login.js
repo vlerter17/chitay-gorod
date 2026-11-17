@@ -43,7 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
             methodTabs.forEach(t => t.classList.remove('active'));
             tab.classList.add('active');
             loginMethod = tab.dataset.method;
-            
             if (loginMethod === 'password') {
                 passwordGroup.style.display = 'block';
                 loginCodeGroup.style.display = 'none';
@@ -60,20 +59,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const sendLoginCodeBtn = document.getElementById('sendLoginCodeBtn');
     sendLoginCodeBtn.addEventListener('click', async () => {
         const email = document.getElementById('loginEmail').value.trim().toLowerCase();
-        if (!email || !email.includes('@')) return alert('Введите email');
+        if (!email || !email.includes('@')) return alert('Введите корректный email');
         
         sendLoginCodeBtn.disabled = true;
         sendLoginCodeBtn.textContent = '...';
-        
         try {
             const resp = await fetch('/api/send-code', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
+                credentials: 'include', // ВАЖНО: для сохранения сессии
                 body: JSON.stringify({ email, action: "login" })
             });
             const data = await resp.json();
             if (!resp.ok) throw new Error(data.error);
             alert('Код отправлен на почту!');
+            document.getElementById('loginCodeGroup').style.display = 'block';
         } catch (err) {
             alert(err.message);
         } finally {
@@ -106,6 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const resp = await fetch(endpoint, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
+                credentials: 'include', // ВАЖНО: сохраняет куки сессии
                 body: JSON.stringify(bodyData)
             });
             const data = await resp.json();
@@ -124,6 +125,76 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // ===== НОВАЯ ЛОГИКА РЕГИСТРАЦИИ =====
+    const sendRegCodeBtn = document.getElementById('sendRegCodeBtn');
+    sendRegCodeBtn.addEventListener('click', async () => {
+        const email = document.getElementById('regEmail').value.trim().toLowerCase();
+        if (!email || !email.includes('@')) return alert('Введите корректный email');
+        
+        sendRegCodeBtn.disabled = true;
+        sendRegCodeBtn.textContent = '...';
+        try {
+            const resp = await fetch('/api/send-code', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                credentials: 'include',
+                body: JSON.stringify({ email, action: "register" })
+            });
+            const data = await resp.json();
+            if (!resp.ok) throw new Error(data.error);
+            alert('Код подтверждения отправлен на почту!');
+            document.getElementById('verifyGroup').style.display = 'block';
+        } catch (err) {
+            alert(err.message);
+        } finally {
+            sendRegCodeBtn.disabled = false;
+            sendRegCodeBtn.textContent = 'Получить код';
+        }
+    });
+
+    registerForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const name = document.getElementById('regName').value.trim();
+        const email = document.getElementById('regEmail').value.trim().toLowerCase();
+        const password = document.getElementById('regPassword').value;
+        const verifyCode = document.getElementById('verifyCode').value.trim();
+        const errorEl = document.getElementById('registerError');
+
+        if (!verifyCode) {
+            errorEl.textContent = 'Сначала получите и введите код из почты';
+            return;
+        }
+
+        errorEl.textContent = 'Проверка кода...';
+        try {
+            // 1. Проверяем код
+            const verifyResp = await fetch('/api/verify-code', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                credentials: 'include',
+                body: JSON.stringify({ email, code: verifyCode })
+            });
+            const verifyData = await verifyResp.json();
+            if (!verifyResp.ok) throw new Error(verifyData.error);
+
+            // 2. Регистрируем
+            errorEl.textContent = 'Создание аккаунта...';
+            const regResp = await fetch('/api/register', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                credentials: 'include',
+                body: JSON.stringify({ name, email, password })
+            });
+            const regData = await regResp.json();
+            if (!regResp.ok) throw new Error(regData.error);
+
+            alert('Регистрация успешна! Теперь войдите в аккаунт.');
+            tabs[0].click(); // Переключаемся на вкладку входа
+        } catch (err) {
+            errorEl.textContent = err.message;
+        }
+    });
+
     // Восстановление пароля
     document.getElementById('forgotPasswordLink').addEventListener('click', async (e) => {
         e.preventDefault();
@@ -133,6 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const resp = await fetch('/api/forgot-password', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
+                credentials: 'include',
                 body: JSON.stringify({ email })
             });
             const data = await resp.json();
@@ -141,7 +213,4 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('Ошибка запроса');
         }
     });
-
-    // Регистрация (оставил как было, логика не изменилась)
-    // ... код для regEmailInput и registerForm (возьмите из предыдущей версии) ...
 });
