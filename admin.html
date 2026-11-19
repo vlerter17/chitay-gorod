@@ -6,14 +6,47 @@
     <title>Админ-панель — Читай-Город</title>
     <link rel="stylesheet" href="account.css">
     <style>
-        .admin-wrap { max-width: 900px; margin: 0 auto; padding: 50px 20px 100px; }
-        .admin-wrap h1 { color: #e8d5b7; font-size: 36px; margin-bottom: 20px; text-align: center; }
-        .admin-card { background: #1a1a2e; border-radius: 15px; padding: 25px; margin-bottom: 25px; }
-        .admin-card h2 { color: #e8d5b7; font-size: 20px; margin-bottom: 12px; }
-        .admin-card p { color: #ccc; line-height: 1.7; }
-        .admin-card code { background: #131322; color: #e8d5b7; padding: 2px 6px; border-radius: 4px; font-size: 13px; }
-        .admin-logout { background: transparent; border: 1px solid #e74c3c; color: #e74c3c; padding: 10px 22px; border-radius: 10px; cursor: pointer; font-family: inherit; font-size: 15px; margin-top: 15px; }
-        .admin-logout:hover { background: #e74c3c; color: #fff; }
+        .admin-wrap { max-width: 1200px; margin: 0 auto; padding: 40px 20px 100px; }
+        .admin-wrap h1 { color: #e8d5b7; font-size: 34px; margin-bottom: 25px; text-align: center; }
+        .admin-tabs { display: flex; gap: 8px; margin-bottom: 25px; background: #131322; padding: 6px; border-radius: 12px; flex-wrap: wrap; }
+        .admin-tab { background: transparent; border: none; color: #999; padding: 12px 22px; border-radius: 8px; font-size: 15px; cursor: pointer; font-family: inherit; transition: all 0.2s; }
+        .admin-tab.active { background: #667eea; color: #fff; }
+        .admin-section { display: none; }
+        .admin-section.active { display: block; }
+        .admin-card { background: #1a1a2e; border-radius: 15px; padding: 25px; margin-bottom: 20px; }
+        .admin-card h2 { color: #e8d5b7; font-size: 20px; margin-bottom: 15px; }
+        .admin-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+        .admin-table th { text-align: left; padding: 10px 8px; color: #e8d5b7; border-bottom: 1px solid rgba(255,255,255,0.15); font-weight: normal; }
+        .admin-table td { padding: 10px 8px; border-bottom: 1px solid rgba(255,255,255,0.06); color: #ccc; vertical-align: top; }
+        .admin-table tr:hover td { background: rgba(255,255,255,0.03); }
+        .admin-btn { padding: 6px 14px; border-radius: 7px; font-family: inherit; font-size: 13px; cursor: pointer; border: 1px solid; background: transparent; transition: all 0.2s; }
+        .admin-btn--edit { border-color: #667eea; color: #667eea; }
+        .admin-btn--edit:hover { background: #667eea; color: #fff; }
+        .admin-btn--danger { border-color: #e74c3c; color: #e74c3c; }
+        .admin-btn--danger:hover { background: #e74c3c; color: #fff; }
+        .admin-btn--refund { border-color: #f59e0b; color: #f59e0b; }
+        .admin-btn--refund:hover { background: #f59e0b; color: #1a1a2e; }
+        .admin-btn--primary { background: #667eea; border-color: #667eea; color: #fff; }
+        .admin-btn--primary:hover { background: #5568d3; }
+        .admin-input, .admin-textarea { width: 100%; padding: 10px 12px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 8px; color: #fff; font-family: inherit; font-size: 14px; outline: none; margin-bottom: 8px; }
+        .admin-input:focus, .admin-textarea:focus { border-color: #667eea; }
+        .admin-textarea { min-height: 120px; resize: vertical; }
+        .admin-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+        .admin-form-grid .full { grid-column: 1 / -1; }
+        .admin-badge { display: inline-block; padding: 2px 8px; border-radius: 5px; font-size: 12px; }
+        .admin-badge--ok { background: rgba(46,204,113,0.15); color: #2ecc71; }
+        .admin-badge--warn { background: rgba(245,158,11,0.15); color: #f59e0b; }
+        .admin-badge--refunded { background: rgba(231,76,60,0.15); color: #e74c3c; }
+        .admin-empty { color: #777; text-align: center; padding: 20px; }
+        .admin-deny { text-align: center; padding: 60px 20px; color: #aaa; }
+        .admin-modal { position: fixed; inset: 0; background: rgba(0,0,0,0.85); display: none; justify-content: center; align-items: center; z-index: 9999; padding: 20px; }
+        .admin-modal.active { display: flex; }
+        .admin-modal__box { background: #1a1a2e; border-radius: 15px; padding: 25px; max-width: 700px; width: 100%; max-height: 90vh; overflow-y: auto; }
+        .admin-modal__box h3 { color: #e8d5b7; margin-bottom: 15px; }
+        .admin-toast { position: fixed; bottom: 25px; right: 25px; background: #1a1a2e; color: #fff; padding: 14px 22px; border-radius: 12px; border-left: 4px solid #2ecc71; box-shadow: 0 10px 30px rgba(0,0,0,0.5); z-index: 99999; display: none; font-size: 14px; max-width: 400px; }
+        .admin-toast.show { display: block; }
+        .admin-toast--err { border-left-color: #e74c3c; }
+        .admin-toolbar { display: flex; gap: 10px; margin-bottom: 15px; flex-wrap: wrap; }
     </style>
 </head>
 <body>
@@ -32,59 +65,318 @@
 
     <main class="admin-wrap">
         <h1>Админ-панель</h1>
-        <div id="adminContent" style="display:none;">
-            <div class="admin-card">
-                <h2>Вы вошли как администратор</h2>
-                <p>Здесь можно разместить управление пользователями, книгами и заказами.</p>
-                <p>Пока это заготовка — функционал можно расширять по мере необходимости.</p>
-            </div>
-            <div class="admin-card">
-                <h2>Проверка</h2>
-                <p>Сервер доступен: <code id="adminServerStatus">проверяем…</code></p>
-            </div>
-        </div>
-        <div class="admin-card" id="adminDenied" style="display:none;">
+        <div id="adminDenied" class="admin-deny" style="display:none;">
             <h2>Доступ закрыт</h2>
             <p>Введите Konami-код на главной странице (↑↑↓↓←→←→ 4 5 6 Enter) и подтвердите вход через Aegis.</p>
         </div>
+        <div id="adminMain" style="display:none;">
+            <div class="admin-tabs">
+                <button class="admin-tab active" data-tab="books">Книги</button>
+                <button class="admin-tab" data-tab="users">Пользователи</button>
+                <button class="admin-tab" data-tab="orders">Заказы</button>
+            </div>
+
+            <div class="admin-section active" id="section-books">
+                <div class="admin-card">
+                    <div class="admin-toolbar">
+                        <button class="admin-btn admin-btn--primary" id="btnAddBook">+ Добавить книгу</button>
+                        <button class="admin-btn admin-btn--edit" id="btnImportBooks">Импортировать из books.js</button>
+                    </div>
+                    <div id="booksTableWrap"><p class="admin-empty">Загрузка…</p></div>
+                </div>
+            </div>
+
+            <div class="admin-section" id="section-users">
+                <div class="admin-card">
+                    <h2>Пользователи</h2>
+                    <div id="usersTableWrap"><p class="admin-empty">Загрузка…</p></div>
+                </div>
+            </div>
+
+            <div class="admin-section" id="section-orders">
+                <div class="admin-card">
+                    <h2>Заказы</h2>
+                    <div id="ordersTableWrap"><p class="admin-empty">Загрузка…</p></div>
+                </div>
+            </div>
+        </div>
     </main>
 
+    <!-- Модалка книги -->
+    <div class="admin-modal" id="bookModal">
+        <div class="admin-modal__box">
+            <h3 id="bookModalTitle">Добавить книгу</h3>
+            <div class="admin-form-grid">
+                <div><label>Название</label><input class="admin-input" id="bkTitle"></div>
+                <div><label>Автор</label><input class="admin-input" id="bkAuthor"></div>
+                <div><label>Цена (₽, 0 = бесплатно)</label><input class="admin-input" id="bkPrice" type="number" step="0.01" value="0"></div>
+                <div><label>Бесплатная?</label>
+                    <select class="admin-input" id="bkFree"><option value="0">Нет</option><option value="1">Да</option></select>
+                </div>
+                <div class="full"><label>Ссылка на обложку (covers/N.jpg или URL)</label><input class="admin-input" id="bkImage"></div>
+                <div class="full"><label>Описание</label><textarea class="admin-textarea" id="bkDesc"></textarea></div>
+                <div class="full"><label>Текст книги</label><textarea class="admin-textarea" id="bkText" style="min-height:180px;"></textarea></div>
+            </div>
+            <div style="display:flex;gap:10px;justify-content:flex-end;margin-top:15px;">
+                <button class="admin-btn" id="bkCancel">Отмена</button>
+                <button class="admin-btn admin-btn--primary" id="bkSave">Сохранить</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="admin-toast" id="toast"></div>
+
+    <script src="books.js"></script>
     <script>
         const API_BASE = '';
         const TOKEN_KEY = 'cg_admin_token';
+        let currentBooks = [];
 
-        (async function () {
-            const token = localStorage.getItem(TOKEN_KEY);
-            if (!token) {
-                document.getElementById('adminDenied').style.display = 'block';
-                return;
-            }
+        function getToken() { return localStorage.getItem(TOKEN_KEY) || ''; }
+        function headers(json = true) {
+            const h = { 'X-Admin-Token': getToken() };
+            if (json) h['Content-Type'] = 'application/json';
+            return h;
+        }
+        function toast(msg, isErr) {
+            const el = document.getElementById('toast');
+            el.textContent = msg;
+            el.className = 'admin-toast show' + (isErr ? ' admin-toast--err' : '');
+            setTimeout(() => el.className = 'admin-toast', 3500);
+        }
+        function esc(s) {
+            return String(s == null ? '' : s).replace(/[&<>"']/g, c =>
+                ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+        }
+
+        // ===== Проверка сессии =====
+        (async () => {
+            const token = getToken();
+            if (!token) { document.getElementById('adminDenied').style.display = 'block'; return; }
             try {
-                const resp = await fetch(`${API_BASE}/api/admin/verify-session`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
+                const r = await fetch(`${API_BASE}/api/admin/verify-session`, {
+                    method: 'POST', headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ token })
                 });
-                const data = await resp.json();
-                if (!data.valid) {
+                const d = await r.json();
+                if (!d.valid) {
                     localStorage.removeItem(TOKEN_KEY);
                     document.getElementById('adminDenied').style.display = 'block';
                     return;
                 }
-                document.getElementById('adminContent').style.display = 'block';
-                document.getElementById('adminServerStatus').textContent = 'OK';
+                document.getElementById('adminMain').style.display = 'block';
+                loadBooks(); loadUsers(); loadOrders();
             } catch (e) {
                 document.getElementById('adminDenied').style.display = 'block';
             }
         })();
 
+        // ===== Вкладки =====
+        document.querySelectorAll('.admin-tab').forEach(tab => {
+            tab.onclick = () => {
+                document.querySelectorAll('.admin-tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.admin-section').forEach(s => s.classList.remove('active'));
+                tab.classList.add('active');
+                document.getElementById('section-' + tab.dataset.tab).classList.add('active');
+            };
+        });
+
+        // ===== КНИГИ =====
+        async function loadBooks() {
+            const wrap = document.getElementById('booksTableWrap');
+            try {
+                const r = await fetch(`${API_BASE}/api/admin/books`, { headers: headers(false) });
+                const list = await r.json();
+                currentBooks = list;
+                if (!Array.isArray(list) || !list.length) {
+                    wrap.innerHTML = '<p class="admin-empty">В БД пока нет книг. Нажмите «Импортировать из books.js» или «+ Добавить книгу».</p>';
+                    return;
+                }
+                wrap.innerHTML = `
+                <table class="admin-table">
+                    <thead><tr><th>ID</th><th>Обложка</th><th>Название / Автор</th><th>Цена</th><th>Бесплатно</th><th>Действия</th></tr></thead>
+                    <tbody>${list.map(b => `
+                        <tr>
+                            <td>${b.id}</td>
+                            <td><img src="${esc(b.image || '')}" alt="" style="width:40px;height:60px;object-fit:cover;border-radius:4px;" onerror="this.style.opacity='.2'"></td>
+                            <td><strong>${esc(b.title)}</strong><br><span style="color:#888">${esc(b.author)}</span></td>
+                            <td>${b.price} ₽</td>
+                            <td>${b.free ? '<span class="admin-badge admin-badge--ok">Да</span>' : '—'}</td>
+                            <td>
+                                <button class="admin-btn admin-btn--edit" data-edit="${b.id}">Изменить</button>
+                                <button class="admin-btn admin-btn--danger" data-del="${b.id}">Удалить</button>
+                            </td>
+                        </tr>`).join('')}
+                    </tbody>
+                </table>`;
+                wrap.querySelectorAll('[data-edit]').forEach(btn => btn.onclick = () => openBookModal(Number(btn.dataset.edit)));
+                wrap.querySelectorAll('[data-del]').forEach(btn => btn.onclick = () => deleteBook(Number(btn.dataset.del)));
+            } catch (e) {
+                wrap.innerHTML = '<p class="admin-empty">Ошибка загрузки книг</p>';
+            }
+        }
+
+        let editingBookId = null;
+        function openBookModal(id) {
+            editingBookId = id || null;
+            const b = id ? currentBooks.find(x => x.id === id) : null;
+            document.getElementById('bookModalTitle').textContent = id ? 'Редактировать книгу' : 'Добавить книгу';
+            document.getElementById('bkTitle').value = b ? b.title : '';
+            document.getElementById('bkAuthor').value = b ? b.author : '';
+            document.getElementById('bkPrice').value = b ? b.price : 0;
+            document.getElementById('bkFree').value = b && b.free ? '1' : '0';
+            document.getElementById('bkImage').value = b ? b.image : '';
+            document.getElementById('bkDesc').value = b ? b.description : '';
+            document.getElementById('bkText').value = b ? b.text : '';
+            document.getElementById('bookModal').classList.add('active');
+        }
+        document.getElementById('btnAddBook').onclick = () => openBookModal(null);
+        document.getElementById('bkCancel').onclick = () => document.getElementById('bookModal').classList.remove('active');
+        document.getElementById('bkSave').onclick = async () => {
+            const payload = {
+                title: document.getElementById('bkTitle').value.trim(),
+                author: document.getElementById('bkAuthor').value.trim(),
+                price: parseFloat(document.getElementById('bkPrice').value) || 0,
+                free: document.getElementById('bkFree').value === '1',
+                image: document.getElementById('bkImage').value.trim(),
+                description: document.getElementById('bkDesc').value.trim(),
+                text: document.getElementById('bkText').value
+            };
+            if (!payload.title) { toast('Введите название', true); return; }
+            const url = editingBookId ? `${API_BASE}/api/admin/books/${editingBookId}` : `${API_BASE}/api/admin/books`;
+            const method = editingBookId ? 'PUT' : 'POST';
+            try {
+                const r = await fetch(url, { method, headers: headers(), body: JSON.stringify(payload) });
+                const d = await r.json();
+                if (!r.ok) { toast(d.error || 'Ошибка', true); return; }
+                toast(d.message || 'Сохранено');
+                document.getElementById('bookModal').classList.remove('active');
+                loadBooks();
+            } catch (e) { toast('Ошибка сети', true); }
+        };
+
+        async function deleteBook(id) {
+            if (!confirm('Удалить книгу #' + id + '?')) return;
+            try {
+                const r = await fetch(`${API_BASE}/api/admin/books/${id}`, { method: 'DELETE', headers: headers(false) });
+                const d = await r.json();
+                if (!r.ok) { toast(d.error || 'Ошибка', true); return; }
+                toast('Удалено');
+                loadBooks();
+            } catch (e) { toast('Ошибка сети', true); }
+        }
+
+        document.getElementById('btnImportBooks').onclick = async () => {
+            if (typeof booksData === 'undefined') { toast('books.js не подключён', true); return; }
+            const arr = Object.keys(booksData).map(id => ({ id: Number(id), ...booksData[id] }));
+            if (!confirm('Импортировать ' + arr.length + ' книг из books.js в БД? Существующие с теми же ID будут перезаписаны.')) return;
+            try {
+                const r = await fetch(`${API_BASE}/api/admin/books/import`, {
+                    method: 'POST', headers: headers(), body: JSON.stringify({ books: arr })
+                });
+                const d = await r.json();
+                if (!r.ok) { toast(d.error || 'Ошибка', true); return; }
+                toast(d.message || 'Импорт выполнен');
+                loadBooks();
+            } catch (e) { toast('Ошибка сети', true); }
+        };
+
+        // ===== ПОЛЬЗОВАТЕЛИ =====
+        async function loadUsers() {
+            const wrap = document.getElementById('usersTableWrap');
+            try {
+                const r = await fetch(`${API_BASE}/api/admin/users`, { headers: headers(false) });
+                const list = await r.json();
+                if (!Array.isArray(list) || !list.length) {
+                    wrap.innerHTML = '<p class="admin-empty">Пользователей пока нет.</p>';
+                    return;
+                }
+                wrap.innerHTML = `
+                <table class="admin-table">
+                    <thead><tr><th>ID</th><th>Имя</th><th>Email</th><th>Пароль</th><th>2FA</th><th>Покупок</th><th></th></tr></thead>
+                    <tbody>${list.map(u => `
+                        <tr>
+                            <td>${u.id}</td>
+                            <td>${esc(u.name)}</td>
+                            <td>${esc(u.email)}</td>
+                            <td>${u.has_password ? '<span class="admin-badge admin-badge--ok">да</span>' : '—'}</td>
+                            <td>${u.has_2fa ? '<span class="admin-badge admin-badge--ok">вкл</span>' : '—'}</td>
+                            <td>${u.purchases}</td>
+                            <td><button class="admin-btn admin-btn--danger" data-deluser="${u.id}">Удалить</button></td>
+                        </tr>`).join('')}
+                    </tbody>
+                </table>`;
+                wrap.querySelectorAll('[data-deluser]').forEach(btn => btn.onclick = () => deleteUser(Number(btn.dataset.deluser)));
+            } catch (e) {
+                wrap.innerHTML = '<p class="admin-empty">Ошибка загрузки</p>';
+            }
+        }
+
+        async function deleteUser(id) {
+            if (!confirm('Удалить пользователя #' + id + '? Все его покупки и корзина тоже удалятся.')) return;
+            try {
+                const r = await fetch(`${API_BASE}/api/admin/users/${id}`, { method: 'DELETE', headers: headers(false) });
+                const d = await r.json();
+                if (!r.ok) { toast(d.error || 'Ошибка', true); return; }
+                toast('Пользователь удалён');
+                loadUsers(); loadOrders();
+            } catch (e) { toast('Ошибка сети', true); }
+        }
+
+        // ===== ЗАКАЗЫ =====
+        async function loadOrders() {
+            const wrap = document.getElementById('ordersTableWrap');
+            try {
+                const r = await fetch(`${API_BASE}/api/admin/orders`, { headers: headers(false) });
+                const list = await r.json();
+                if (!Array.isArray(list) || !list.length) {
+                    wrap.innerHTML = '<p class="admin-empty">Заказов пока нет.</p>';
+                    return;
+                }
+                wrap.innerHTML = `
+                <table class="admin-table">
+                    <thead><tr><th>№</th><th>Пользователь</th><th>Состав</th><th>Сумма</th><th>Карта</th><th>Статус</th><th>Дата</th><th></th></tr></thead>
+                    <tbody>${list.map(o => `
+                        <tr>
+                            <td>${o.id}</td>
+                            <td>${esc(o.user_email || ('#' + (o.user_id || '?')))}</td>
+                            <td>${o.items.map(i => esc(i.title)).join(', ') || '—'}</td>
+                            <td>${o.total} ₽</td>
+                            <td>${o.card_last4 ? '•••• ' + esc(o.card_last4) : '—'}</td>
+                            <td>${o.status === 'refunded'
+                                ? '<span class="admin-badge admin-badge--refunded">возвращён</span>'
+                                : '<span class="admin-badge admin-badge--ok">оплачен</span>'}</td>
+                            <td>${esc(o.created_at || '')}${o.refunded_at ? '<br><small style="color:#888">возврат: ' + esc(o.refunded_at) + '</small>' : ''}</td>
+                            <td>${o.status !== 'refunded'
+                                ? `<button class="admin-btn admin-btn--refund" data-refund="${o.id}">Вернуть</button>`
+                                : '—'}</td>
+                        </tr>`).join('')}
+                    </tbody>
+                </table>`;
+                wrap.querySelectorAll('[data-refund]').forEach(btn => btn.onclick = () => refundOrder(Number(btn.dataset.refund)));
+            } catch (e) {
+                wrap.innerHTML = '<p class="admin-empty">Ошибка загрузки</p>';
+            }
+        }
+
+        async function refundOrder(id) {
+            if (!confirm('Вернуть деньги по заказу #' + id + '? (демонстрация — реальных переводов нет)')) return;
+            try {
+                const r = await fetch(`${API_BASE}/api/admin/orders/${id}/refund`, { method: 'POST', headers: headers(false) });
+                const d = await r.json();
+                if (!r.ok) { toast(d.error || 'Ошибка', true); return; }
+                toast(d.message || 'Возврат выполнен');
+                loadOrders();
+            } catch (e) { toast('Ошибка сети', true); }
+        }
+
+        // ===== Выход =====
         document.getElementById('adminLogout').onclick = async () => {
-            const token = localStorage.getItem(TOKEN_KEY);
+            const token = getToken();
             if (token) {
                 try {
                     await fetch(`${API_BASE}/api/admin/logout`, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
+                        method: 'POST', headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({ token })
                     });
                 } catch (e) {}
@@ -93,12 +385,10 @@
             window.location.href = 'index.html';
         };
 
+        // Курсор
         const cursor = document.getElementById('cursor');
         document.addEventListener('mousemove', (e) => {
-            if (cursor) {
-                cursor.style.left = e.clientX + 'px';
-                cursor.style.top = e.clientY + 'px';
-            }
+            if (cursor) { cursor.style.left = e.clientX + 'px'; cursor.style.top = e.clientY + 'px'; }
         });
         document.querySelectorAll('a, button').forEach(el => {
             el.addEventListener('mouseenter', () => cursor && cursor.classList.add('hover'));
