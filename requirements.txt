@@ -5,4 +5,4 @@ beautifulsoup4
 gunicorn
 Werkzeug
 pyotp
-qrcode
+qrcode[pil]

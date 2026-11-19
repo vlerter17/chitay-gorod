@@ -5,11 +5,14 @@ import ssl
 import random
 import time
 import os
+import io
+import base64
 import sqlite3
 import secrets
 from datetime import datetime, timedelta
 import requests
 import pyotp
+import qrcode
 from flask import Flask, request, jsonify, send_from_directory, session
 from flask_cors import CORS
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -20,6 +23,10 @@ CORS(app, supports_credentials=True)
 
 # Если база на Netrun лежит в /data, используем её. Иначе - локально.
 DB_PATH = '/data/library.db' if os.path.exists('/data') else 'library.db'
+
+# ===== НАСТРОЙКИ АДМИН-ПАНЕЛИ =====
+ADMIN_SECRET_WORD = "карамельный чизкейк"  # секретное слово для первичной настройки
+ADMIN_SESSION_TTL = 60 * 60  # 1 час
 
 def init_db():
     conn = sqlite3.connect(DB_PATH)
@@ -34,6 +41,11 @@ def init_db():
                  (user_id INTEGER, book_id INTEGER, PRIMARY KEY (user_id, book_id))''')
     c.execute('''CREATE TABLE IF NOT EXISTS reset_tokens 
                  (email TEXT, token TEXT UNIQUE, expires_at DATETIME)''')
+    # Таблицы админ-панели
+    c.execute('''CREATE TABLE IF NOT EXISTS admin_settings 
+                 (key TEXT PRIMARY KEY, value TEXT)''')
+    c.execute('''CREATE TABLE IF NOT EXISTS admin_sessions 
+                 (token TEXT PRIMARY KEY, expires_at REAL)''')
     
     # Проверяем, есть ли колонка totp_secret (для безопасного обновления старых баз)
     c.execute("PRAGMA table_info(users)")
@@ -68,11 +80,8 @@ CODE_TTL = 10 * 60
 def send_email(to_email, subject, html_content):
     msg = MIMEMultipart("alternative")
     msg["Subject"] = subject
-    
-    # ИСПРАВЛЕНИЕ: Яндекс требует, чтобы From был ровно таким же, как логин SMTP_USER
     msg["From"] = FROM_EMAIL  
     msg["To"] = to_email
-    
     msg.attach(MIMEText(html_content, "html", "utf-8"))
     try:
         context = ssl.create_default_context()
@@ -108,6 +117,117 @@ def get_beautiful_email_html(title, code, description):
     </div>
     """
 
+# ===== АДМИН-ПАНЕЛЬ: ВСПОМОГАТЕЛЬНЫЕ =====
+def get_admin_secret():
+    conn = sqlite3.connect(DB_PATH)
+    c = conn.cursor()
+    c.execute("SELECT value FROM admin_settings WHERE key = 'totp_secret'")
+    row = c.fetchone()
+    conn.close()
+    return row[0] if row else None
+
+def set_admin_secret(secret):
+    conn = sqlite3.connect(DB_PATH)
+    c = conn.cursor()
+    c.execute("INSERT OR REPLACE INTO admin_settings (key, value) VALUES ('totp_secret', ?)", (secret,))
+    conn.commit()
+    conn.close()
+
+def create_admin_token():
+    token = secrets.token_urlsafe(32)
+    conn = sqlite3.connect(DB_PATH)
+    c = conn.cursor()
+    now = time.time()
+    # Чистим просроченные
+    c.execute("DELETE FROM admin_sessions WHERE expires_at < ?", (now,))
+    c.execute("INSERT INTO admin_sessions (token, expires_at) VALUES (?, ?)", (token, now + ADMIN_SESSION_TTL))
+    conn.commit()
+    conn.close()
+    return token
+
+def check_admin_token(token):
+    if not token:
+        return False
+    conn = sqlite3.connect(DB_PATH)
+    c = conn.cursor()
+    c.execute("SELECT expires_at FROM admin_sessions WHERE token = ?", (token,))
+    row = c.fetchone()
+    conn.close()
+    if not row:
+        return False
+    return row[0] > time.time()
+
+def delete_admin_token(token):
+    conn = sqlite3.connect(DB_PATH)
+    c = conn.cursor()
+    c.execute("DELETE FROM admin_sessions WHERE token = ?", (token,))
+    conn.commit()
+    conn.close()
+
+# ===== АДМИН-ПАНЕЛЬ: МАРШРУТЫ =====
+@app.route("/api/admin/status", methods=["GET"])
+def admin_status():
+    return jsonify({"configured": bool(get_admin_secret())})
+
+@app.route("/api/admin/setup", methods=["POST"])
+def admin_setup():
+    if get_admin_secret():
+        return jsonify({"error": "Панель уже настроена"}), 400
+
+    data = request.get_json(silent=True) or {}
+    word = (data.get("secret_word") or "").strip().lower()
+
+    if word != ADMIN_SECRET_WORD:
+        return jsonify({"error": "Неверное секретное слово"}), 403
+
+    secret = pyotp.random_base32()
+    set_admin_secret(secret)
+
+    totp = pyotp.TOTP(secret)
+    uri = totp.provisioning_uri(name="admin@chitay-gorod", issuer_name="ChitayGorod")
+    img = qrcode.make(uri)
+    buf = io.BytesIO()
+    img.save(buf, format="PNG")
+    qr_b64 = base64.b64encode(buf.getvalue()).decode()
+
+    return jsonify({
+        "secret": secret,
+        "qr_png_base64": qr_b64,
+        "message": "Секрет создан. Отсканируйте QR в Aegis."
+    })
+
+@app.route("/api/admin/login", methods=["POST"])
+def admin_login():
+    secret = get_admin_secret()
+    if not secret:
+        return jsonify({"error": "Сначала настройте панель через секретное слово"}), 400
+
+    data = request.get_json(silent=True) or {}
+    code = (data.get("code") or "").strip()
+    if not code:
+        return jsonify({"error": "Введите код"}), 400
+
+    totp = pyotp.TOTP(secret)
+    if not totp.verify(code, valid_window=1):
+        return jsonify({"error": "Неверный код"}), 401
+
+    token = create_admin_token()
+    return jsonify({"success": True, "token": token, "expires_in": ADMIN_SESSION_TTL})
+
+@app.route("/api/admin/verify-session", methods=["POST"])
+def admin_verify_session():
+    data = request.get_json(silent=True) or {}
+    token = (data.get("token") or "").strip()
+    return jsonify({"valid": check_admin_token(token)})
+
+@app.route("/api/admin/logout", methods=["POST"])
+def admin_logout():
+    data = request.get_json(silent=True) or {}
+    token = (data.get("token") or "").strip()
+    if token:
+        delete_admin_token(token)
+    return jsonify({"message": "Выход выполнен"})
+
 # ===== АУТЕНТИФИКАЦИЯ =====
 @app.route("/api/send-code", methods=["POST"])
 def send_code():
@@ -126,7 +246,6 @@ def send_code():
 
     if action == "register":
         if user_exists:
-            # Красивый ответ для фронтенда, если аккаунт уже есть
             return jsonify({
                 "error": "Этот email уже зарегистрирован.",
                 "message": "У вас уже есть аккаунт! Хотите войти по коду или паролю?",
