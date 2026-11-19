@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', async () => {
     let currentUser = null;
     let cartData = [];
+    let subtotal = 0;
 
     try {
         const resp = await fetch('/api/user');
@@ -20,7 +21,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     userInfo.innerHTML = `<p><strong>Пользователь:</strong> ${currentUser.name}</p><p><strong>Email:</strong> ${currentUser.email}</p>`;
 
     const paymentItems = document.getElementById('paymentItems');
-    let subtotal = 0;
 
     if (cartData.length === 0) {
         paymentItems.innerHTML = '<p style="color:#999;text-align:center;padding:20px;">Корзина пуста. <a href="index.html" style="color:#e8d5b7;">Вернуться в каталог</a></p>';
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     document.getElementById('paymentTotal').textContent = subtotal + ' ₽';
     document.getElementById('paymentSubmitAmount').textContent = subtotal + ' ₽';
 
-    // Форматирование карты
+    // ===== Форматирование карты =====
     const cardNumberInput = document.getElementById('cardNumber');
     const cardExpiryInput = document.getElementById('cardExpiry');
     const cardCvcInput = document.getElementById('cardCvc');
@@ -71,18 +71,33 @@ document.addEventListener('DOMContentLoaded', async () => {
         this.value = this.value.replace(/\D/g, '').substring(0, 3);
     });
 
-    // Оплата
+    // ===== Оплата =====
     document.getElementById('paymentForm').addEventListener('submit', async function (e) {
         e.preventDefault();
         if (cartData.length === 0) { alert('Корзина пуста!'); return; }
+
+        // Собираем данные карты для отправки на сервер (полный номер НЕ сохраняется на сервере,
+        // там хранятся только последние 4 цифры — так безопаснее).
+        const cardNumberRaw = (document.getElementById('cardNumber').value || '').replace(/\D/g, '');
 
         const btn = document.getElementById('paymentSubmit');
         btn.disabled = true;
         btn.textContent = 'Обработка...';
 
         try {
-            const resp = await fetch('/api/purchase', { method: 'POST' });
-            if (!resp.ok) throw new Error('Ошибка оплаты');
+            const resp = await fetch('/api/purchase', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    card_number: cardNumberRaw,
+                    total: subtotal
+                })
+            });
+
+            if (!resp.ok) {
+                const errData = await resp.json().catch(() => ({}));
+                throw new Error(errData.error || 'Ошибка оплаты');
+            }
 
             document.getElementById('paymentContainer').style.display = 'none';
             document.getElementById('paymentSuccess').style.display = 'flex';
