@@ -94,13 +94,13 @@ const booksData = {
          image: "covers/45.jpg", url: "http://az.lib.ru/p/platonow_a_p/text_0030.shtml",
          description: "Утопический роман." },
     46: { title: "Доктор Живаго", author: "Борис Пастернак", price: 880, available: true,
-         image: "covers/46.jpg", url: "http://lib.ru/POEZIQ/PASTERNAK/doktor.txt", // Осторожно, может не работать
+         image: "covers/46.jpg", url: "http://lib.ru/POEZIQ/PASTERNAK/doktor.txt",
          description: "Роман о судьбе интеллигенции в годы революции." },
     47: { title: "Архипелаг ГУЛАГ", author: "Александр Солженицын", price: 1300, available: true,
          image: "covers/47.jpg", url: "http://www.lib.ru/PROZA/SOLZHENICYN/gulag.txt",
          description: "Художественное исследование советских лагерей." },
     48: { title: "Один день Ивана Денисовича", author: "Александр Солженицын", price: 550, available: true,
-         image: "covers/48.jpg", url: "http://www.lib.ru/PROZA/SOLZHENICYN/ivan_den.txt", // Замена ссылки
+         image: "covers/48.jpg", url: "http://www.lib.ru/PROZA/SOLZHENICYN/ivan_den.txt",
          description: "Рассказ о жизни в лагере." },
     49: { title: "Матрёнин двор", author: "Александр Солженицын", price: 450, available: true,
          image: "covers/49.jpg", url: "http://www.lib.ru/PROZA/SOLZHENICYN/matren.txt",
@@ -139,3 +139,61 @@ function attachCover(imgElement, book, id) {
         imgElement.onerror = null;
     };
 }
+
+// ===== СИНХРОНИЗАЦИЯ С СЕРВЕРОМ (книги из админки) =====
+// При первом заходе подтягиваем книги из БД (если админ их добавил/импортировал)
+// и один раз перезагружаем страницу, чтобы каталог увидел обновления.
+(async () => {
+    try {
+        const resp = await fetch('/api/books', { cache: 'no-store' });
+        if (!resp.ok) return;
+        const list = await resp.json();
+        if (!Array.isArray(list) || list.length === 0) return;
+
+        let changed = false;
+        list.forEach(b => {
+            if (!b || !b.id) return;
+            const cur = booksData[b.id];
+
+            // Строим нормализованную запись из серверных данных.
+            // Поле url приоритетно берём локальное (чтобы не потерять ссылку на текст),
+            // а если его нет — используем text с сервера.
+            const normalized = {
+                title: b.title,
+                author: b.author || '',
+                price: Number(b.price) || 0,
+                free: !!b.free,
+                available: true,
+                image: b.image || (cur ? cur.image : ''),
+                description: b.description || '',
+                url: (cur && cur.url) || b.text || ''
+            };
+
+            if (!cur) {
+                // Новая книга, добавленная через админку
+                booksData[b.id] = normalized;
+                changed = true;
+                return;
+            }
+
+            // Существующую книгу обновляем, если что-то изменилось
+            if (cur.title !== normalized.title ||
+                cur.author !== normalized.author ||
+                cur.price !== normalized.price ||
+                cur.free !== normalized.free ||
+                cur.image !== normalized.image ||
+                cur.description !== normalized.description ||
+                cur.available !== normalized.available) {
+                booksData[b.id] = Object.assign({}, cur, normalized);
+                changed = true;
+            }
+        });
+
+        if (changed && !sessionStorage.getItem('cg_books_synced')) {
+            sessionStorage.setItem('cg_books_synced', '1');
+            location.reload();
+        }
+    } catch (e) {
+        // Сервер недоступен — работаем со статическим books.js (это нормально)
+    }
+})();
